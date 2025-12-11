@@ -3264,9 +3264,9 @@
     <script>
         // Payment Modal Script
         document.addEventListener("DOMContentLoaded", function () {
-            const paymentModal = document.getElementById("paymentModal");
-            const paymentModalClose = document.getElementById("paymentModalClose");
-            const paymentForm = document.getElementById("paymentForm");
+            let paymentModal = document.getElementById("paymentModal");
+            let paymentModalClose = document.getElementById("paymentModalClose");
+            let paymentForm = document.getElementById("paymentForm");
             const btnBayar = document.querySelector(".btn-bayar");
             const paymentConfirm = document.getElementById("confirmPayment");
             const paymentCancel = document.getElementById("cancelPayment");
@@ -3318,7 +3318,18 @@
             }
 
             function openPaymentModal() {
-                if (!paymentModal) return;
+                // If modal markup is not present or the existing markup is causing issues,
+                // create and inject a self-contained modal into document.body.
+                if (!paymentModal) {
+                    try {
+                        paymentModal = createInjectedPaymentModal();
+                        paymentModalClose = paymentModal.querySelector('.payment-modal-close');
+                        paymentForm = paymentModal.querySelector('#paymentForm');
+                    } catch (err) {
+                        console.error('Failed to create injected modal', err);
+                        return;
+                    }
+                }
                 paymentModal.classList.add("open");
                 paymentModal.setAttribute("aria-hidden", "false");
 
@@ -3402,11 +3413,18 @@
                     }
 
                     // Use passive:false for touchmove so we can call preventDefault
-                    modalBody.addEventListener('touchstart', onTouchStart, { passive: true });
-                    modalBody.addEventListener('touchmove', onTouchMove, { passive: false });
+                    modalBody.addEventListener('touchstart', onTouchStart, {
+                        passive: true
+                    });
+                    modalBody.addEventListener('touchmove', onTouchMove, {
+                        passive: false
+                    });
 
                     modalBody._touchHandlersAttached = true;
-                    modalBody._touchHandlers = { onTouchStart, onTouchMove };
+                    modalBody._touchHandlers = {
+                        onTouchStart,
+                        onTouchMove
+                    };
                     console.log('Attached modal touch handlers for inner scrolling');
                 })();
 
@@ -3414,6 +3432,84 @@
                 if (panel) enableFocusTrap(panel);
 
                 console.log('Payment modal opened');
+            }
+
+            /* Create an injected modal and append to body. This keeps modal outside
+             of any possibly-broken page markup and ensures JS/CSS work reliably. */
+            function createInjectedPaymentModal() {
+                const container = document.createElement('div');
+                container.className = 'payment-modal';
+                container.id = 'paymentModal';
+                container.setAttribute('aria-hidden', 'true');
+
+                // basic panel structure — header/body/footer. We'll attempt to reuse
+                // existing `.payment-content` if available, otherwise insert a simple form.
+                const existingContent = document.querySelector('.payment-content');
+
+                container.innerHTML = `
+                    <div class="payment-modal-panel" role="dialog" aria-modal="true" aria-labelledby="paymentModalTitle" tabindex="-1">
+                        <div class="payment-modal-header">
+                            <div class="payment-modal-title-wrap">
+                                <h3 id="paymentModalTitle" class="text-2xl font-black mb-0">Yuk Isi Data Diri Dulu....</h3>
+                                <p class="text-sm text-gray-500 mb-0">Lengkapi data diri untuk melanjutkan</p>
+                            </div>
+                            <button class="payment-modal-close" aria-label="Tutup">✕</button>
+                        </div>
+                        <div class="payment-modal-body">
+                            <div class="payment-content"></div>
+                        </div>
+                        <div class="payment-modal-footer">
+                            <div class="payment-actions">
+                                <button type="button" class="btn btn-primary" id="confirmPayment">Lanjutkan Pembayaran</button>
+                                <button type="button" class="btn btn-secondary" id="cancelPayment">Batalkan</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                // If original .payment-content exists, clone its inner form to reuse markup
+                if (existingContent) {
+                    const target = container.querySelector('.payment-content');
+                    try {
+                        const clone = existingContent.cloneNode(true);
+                        // ensure form has id paymentForm for existing scripts
+                        const form = clone.querySelector('form');
+                        if (form) form.id = 'paymentForm';
+                        // attach cloned content
+                        target.innerHTML = '';
+                        target.appendChild(clone);
+                    } catch (err) {
+                        console.warn('Could not clone existing payment-content', err);
+                    }
+                } else {
+                    // fallback minimal form
+                    const target = container.querySelector('.payment-content');
+                    target.innerHTML = `
+                        <form id="paymentForm">
+                            <div style="padding:1rem;max-width:720px;margin:0 auto;">
+                                <label>Nama Lengkap</label>
+                                <input name="name" class="form-input" />
+                                <div style="height:24px"></div>
+                                <label>Email</label>
+                                <input name="email" class="form-input" />
+                            </div>
+                        </form>
+                    `;
+                }
+
+                document.body.appendChild(container);
+
+                // attach close handlers
+                container.addEventListener('click', function (e) {
+                    if (e.target === container) closePaymentModal();
+                });
+
+                const closeBtn = container.querySelector('.payment-modal-close');
+                if (closeBtn) closeBtn.addEventListener('click', closePaymentModal);
+                const cancelBtn = container.querySelector('#cancelPayment');
+                if (cancelBtn) cancelBtn.addEventListener('click', closePaymentModal);
+
+                return container;
             }
 
             function closePaymentModal() {
@@ -3533,115 +3629,80 @@
                 }
             });
 
-            // Payment confirmation handler
-            if (paymentConfirm) {
-                paymentConfirm.addEventListener("click", function (e) {
-                    e.preventDefault();
+            // Payment confirmation handler (delegated) — works for injected or static modal
+            document.addEventListener('click', function (evt) {
+                const btn = evt.target.closest && evt.target.closest('#confirmPayment');
+                if (!btn) return;
+                evt.preventDefault();
 
-                    const name = document.getElementById("payerName");
-                    const phone = document.getElementById("payerPhone");
-                    const agreeTerms = paymentForm.querySelector('#agree_terms');
-                    const genderChecked = paymentForm.querySelector('input[name="gender"]:checked');
-                    const paymentMethodChecked = paymentForm.querySelector(
-                        'input[name="payment_method"]:checked');
+                const currentForm = document.querySelector('#paymentForm');
+                if (!currentForm) return;
 
-                    let isValid = true;
-                    let firstInvalidField = null;
+                const name = currentForm.querySelector('#payerName');
+                const phone = currentForm.querySelector('#payerPhone');
+                const agreeTerms = currentForm.querySelector('#agree_terms');
+                const genderChecked = currentForm.querySelector('input[name="gender"]:checked');
+                const paymentMethodChecked = currentForm.querySelector(
+                    'input[name="payment_method"]:checked');
 
-                    // Reset error states
-                    const inputs = paymentForm.querySelectorAll('.form-input');
-                    inputs.forEach(input => {
-                        input.classList.remove('border-red-400');
-                    });
+                let isValid = true;
+                let firstInvalidField = null;
 
-                    paymentCards.forEach(card => {
-                        card.style.borderColor = '';
-                    });
+                // Reset error states
+                const inputs = currentForm.querySelectorAll('.form-input');
+                inputs.forEach(input => input.classList.remove('border-red-400'));
 
-                    genderCards.forEach(card => {
-                        card.style.borderColor = '';
-                    });
+                const localPaymentCards = currentForm.querySelectorAll('.payment-method-card');
+                localPaymentCards.forEach(card => card.style.borderColor = '');
+                const localGenderCards = currentForm.querySelectorAll('.gender-card');
+                localGenderCards.forEach(card => card.style.borderColor = '');
+                if (agreeTerms) agreeTerms.parentElement.style.color = '';
 
-                    if (agreeTerms) {
-                        agreeTerms.parentElement.style.color = '';
-                    }
+                if (!name || !name.value.trim()) {
+                    isValid = false;
+                    if (name) name.classList.add('border-red-400');
+                    if (!firstInvalidField) firstInvalidField = name;
+                }
+                if (!phone || !phone.value.trim()) {
+                    isValid = false;
+                    if (phone) phone.classList.add('border-red-400');
+                    if (!firstInvalidField) firstInvalidField = phone;
+                }
+                if (!genderChecked) {
+                    isValid = false;
+                    localGenderCards.forEach(card => card.style.borderColor = '#ef4444');
+                }
+                if (!paymentMethodChecked) {
+                    isValid = false;
+                    localPaymentCards.forEach(card => card.style.borderColor = '#ef4444');
+                }
+                if (!agreeTerms || !agreeTerms.checked) {
+                    isValid = false;
+                    if (agreeTerms) agreeTerms.parentElement.style.color = '#ef4444';
+                }
 
-                    // Validate required fields
-                    if (!name || !name.value.trim()) {
-                        isValid = false;
-                        name.classList.add('border-red-400');
-                        if (!firstInvalidField) firstInvalidField = name;
-                    }
+                if (!isValid) {
+                    if (firstInvalidField) firstInvalidField.focus();
+                    alert('Mohon lengkapi semua field yang wajib diisi.');
+                    return;
+                }
 
-                    if (!phone || !phone.value.trim()) {
-                        isValid = false;
-                        phone.classList.add('border-red-400');
-                        if (!firstInvalidField) firstInvalidField = phone;
-                    }
+                // perform submit-like feedback
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Memproses...';
+                btn.disabled = true;
 
-                    if (!genderChecked) {
-                        isValid = false;
-                        genderCards.forEach(card => {
-                            card.style.borderColor = '#ef4444';
-                        });
-                    }
-
-                    if (!paymentMethodChecked) {
-                        isValid = false;
-                        paymentCards.forEach(card => {
-                            card.style.borderColor = '#ef4444';
-                        });
-                    }
-
-                    if (!agreeTerms || !agreeTerms.checked) {
-                        isValid = false;
-                        if (agreeTerms) {
-                            agreeTerms.parentElement.style.color = '#ef4444';
-                        }
-                    }
-
-                    if (!isValid) {
-                        // Focus on first invalid field
-                        if (firstInvalidField) {
-                            firstInvalidField.focus();
-                        }
-
-                        // Show error message
-                        alert("Mohon lengkapi semua field yang wajib diisi.");
-                        return;
-                    }
-
-                    // Show loading state
-                    const originalText = paymentConfirm.innerHTML;
-                    paymentConfirm.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Memproses...';
-                    paymentConfirm.disabled = true;
-
-                    // Simulate payment processing
-                    setTimeout(() => {
-                        // Restore button state
-                        paymentConfirm.innerHTML = originalText;
-                        paymentConfirm.disabled = false;
-
-                        // Close modal
-                        closePaymentModal();
-
-                        // Show success message
-                        alert(
-                            "Pembayaran berhasil diproses! Silakan selesaikan pembayaran Anda."
-                        );
-
-                        // Reset form
-                        paymentForm.reset();
-
-                        // Reset visual selections
-                        document.querySelectorAll(
-                            '.payment-method-card.selected, .gender-card.selected').forEach(
-                            el => {
-                                el.classList.remove('selected');
-                            });
-                    }, 1500);
-                });
-            }
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                    closePaymentModal();
+                    alert('Pembayaran berhasil diproses! Silakan selesaikan pembayaran Anda.');
+                    currentForm.reset();
+                    document.querySelectorAll(
+                        '.payment-method-card.selected, .gender-card.selected').forEach(
+                        el => el.classList.remove('selected'));
+                }, 1500);
+            });
 
             // Prevent scroll chaining in modal
             const modalBody = document.querySelector('.payment-modal-body');
