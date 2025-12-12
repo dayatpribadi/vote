@@ -262,7 +262,7 @@
                 <!-- CONTENT START -->
                 <div class="page-content pb-40">
                     <!-- Banner Style One -->
-                    <div class="2xl:h-237.5 lg:h-192 overflow-hidden relative"
+                    <div id="page-banner" class="2xl:h-237.5 lg:h-192 overflow-hidden relative"
                         style="background-image: url(assets/images/bg-foot3.jpg);">
                         <div class="bg-black/20 lg:rounded-3xl lg:p-8.75 2xl:h-220 lg:h-174.5 absolute top-0 left-0 right-0 z-1 flex justify-between max-lg:text-center"
                             style="z-index:1;">
@@ -359,12 +359,12 @@
 
                                 </div>
 
-                                <div class="lg:absolute top-0 right-0 z-3 h-full" style="z-index:3;">
+                                <div class="lg:absolute top-0 mt-45 right-0 z-3 h-full" style="z-index:3;">
                                     <div
                                         class="relative h-full ml-auto 2xl:w-full xl:w-full lg:w-4/5 w-3/4 max-2xl:mr-12.5 max-lg:!mr-auto">
                                         <img id="hero-overlap-img" src="assets/images/krn/120.png" alt="Image"
-                                            class="w-auto lg:w-full h-full object-cover max-w-none" width="1200"
-                                            height="1200" loading="lazy">
+                                            class="w-auto  object-cover max-w-none" width="800" height="800"
+                                            loading="lazy">
                                     </div>
                                 </div>
 
@@ -1797,6 +1797,64 @@
             window.openPaymentModal = openPaymentModal;
             window.closePaymentModal = closePaymentModal;
             window.selectVote = selectVote;
+        })();
+    </script>
+    <script>
+        // Smooth hero follow using GSAP + ScrollTrigger
+        (function () {
+            if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+            try {
+                gsap.registerPlugin(ScrollTrigger);
+            } catch (e) {}
+
+            const hero = document.getElementById('hero-above-header');
+            const banner = document.getElementById('page-banner');
+            if (!hero || !banner) return;
+
+            function make() {
+                ScrollTrigger.refresh();
+                const bannerHeight = banner.offsetHeight || 1;
+                // maximum travel distance for the hero while banner is scrolling
+                const maxOffset = Math.min(window.innerHeight * 0.36, 780);
+
+                // kill existing if any
+                if (hero._gsapTrigger) {
+                    try {
+                        hero._gsapTrigger.kill();
+                    } catch (e) {}
+                }
+
+                // animate hero y from 0 to maxOffset while the banner area is scrolled
+                gsap.to(hero, {
+                    y: maxOffset,
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: banner,
+                        start: 'top top',
+                        end: `+=${bannerHeight}`,
+                        scrub: 0.6,
+                        invalidateOnRefresh: true,
+                        onRefresh(self) {
+                            // ensure the animation adapts
+                        }
+                    }
+                });
+            }
+
+            // create on load and refresh on resize
+            window.addEventListener('load', make, {
+                passive: true
+            });
+            window.addEventListener('resize', function () {
+                // small debounce
+                clearTimeout(hero._resizeTimer);
+                hero._resizeTimer = setTimeout(function () {
+                    ScrollTrigger.refresh();
+                    make();
+                }, 120);
+            }, {
+                passive: true
+            });
         })();
     </script>
 
