@@ -16602,15 +16602,24 @@ button.scroltop span {
 
 .btn-primary::before {
   background: linear-gradient(135deg, #f97316 0%, #fb7185 100%);
+  color: #FFF;
 }
 
 .btn-primary:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 40px rgba(251, 113, 133, 0.4);
+  color: #FFF !important;
+}
+
+.btn-primary:hover svg,
+.btn-primary:hover svg * {
+  stroke: #FFF !important;
+  fill: #FFF !important;
 }
 
 .btn-primary:hover::before {
   opacity: 1;
+  color: #FFF;
 }
 
 .btn-secondary {
