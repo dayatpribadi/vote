@@ -2240,6 +2240,79 @@
             window.selectVote = selectVote;
         })();
     </script>
+
+    <!-- Toast Notification Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toastContainer = document.createElement('div');
+            toastContainer.id = 'toast-container';
+            toastContainer.className = 'toast-container';
+            document.body.appendChild(toastContainer);
+
+            // Sample finalist data - replace with real data
+            const finalists = [{
+                    name: 'Dzakia Sheza Ayu Handayani',
+                    votes: 100
+                },
+                {
+                    name: 'Revalina Liwanathaya Shanum',
+                    votes: 103
+                },
+                {
+                    name: 'Salwa Difa Raihana Hanifah',
+                    votes: 107
+                },
+                {
+                    name: 'Elizabeth Belvania Cahaya P',
+                    votes: 100
+                },
+                {
+                    name: 'Belva Ayunindya A S',
+                    votes: 50
+                },
+                {
+                    name: 'Wildan Dhany Fauzan',
+                    votes: 45
+                }
+            ];
+
+            let currentIndex = 0;
+
+            function showToast(finalist) {
+                const toast = document.createElement('div');
+                toast.className = 'toast';
+                toast.innerHTML = `
+                    <div class="toast-content">
+                        <i class="fa fa-bell toast-icon"></i>
+                        <div class="toast-text">
+                            <strong>${finalist.name}</strong> telah divote (${finalist.votes} vote)
+                        </div>
+                    </div>
+                `;
+
+                toastContainer.appendChild(toast);
+
+                // Auto remove after 5 seconds
+                setTimeout(() => {
+                    toast.classList.add('fade-out');
+                    setTimeout(() => {
+                        if (toast.parentNode) {
+                            toast.parentNode.removeChild(toast);
+                        }
+                    }, 500);
+                }, 5000);
+            }
+
+            // Show toast every 8 seconds
+            setInterval(() => {
+                showToast(finalists[currentIndex]);
+                currentIndex = (currentIndex + 1) % finalists.length;
+            }, 8000);
+
+            // Show first toast immediately
+            showToast(finalists[0]);
+        });
+    </script>
 </body>
 
 </html>

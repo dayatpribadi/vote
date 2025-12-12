@@ -932,7 +932,8 @@
                                                 </div>
 
                                                 <!-- INI MENU DESKRIPSI -->
-                                                <div class="twm-post-com-wrap mt-7.5 mb-10" id="leaderboard">
+                                                <div class="twm-post-com-wrap mt-7.5 mb-7.5"
+                                                    style="margin-bottom: 100px !important;" id="leaderboard">
                                                     <div class="clear" id="comment-list">
                                                         <div class="comments-area" id="comments">
                                                             <div>
@@ -957,9 +958,8 @@
                                                 <!-- INI MENU LEADERBOARD -->
 
                                                 <!-- Leaderboard (Top 3) -->
-                                                <div class="leaderboard-outer">
-                                                    <div class="max-w-7xl mx-auto px-4 py-8 mt-7.5"
-                                                        id="leaderboard-1-3">
+                                                <div class="leaderboard-outer" id="leaderboard">
+                                                    <div class="max-w-6xl mx-auto mt-16 mb-16" id="leaderboard-1-3">
                                                         <div class="cards-wrapper leaderboard mx-auto">
                                                             <!-- Rank 2 (left) -->
                                                             <div class="card silver">
@@ -967,7 +967,7 @@
                                                                     <img src="assets/images/krn/silver_crown.png"
                                                                         alt="Silver Crown" style="
                                         display: block;
-                                        width: 3.5rem;
+                                        width: 5rem;
                                         height: auto;
                                       " />
                                                                 </div>
@@ -992,7 +992,7 @@
                                                                     <img src="assets/images/krn/gold_crown.gif"
                                                                         alt="Gold Crown" style="
                                         display: block;
-                                        width: 4.5rem;
+                                        width: 6rem;
                                         height: auto;
                                       " />
                                                                 </div>
@@ -1017,7 +1017,7 @@
                                                                     <img src="assets/images/krn/bronze_crown.png"
                                                                         alt="Bronze Crown" style="
                                         display: block;
-                                        width: 3.5rem;
+                                        width: 5rem;
                                         height: auto;
                                       " />
                                                                 </div>
@@ -1041,7 +1041,7 @@
                                                     <!-- Ini menu #Finalis -->
                                                     <!-- Juara 4-10 list (under leaderboard 1-3) -->
                                                     <div class="max-w-7xl mx-auto px-4 py-6" id="juara-4-10">
-                                                        <div class="grid grid-cols-1 gap-4 mt-7.5">
+                                                        <div class="grid grid-cols-1 gap-4 mt-7.5 mb-7.5">
                                                             <!-- Rank 4 -->
                                                             <div
                                                                 class="bg-white rounded-2xl shadow p-3 flex items-center justify-between gap-3">
@@ -3987,6 +3987,79 @@
                             span.textContent = curr + 1;
                         });
                     });
+            });
+        </script>
+
+        <!-- Toast Notification Script -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const toastContainer = document.createElement('div');
+                toastContainer.id = 'toast-container';
+                toastContainer.className = 'toast-container';
+                document.body.appendChild(toastContainer);
+
+                // Sample finalist data - replace with real data
+                const finalists = [{
+                        name: 'Dzakia Sheza Ayu Handayani',
+                        votes: 100
+                    },
+                    {
+                        name: 'Revalina Liwanathaya Shanum',
+                        votes: 103
+                    },
+                    {
+                        name: 'Salwa Difa Raihana Hanifah',
+                        votes: 107
+                    },
+                    {
+                        name: 'Elizabeth Belvania Cahaya P',
+                        votes: 100
+                    },
+                    {
+                        name: 'Belva Ayunindya A S',
+                        votes: 50
+                    },
+                    {
+                        name: 'Wildan Dhany Fauzan',
+                        votes: 45
+                    }
+                ];
+
+                let currentIndex = 0;
+
+                function showToast(finalist) {
+                    const toast = document.createElement('div');
+                    toast.className = 'toast';
+                    toast.innerHTML = `
+                        <div class="toast-content">
+                            <i class="fa fa-bell toast-icon"></i>
+                            <div class="toast-text">
+                                <strong>${finalist.name}</strong> telah divote (${finalist.votes} vote)
+                            </div>
+                        </div>
+                    `;
+
+                    toastContainer.appendChild(toast);
+
+                    // Auto remove after 5 seconds
+                    setTimeout(() => {
+                        toast.classList.add('fade-out');
+                        setTimeout(() => {
+                            if (toast.parentNode) {
+                                toast.parentNode.removeChild(toast);
+                            }
+                        }, 500);
+                    }, 5000);
+                }
+
+                // Show toast every 8 seconds
+                setInterval(() => {
+                    showToast(finalists[currentIndex]);
+                    currentIndex = (currentIndex + 1) % finalists.length;
+                }, 8000);
+
+                // Show first toast immediately
+                showToast(finalists[0]);
             });
         </script>
 </body>

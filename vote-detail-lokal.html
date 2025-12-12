@@ -2406,36 +2406,41 @@
                                         <aside class="side-bar my-sticky space-top-0">
                                             <!-- RECENT POSTS -->
                                             <div class="mb-7.5 trv-recent-posts">
-                                                <div class="fade-vote fade-slide">
-                                                    <div class="mb-5">
-                                                        <h6
-                                                            class="relative pl-4 w-full rounded-full block text-md font-semibold py-3 px-5 bg-linear-(--heading-gradient) border-l-4 border-citrusyellow mb-6">
-                                                            <i class="fa fa-bell icon-bell mr-3" aria-hidden="true"></i>
-                                                            Dzakia Sheza Ayu Handayani telah divote (100 vote)
-                                                        </h6>
+                                                <!-- Enhanced Breadcrumb -->
+                                                <nav class="breadcrumb-nav mb-6" aria-label="Breadcrumb">
+                                                    <div
+                                                        class="bg-gradient-to-r from-primary/10 pl-10 via-primary/5 to-transparent rounded-2xl p-4 border border-primary/20 shadow-sm">
+                                                        <div class="flex items-center justify-between">
+                                                            <ol class="flex items-center space-x-3 text-sm">
+                                                                <li>
+                                                                    <a href="index.html"
+                                                                        class="flex items-center text-gray-700 hover:text-primary transition-all duration-300 group">
+                                                                        <div>
+                                                                            <span
+                                                                                class="font-semibold text-gray-900">Beranda</span>
+                                                                            <div class="text-xs text-gray-500">Halaman
+                                                                                Utama</div>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="flex items-center mx-3">
+                                                                    |
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#"
+                                                                        class="flex items-center text-gray-700 hover:text-primary transition-all duration-300 group">
+                                                                        <div>
+                                                                            <span
+                                                                                class="font-semibold text-gray-900">Voting</span>
+                                                                            <div class="text-xs text-gray-500">Miss Jawa
+                                                                                Timur 2025</div>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                            </ol>
+                                                        </div>
                                                     </div>
-                                                    <div class="mb-5">
-                                                        <h6
-                                                            class="relative pl-4 w-full rounded-full block text-md font-semibold py-3 px-5 bg-linear-(--heading-gradient) border-l-4 border-citrusyellow mb-6">
-                                                            <i class="fa fa-bell icon-bell mr-3" aria-hidden="true"></i>
-                                                            Revalina Liwanathaya Shanum telah divote (103 vote)
-                                                        </h6>
-                                                    </div>
-                                                    <div class="mb-5">
-                                                        <h6
-                                                            class="relative pl-4 w-full rounded-full block text-md font-semibold py-3 px-5 bg-linear-(--heading-gradient) border-l-4 border-citrusyellow mb-6">
-                                                            <i class="fa fa-bell icon-bell mr-3" aria-hidden="true"></i>
-                                                            Salwa Difa Raihana Hanifah (107 vote)
-                                                        </h6>
-                                                    </div>
-                                                    <div class="mb-5">
-                                                        <h6
-                                                            class="relative pl-4 w-full rounded-full block text-md font-semibold py-3 px-5 bg-linear-(--heading-gradient) border-l-4 border-citrusyellow mb-6">
-                                                            <i class="fa fa-bell icon-bell mr-3" aria-hidden="true"></i>
-                                                            Elizabeth Belvania Cahaya P (100 vote)
-                                                        </h6>
-                                                    </div>
-                                                </div>
+                                                </nav>
                                                 <div
                                                     class="bg-white border border-primary/20 xl:rounded-3xl rounded-xxl xl:p-10 pt-7.5 pb-5 px-5">
                                                     <div
@@ -4044,6 +4049,79 @@
                             span.textContent = curr + 1;
                         });
                     });
+            });
+        </script>
+
+        <!-- Toast Notification Script -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const toastContainer = document.createElement('div');
+                toastContainer.id = 'toast-container';
+                toastContainer.className = 'toast-container';
+                document.body.appendChild(toastContainer);
+
+                // Sample finalist data - replace with real data
+                const finalists = [{
+                        name: 'Dzakia Sheza Ayu Handayani',
+                        votes: 100
+                    },
+                    {
+                        name: 'Revalina Liwanathaya Shanum',
+                        votes: 103
+                    },
+                    {
+                        name: 'Salwa Difa Raihana Hanifah',
+                        votes: 107
+                    },
+                    {
+                        name: 'Elizabeth Belvania Cahaya P',
+                        votes: 100
+                    },
+                    {
+                        name: 'Belva Ayunindya A S',
+                        votes: 50
+                    },
+                    {
+                        name: 'Wildan Dhany Fauzan',
+                        votes: 45
+                    }
+                ];
+
+                let currentIndex = 0;
+
+                function showToast(finalist) {
+                    const toast = document.createElement('div');
+                    toast.className = 'toast';
+                    toast.innerHTML = `
+                        <div class="toast-content">
+                            <i class="fa fa-bell toast-icon"></i>
+                            <div class="toast-text">
+                                <strong>${finalist.name}</strong> telah divote (${finalist.votes} vote)
+                            </div>
+                        </div>
+                    `;
+
+                    toastContainer.appendChild(toast);
+
+                    // Auto remove after 5 seconds
+                    setTimeout(() => {
+                        toast.classList.add('fade-out');
+                        setTimeout(() => {
+                            if (toast.parentNode) {
+                                toast.parentNode.removeChild(toast);
+                            }
+                        }, 500);
+                    }, 5000);
+                }
+
+                // Show toast every 8 seconds
+                setInterval(() => {
+                    showToast(finalists[currentIndex]);
+                    currentIndex = (currentIndex + 1) % finalists.length;
+                }, 8000);
+
+                // Show first toast immediately
+                showToast(finalists[0]);
             });
         </script>
 </body>
