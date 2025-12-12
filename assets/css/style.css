@@ -16692,6 +16692,132 @@ button.scroltop span {
   color: #fff !important;
 }
 
+/* Modern news search card styles */
+.news-search-card {
+  background: linear-gradient(180deg, #ffffff 0%, #fbfbfb 100%);
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(16, 24, 40, 0.06);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.news-search-card .input-wrap {
+  position: relative;
+  flex: 1;
+}
+
+.news-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+.news-search-input {
+  width: 100%;
+  padding: 12px 16px 12px 40px;
+  border-radius: 10px;
+  border: 1px solid #e6e9ee;
+  background: #fff;
+  font-size: 0.95rem;
+  color: #111827;
+  transition: box-shadow 150ms ease, border-color 150ms ease;
+}
+
+.news-search-input:focus {
+  box-shadow: 0 6px 18px rgba(59, 130, 246, 0.08);
+  border-color: #60a5fa;
+  outline: none;
+}
+
+.news-search-select {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #e6e9ee;
+  background: #fff;
+  color: #374151;
+  min-width: 180px;
+}
+
+/* Custom select wrapper to provide a modern styled dropdown */
+.custom-select {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-select .news-search-select {
+  /* remove native arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 40px;
+  /* space for custom icon */
+  background-image: none;
+}
+
+.custom-select-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+.custom-select .news-search-select:focus {
+  outline: none;
+  border-color: #60a5fa;
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.08);
+}
+
+.custom-select .news-search-select:hover {
+  border-color: #c7d2fe;
+}
+
+/* Improve option readability on some mobile browsers */
+select.news-search-select option {
+  padding: 8px 12px;
+}
+
+.news-search-btn {
+  background: linear-gradient(90deg, #fb7185 0%, #ef4444 100%);
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 18px;
+  border: none;
+  box-shadow: 0 8px 24px rgba(239, 68, 68, 0.12);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.news-search-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(239, 68, 68, 0.14);
+}
+
+@media (max-width: 640px) {
+  .news-search-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .news-search-card .input-wrap {
+    width: 100%;
+  }
+
+  .news-search-select {
+    width: 100%;
+  }
+
+  .news-search-btn {
+    width: 100%;
+  }
+}
+
 
 /* General safeguard: ensure any .btn-primary children (icons/text/SVG) stay visible on hover */
 .btn.btn-primary:hover,
