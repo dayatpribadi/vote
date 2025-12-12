@@ -16639,6 +16639,15 @@ button.scroltop span {
   font-size: 1.25rem;
 }
 
+/* Ensure WhatsApp CTA .btn-primary text + svg are white on hover */
+.btn.btn-primary[href^="whatsapp://"]:hover,
+.btn.btn-primary[href^="whatsapp://"]:hover svg,
+.btn.btn-primary[href^="whatsapp://"]:hover svg * {
+  color: #fff !important;
+  fill: #fff !important;
+  stroke: #fff !important;
+}
+
 /* Progress Indicator (optional) */
 .payment-progress {
   display: flex;
