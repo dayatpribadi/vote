@@ -697,7 +697,8 @@
 
         <!-- HEADER START -->
         <header
-            class="site-header sticky-header fixed duration-500 z-999 bg-white before:absolute before:w-62.5 before:h-37.5 w-full before:-translate-x-1/2 before:bg-white before:shadow-header before:-z-1 max-4xl:before:hidden [.site-header.is-fixed]:animate-header-scroll-animation [.site-header.is-fixed]:top-0">
+            class="site-header sticky-header fixed duration-500 z-999 bg-white before:absolute before:w-62.5 before:h-37.5 w-full before:-translate-x-1/2 before:bg-white before:shadow-header before:-z-1 max-4xl:before:hidden [.site-header.is-fixed]:animate-header-scroll-animation [.site-header.is-fixed]:top-0"
+            style="top: 2.5rem">
             <div class="main-bar-wraper">
                 <div
                     class="container flex items-center justify-between relative w-full 2xl:min-h-20 min-h-20 2xxl:ps-8.75 px-4.5 2xxl:pe-13.75 duration-500">
@@ -720,8 +721,8 @@
                         class="lg:hidden fixed top-0 left-0 bg-black size-full duration-300 z-999 opacity-0 visible pointer-events-none menu-close fade-overlay">
                     </div>
                     <div
-                        class="flex lg:basis-auto lg:grow max-lg:flex-col 4xl:justify-start lg:justify-center justify-start font-base max-lg:fixed max-lg:h-screen max-lg:px-5 max-lg:top-0 max-lg:-left-75 max-lg:z-1 max-lg:bg-white max-lg:w-72 max-lg:overflow-auto max-lg:duration-700 header-nav custom-scroll">
-                        <div class="flex items-center relative z-9 py-6.25 lg:hidden">
+                        class="flex lg:basis-auto lg:grow max-lg:flex-col 4xl:justify-start lg:justify-center justify-start font-base max-lg:fixed max-lg:h-screen max-lg:px-5 max-lg:top-0 max-lg:-left-75 max-lg:z-9999 max-lg:bg-white max-lg:w-72 max-lg:overflow-auto max-lg:duration-700 header-nav custom-scroll">
+                        <div class="flex items-center relative z-9 py-2.25 lg:hidden">
                             <a href="index.html" class="table-cell align-middle">
                                 <img src="assets/images/superdev_.png" alt="" class="object-contain duration-500" />
                             </a>
@@ -879,21 +880,56 @@
                                                     Putra Putri Pelajar Nusantara Jawa Tengah Favorit 2026
                                                 </h3>
 
-                                                <!-- Vote stats: Peringkat, Harga, Hasil Voting -->
-                                                <div class="flex flex-wrap items-center justify-center gap-4 mb-6">
-                                                    <div class="text-center bg-white/5 px-4 py-2 rounded-2xl">
-                                                        <div class="text-xs text-gray-500">Peringkat</div>
-                                                        <div id="singleRank" class="text-xl font-black">1</div>
+                                                <div
+                                                    class="md:flex justify-between pt-7.5 pb-5 items-baseline border-t border-primary/20">
+                                                    <div class="flex flex-wrap mb-2.5">
+                                                        <div class="-mt-0.75 flex flex-wrap gap-1.25">
+                                                            <a class="block text-primary bg-paleaqua text-base font-title font-medium duration-500 py-1.75 px-5 rounded-3xl hover:bg-citrusyellow"
+                                                                href="services.html">FAQ Vote
+                                                                <i
+                                                                    class="fa-solid fa-arrow-up-right-from-square ml-2"></i></a>
+                                                            <a class="block text-primary bg-paleaqua text-base font-title font-medium duration-500 py-1.75 px-5 rounded-3xl hover:bg-citrusyellow"
+                                                                href="services.html">Tutorial Vote
+                                                                <i
+                                                                    class="fa-solid fa-arrow-up-right-from-square ml-2"></i></a>
+                                                            <a class="block text-primary bg-paleaqua text-base font-title font-medium duration-500 py-1.75 px-5 rounded-3xl hover:bg-citrusyellow"
+                                                                href="services.html">S & K Voting
+                                                                <i
+                                                                    class="fa-solid fa-arrow-up-right-from-square ml-2"></i></a>
+                                                        </div>
                                                     </div>
 
-                                                    <div class="text-center bg-white/5 px-4 py-2 rounded-2xl">
-                                                        <div class="text-xs text-gray-500">Harga</div>
-                                                        <div id="singlePrice" class="text-xl font-black">USD 1.00</div>
-                                                    </div>
-
-                                                    <div class="text-center bg-white/5 px-4 py-2 rounded-2xl">
-                                                        <div class="text-xs text-gray-500">Hasil Voting</div>
-                                                        <div id="singleVotes" class="text-xl font-black">500 votes</div>
+                                                    <div class="md:text-right max-md:mt-7.5">
+                                                        <ul class="social-icons">
+                                                            <li
+                                                                class="inline-flex size-11.5 bg-citrusyellow mr-2.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg mb-2.5 group">
+                                                                <a class="inline-flex size-9 bg-primary rounded-full justify-center items-center duration-500 text-white text-lg"
+                                                                    href="https://www.x.com" target="_blank"><i
+                                                                        class="fa-brands fa-x-twitter group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li
+                                                                class="inline-flex size-11.5 bg-citrusyellow mr-2.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg mb-2.5 group">
+                                                                <a class="inline-flex size-9 bg-primary rounded-full justify-center items-center duration-500 text-white text-lg"
+                                                                    href="https://www.facebook.com " target="_blank"><i
+                                                                        class="fa-brands fa-facebook group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li
+                                                                class="inline-flex size-11.5 bg-citrusyellow mr-2.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg mb-2.5 group">
+                                                                <a class="inline-flex size-9 bg-primary rounded-full justify-center items-center duration-500 text-white text-lg"
+                                                                    href="https://www.instagram.com" target="_blank"><i
+                                                                        class="fa-brands fa-instagram group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li
+                                                                class="inline-flex size-11.5 bg-citrusyellow mr-2.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg mb-2.5 group">
+                                                                <a class="inline-flex size-9 bg-primary rounded-full justify-center items-center duration-500 text-white text-lg"
+                                                                    href="https://www.pinterest.com/" target="_blank"><i
+                                                                        class="fa-brands fa-pinterest group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
                                                     </div>
                                                 </div>
 
@@ -925,16 +961,21 @@
                                                     <div class="clear" id="comment-list">
                                                         <div class="comments-area" id="comments">
                                                             <div>
-                                                                <div class="relative max-lg:flex max-lg:justify-center">
-                                                                    <div
-                                                                        class="w-12 min-w-12 mr-7.5 h-12 flex items-center justify-center">
-                                                                        <i
-                                                                            class="fa-solid fa-crown text-40 leading-[0.75] pt-1.25 px-10"></i>
+                                                                <div
+                                                                    class="relative max-lg:flex max-lg:justify-center justify-center">
+                                                                    <div class="w-full flex justify-center">
+                                                                        <div class="max-w-3xl w-full bg-white border border-primary/20 rounded-3xl p-6 text-center shadow-sm mx-4">
+                                                                            <div class="flex items-center justify-center gap-4">
+                                                                                <div class="w-12 min-w-12 h-12 flex items-center justify-center">
+                                                                                    <i class="fa-solid fa-crown text-40 leading-[0.75] pt-1.25 px-10"></i>
+                                                                                </div>
+                                                                                <h1 class="sm:text-28 text-28">
+                                                                                    Leaderboard Putra Putri Pelajar
+                                                                                    Nusantara Jawa Tengah Favorit 2026
+                                                                                </h1>
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
-                                                                    <h1 class="sm:text-28 text-28">
-                                                                        Leaderboard Putra Putri Pelajar
-                                                                        Nusantara Jawa Tengah Favorit 2026
-                                                                    </h1>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -2286,763 +2327,168 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-
-                                <!-- SIDE BAR START -->
-                                <div class="lg:w-1/3 xl:w-1/3 w-full mb-7.5">
-                                    <aside class="side-bar my-sticky space-top-0">
-                                        <!-- RECENT POSTS -->
-                                        <div class="mb-7.5 trv-recent-posts">
-                                            <!-- Enhanced Breadcrumb -->
-                                            <nav class="breadcrumb-nav mb-6" aria-label="Breadcrumb">
-                                                <div
-                                                    class="bg-gradient-to-r from-primary/10 pl-10 via-primary/5 to-transparent rounded-2xl p-4 border border-primary/20 shadow-sm">
-                                                    <div class="flex items-center justify-between">
-                                                        <ol class="flex items-center space-x-3 text-sm">
-                                                            <li>
-                                                                <a href="index.html"
-                                                                    class="flex items-center text-gray-700 hover:text-primary transition-all duration-300 group">
-                                                                    <div>
-                                                                        <span
-                                                                            class="font-semibold text-gray-900">Beranda</span>
-                                                                        <div class="text-xs text-gray-500">Halaman
-                                                                            Utama</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                            <li class="flex items-center mx-3">
-                                                                |
-                                                            </li>
-                                                            <li>
-                                                                <a href="#"
-                                                                    class="flex items-center text-gray-700 hover:text-primary transition-all duration-300 group">
-                                                                    <div>
-                                                                        <span
-                                                                            class="font-semibold text-gray-900">Voting</span>
-                                                                        <div class="text-xs text-gray-500">Miss Jawa
-                                                                            Timur 2025</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                        </ol>
-                                                    </div>
-                                                </div>
-                                            </nav>
-                                            <div
-                                                class="bg-white border border-primary/20 xl:rounded-3xl rounded-xxl xl:p-10 pt-7.5 pb-5 px-5">
-                                                <div
-                                                    class="sm:left-7.5 size-17.5 rounded-full bg-white duration-500 max-sm:mx-auto max-sm:mb-2.5 mb-5">
-                                                    <img class="w-full rounded-full"
-                                                        src="assets/images/comment-author/pic1.jpg" alt="img" width="70"
-                                                        height="70" loading="lazy" />
-                                                </div>
-                                                <div class="block mb-1.25">
-                                                    <cite
-                                                        class="sm:inline-block block text-heading font-title text-xl font-semibold not-italic">Diselenggarakan
-                                                        oleh :</cite>
-                                                </div>
-                                                <p class="text-sm max-sm:mb-5">
-                                                    Putra Putri Pelajar Nusantara Jawa Tengah
-                                                </p>
-                                                <div class="event-details mt-7.5">
-                                                    <h4 class="text-xl font-semibold mb-3">
-                                                        Detail Grandfinal
-                                                    </h4>
-                                                    <p class="text-sm mb-2">
-                                                        <i class="fa fa-calendar mr-4"></i>Minggu, 21
-                                                        Desember 2025
-                                                    </p>
-                                                    <p class="text-sm mb-2">
-                                                        <i class="fa fa-clock mr-4"></i>12:00 - 18:00
-                                                        (WIB)
-                                                    </p>
-                                                    <p class="text-sm mb-2">
-                                                        <i class="fa fa-map-marker mr-4"></i>Lokasi:
-                                                        Palur Plaza, Karanganyar
-                                                    </p>
-                                                    <p class="text-sm mb-2">
-                                                        <i class="fa fa-map-marker mr-4"></i>Venue:
-                                                        Palur Plaza, Karanganyar
-                                                    </p>
-                                                    <p class="text-sm mb-2 mt-7.5">
-                                                        <i class="fa fa-money-bill mr-4"></i>Harga:
-                                                        <br />
-                                                        <span class="text-2xl font-extrabold">IDR 5,000</span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Top Destinations -->
-                                        <div class="mb-7.5">
-                                            <div
-                                                class="bg-white border border-primary/20 xl:rounded-3xl rounded-xxl p-5">
-                                                <div class="relative border-b flex mb-7.5">
+                                    <!-- SIDE BAR START -->
+                                    <div class="lg:w-1/3 xl:w-1/3 w-full mb-7.5">
+                                        <aside class="side-bar my-sticky space-top-0">
+                                            <!-- RECENT POSTS -->
+                                            <div class="mb-7.5 trv-recent-posts">
+                                                <!-- Enhanced Breadcrumb -->
+                                                <nav class="breadcrumb-nav mb-6" aria-label="Breadcrumb">
                                                     <div
-                                                        class="sm:left-7.5 mr-5 size-17.5 bg-white duration-500 max-sm:mx-auto max-sm:mb-2.5">
-                                                        <img class="w-full" src="assets/images/krn/vote.png" alt="img"
-                                                            width="70" height="70" loading="lazy" />
-                                                    </div>
-                                                    <div class="bg-white rounded-xxl w-full">
-                                                        <div>
-                                                            <h5>
-                                                                <a href="blog-detail.html"
-                                                                    class="duration-500 2xl:text-xl/6 sm:text-lg text-sm font-title font-medium text-primary block hover:text-citrusyellow">
-                                                                    Putra Putri Pelajar Nusantara Jawa Tengah
-                                                                    Favorit 2026</a>
-                                                            </h5>
+                                                        class="bg-gradient-to-r from-primary/10 pl-10 via-primary/5 to-transparent rounded-2xl p-4 border border-primary/20 shadow-sm">
+                                                        <div class="flex items-center justify-between">
+                                                            <ol class="flex items-center space-x-3 text-sm">
+                                                                <li>
+                                                                    <a href="index.html"
+                                                                        class="flex items-center text-gray-700 hover:text-primary transition-all duration-300 group">
+                                                                        <div>
+                                                                            <span
+                                                                                class="font-semibold text-gray-900">Beranda</span>
+                                                                            <div class="text-xs text-gray-500">Halaman
+                                                                                Utama</div>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="flex items-center mx-3">
+                                                                    |
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#"
+                                                                        class="flex items-center text-gray-700 hover:text-primary transition-all duration-300 group">
+                                                                        <div>
+                                                                            <span
+                                                                                class="font-semibold text-gray-900">Voting</span>
+                                                                            <div class="text-xs text-gray-500">Miss Jawa
+                                                                                Timur 2025</div>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                            </ol>
                                                         </div>
                                                     </div>
+                                                </nav>
+                                                <div
+                                                    class="bg-white border border-primary/20 xl:rounded-3xl rounded-xxl xl:p-10 pt-7.5 pb-5 px-5">
+                                                    <div
+                                                        class="sm:left-7.5 size-17.5 rounded-full bg-white duration-500 max-sm:mx-auto max-sm:mb-2.5 mb-5">
+                                                        <img class="w-full rounded-full"
+                                                            src="assets/images/comment-author/pic1.jpg" alt="img"
+                                                            width="70" height="70" loading="lazy" />
+                                                    </div>
+                                                    <div class="block mb-1.25">
+                                                        <cite
+                                                            class="sm:inline-block block text-heading font-title text-xl font-semibold not-italic">Diselenggarakan
+                                                            oleh :</cite>
+                                                    </div>
+                                                    <p class="text-sm max-sm:mb-5">
+                                                        Putra Putri Pelajar Nusantara Jawa Tengah
+                                                    </p>
+                                                    <div class="event-details mt-7.5">
+                                                        <h4 class="text-xl font-semibold mb-3">
+                                                            Detail Grandfinal
+                                                        </h4>
+                                                        <p class="text-sm mb-2">
+                                                            <i class="fa fa-calendar mr-4"></i>Minggu, 21
+                                                            Desember 2025
+                                                        </p>
+                                                        <p class="text-sm mb-2">
+                                                            <i class="fa fa-clock mr-4"></i>12:00 - 18:00
+                                                            (WIB)
+                                                        </p>
+                                                        <p class="text-sm mb-2">
+                                                            <i class="fa fa-map-marker mr-4"></i>Lokasi:
+                                                            Palur Plaza, Karanganyar
+                                                        </p>
+                                                        <p class="text-sm mb-2">
+                                                            <i class="fa fa-map-marker mr-4"></i>Venue:
+                                                            Palur Plaza, Karanganyar
+                                                        </p>
+                                                        <p class="text-sm mb-2 mt-7.5">
+                                                            <i class="fa fa-money-bill mr-4"></i>Harga:
+                                                            <br />
+                                                            <span class="text-2xl font-extrabold">IDR 5,000</span>
+                                                        </p>
+                                                    </div>
                                                 </div>
-                                                <div class="billing space-y-2">
-                                                    <div class="flex justify-between text-sm mb-2">
-                                                        <span>Belva Ayunindya A S (1x)</span>
-                                                        <span>IDR 5,000</span>
-                                                    </div>
-                                                    <div class="flex justify-between text-sm mb-2">
-                                                        <span>Wildan Dhany Fauzan (1x)</span>
-                                                        <span>IDR 5,000</span>
-                                                    </div>
-                                                    <div class="flex justify-between text-sm mb-2">
-                                                        <span>Alia Oktavia Kristi (1x)</span>
-                                                        <span>IDR 5,000</span>
-                                                    </div>
-                                                    <div class="flex justify-between text-sm mb-2">
-                                                        <span>Mikayla Alodia Da... (10x)</span>
-                                                        <span>IDR 50,000</span>
-                                                    </div>
-                                                    <hr class="border-t border-primary/20 my-2.5" />
-                                                    <div class="flex justify-between font-semibold text-base">
-                                                        <span>Total</span>
-                                                        <span>IDR 65,000</span>
-                                                    </div>
+                                            </div>
 
-                                                    <!-- Jika Belum ada Finalis yang dipilih tampilkan ini -->
-                                                    <div class="before-select-finalis mt-3 hidden">
-                                                        <span>Belum ada finalis yang dipilih, silahkan
-                                                            pilih finalis terlebih dahulu</span>
+                                            <!-- Top Destinations -->
+                                            <div class="mb-7.5">
+                                                <div
+                                                    class="bg-white border border-primary/20 xl:rounded-3xl rounded-xxl p-5">
+                                                    <div class="relative border-b flex mb-7.5">
+                                                        <div
+                                                            class="sm:left-7.5 mr-5 size-17.5 bg-white duration-500 max-sm:mx-auto max-sm:mb-2.5">
+                                                            <img class="w-full" src="assets/images/krn/vote.png"
+                                                                alt="img" width="70" height="70" loading="lazy" />
+                                                        </div>
+                                                        <div class="bg-white rounded-xxl w-full">
+                                                            <div>
+                                                                <h5>
+                                                                    <a href="blog-detail.html"
+                                                                        class="duration-500 2xl:text-xl/6 sm:text-lg text-sm font-title font-medium text-primary block hover:text-citrusyellow">
+                                                                        Putra Putri Pelajar Nusantara Jawa Tengah
+                                                                        Favorit 2026</a>
+                                                                </h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="billing space-y-2">
+                                                        <div class="flex justify-between text-sm mb-2">
+                                                            <span>Belva Ayunindya A S (1x)</span>
+                                                            <span>IDR 5,000</span>
+                                                        </div>
+                                                        <div class="flex justify-between text-sm mb-2">
+                                                            <span>Wildan Dhany Fauzan (1x)</span>
+                                                            <span>IDR 5,000</span>
+                                                        </div>
+                                                        <div class="flex justify-between text-sm mb-2">
+                                                            <span>Alia Oktavia Kristi (1x)</span>
+                                                            <span>IDR 5,000</span>
+                                                        </div>
+                                                        <div class="flex justify-between text-sm mb-2">
+                                                            <span>Mikayla Alodia Da... (10x)</span>
+                                                            <span>IDR 50,000</span>
+                                                        </div>
                                                         <hr class="border-t border-primary/20 my-2.5" />
                                                         <div class="flex justify-between font-semibold text-base">
                                                             <span>Total</span>
-                                                            <span>IDR 0</span>
+                                                            <span>IDR 65,000</span>
                                                         </div>
+
+                                                        <!-- Jika Belum ada Finalis yang dipilih tampilkan ini -->
+                                                        <div class="before-select-finalis mt-3 hidden">
+                                                            <span>Belum ada finalis yang dipilih, silahkan
+                                                                pilih finalis terlebih dahulu</span>
+                                                            <hr class="border-t border-primary/20 my-2.5" />
+                                                            <div class="flex justify-between font-semibold text-base">
+                                                                <span>Total</span>
+                                                                <span>IDR 0</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- button -->
+                                                    <div
+                                                        class="btn-bayar bg-primary text-white py-3 px-5 rounded-25xl text-center cursor-pointer hover:bg-primary/80 transition duration-300 mt-7.5">
+                                                        <i class="fas fa-money-bill-wave mr-3"></i>
+                                                        Lanjutkan Pembayaran
                                                     </div>
                                                 </div>
-                                                <!-- button -->
-                                                <div
-                                                    class="btn-bayar bg-primary text-white py-3 px-5 rounded-25xl text-center cursor-pointer hover:bg-primary/80 transition duration-300 mt-7.5">
-                                                    <i class="fas fa-money-bill-wave mr-3"></i>
-                                                    Lanjutkan Pembayaran
-                                                </div>
                                             </div>
-                                        </div>
-                                    </aside>
+                                        </aside>
+                                    </div>
+                                    <!-- SIDE BAR END -->
                                 </div>
-                                <!-- SIDE BAR END -->
+
                             </div>
                         </div>
                     </div>
+                    <!-- SECTION END -->
                 </div>
-                <!-- SECTION END -->
-            </div>
-            <!-- CONTENT END -->
+                <!-- CONTENT END -->
 
-            <!-- FOOTER BLOCKES START -->
-            <div class="container">
-                <div class="sm:pt-20 pt-10 text-white/06 border-b border-primary">
-                    <div class="grid grid-cols-12">
-                        <div class="lg:col-span-8 col-span-12 sm:px-3.75">
-                            <div class="mb-10">
-                                <div class="mb-10 text-center block max-w-48.25 after:table after:clear-both">
-                                    <a href="index.html"><img src="assets/images/superdev_.png" alt="logo" width="193"
-                                            height="81" loading="lazy" /></a>
-                                </div>
-                                <p class="sm:pr-12.5 mb-4 text-base text-white/50">
-                                    Platform ticketing dan voting online yang terpercaya.
-                                    Hanya dengan 1 website, kamu dapat langsung memberikan
-                                    dukungan pada finalis favorit kamu atau membeli tiket
-                                    dari event yang kamu inginkan. Transparan dan kenyamanan
-                                    user adalah kunci utama dari Superdev Indonesia.
-                                </p>
-
-                                <!-- Contact buttons -->
-                                <div class="flex flex-row gap-4 flex-wrap m-5">
-                                    <a href="tel:6285232304965"
-                                        class="flex items-center rounded-2xl gap-3 p-4 bg-transparent border border-white text-white flex-1"
-                                        style="margin:10px !important; padding:10px !important;">
-                                        <span
-                                            class="w-12 h-12 flex items-center justify-center bg-white/10 text-white rounded-full flex-shrink-0">
-                                            <i class="fa-solid fa-headset text-xl"></i>
-                                        </span>
-                                        <div>
-                                            <div class="font-semibold">Customer Support</div>
-                                            <div class="text-sm">Irwan Sanjaya <br> +62 852-3230-4965</div>
-                                        </div>
-                                    </a>
-
-                                    <a href="https://wa.me/6282124594440"
-                                        class="flex items-center rounded-2xl gap-3 p-4 bg-transparent border border-white text-white flex-1"
-                                        style="margin:10px !important; padding:10px !important;">
-                                        <span
-                                            class="w-12 h-12 flex items-center justify-center bg-white/10 text-white rounded-full flex-shrink-0">
-                                            <i class="fa-brands fa-whatsapp text-xl"></i>
-                                        </span>
-                                        <div>
-                                            <div class="font-semibold">Event dan Vote</div>
-                                            <div class="text-sm">Irwan Sanjaya <br> +62 821-2459-4440</div>
-                                        </div>
-                                    </a>
-
-                                    <a href="mailto:info@kreen.id"
-                                        class="flex items-center rounded-2xl gap-3 p-4 bg-transparent border border-white text-white flex-1"
-                                        style="margin:10px !important; padding:10px !important;">
-                                        <span
-                                            class="w-12 h-12 flex items-center justify-center bg-white/10 text-white rounded-full flex-shrink-0">
-                                            <i class="fa-solid fa-envelope text-xl"></i>
-                                        </span>
-                                        <div>
-                                            <div class="font-semibold">Contact Us</div>
-                                            <div class="text-sm">info@superdev_.id</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <ul class="mt-5">
-                                    <li
-                                        class="inline-flex xl:size-11.5 size-10.5 bg-citrusyellow xl:mr-2.5 mr-1.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
-                                        <a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg"
-                                            href="https://www.x.com" target="_blank">
-                                            <i
-                                                class="fa-brands fa-x-twitter group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
-                                        </a>
-                                    </li>
-                                    <li
-                                        class="inline-flex xl:size-11.5 size-10.5 bg-citrusyellow xl:mr-2.5 mr-1.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
-                                        <a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg"
-                                            href="https://www.facebook.com" target="_blank">
-                                            <i
-                                                class="fa-brands fa-facebook group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
-                                        </a>
-                                    </li>
-                                    <li
-                                        class="inline-flex xl:size-11.5 size-10.5 bg-citrusyellow xl:mr-2.5 mr-1.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
-                                        <a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg"
-                                            href="https://www.instagram.com" target="_blank">
-                                            <i
-                                                class="fa-brands fa-instagram group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
-                                        </a>
-                                    </li>
-                                    <li
-                                        class="inline-flex xl:size-11.5 size-10.5 bg-citrusyellow xl:mr-2.5 mr-1.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
-                                        <a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg"
-                                            href="https://www.pinterest.com/" target="_blank">
-                                            <i
-                                                class="fa-brands fa-pinterest group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="lg:col-span-2 col-span-6 mb-5 sm:px-3.75">
-                            <div class="mb-10">
-                                <h3 class="!text-white mb-7.5 relative xl:text-28 text-2xl">
-                                    Tentang Kami
-                                </h3>
-                                <ul>
-                                    <li class="block w-full py-0.5 overflow-hidden">
-                                        <a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
-                                            href="tentang.html">Tentang Kami</a>
-                                    </li>
-                                    <li class="block w-full py-0.5 overflow-hidden">
-                                        <a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
-                                            href="kontak.html">Kontak Kami</a>
-                                    </li>
-                                    <li class="block w-full py-0.5 overflow-hidden">
-                                        <a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
-                                            href="pusat-bantuan.html">Pusat Bantuan</a>
-                                    </li>
-                                    <li class="block w-full py-0.5 overflow-hidden">
-                                        <a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
-                                            href="voting.html">Voting</a>
-                                    </li>
-                                    <li class="block w-full py-0.5 overflow-hidden">
-                                        <a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
-                                            href="berita-event.html">Berita Event</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="lg:col-span-2 col-span-6 mb-5 sm:px-3.75">
-                            <div class="mb-10">
-                                <h3 class="!text-white mb-7.5 relative xl:text-28 text-2xl">
-                                    Legal
-                                </h3>
-                                <ul>
-                                    <li class="block w-full py-0.5 overflow-hidden">
-                                        <a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
-                                            href="about-1.html">Terms & Condition</a>
-                                    </li>
-                                    <li class="block w-full py-0.5 overflow-hidden">
-                                        <a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
-                                            href="faq.html">Privacy Policy</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="py-10 text-white relative z-1 font-normal after:absolute after:bg-primary after:max-w-135 after:h-px after:left-1/2 after:top-0 after:-translate-x-1/2">
-                    <div class="container">
-                        <p class="copyrights-text text-center text-sm font-semibold">
-                            © <span class="current-year">2025</span>
-                            <a href="#" target="_blank"><span
-                                    class="inline-block text-citrusyellow uppercase text-center text-sm font-semibold">Superdev
-                                    Indonesia</span></a>
-                            All Rights Reserved.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!-- FOOTER COPYRIGHT -->
-        </div>
-    </div>
-
-    <!-- BUTTON TOP START -->
-    <button class="scroltop">
-        <span class="fa fa-angle-up relative" id="btn-vibrate"></span>
-    </button>
-
-    <div id="offcanvas-right"
-        class="fixed top-0 right-0 z-9999999 h-screen overflow-y-auto transition-transform translate-x-full bg-black/20 backdrop-blur-[5px] sm:max-w-125 max-w-88 custom-scroll">
-        <button type="button"
-            class="absolute right-0 top-6 text-[#443935] bg-citrusyellow text-base size-7 cursor-pointer rounded m-6.25"
-            data-drawer-hide="offcanvas-right" aria-label="Close">
-            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-        </button>
-        <div class="pt-30 pb-10 px-8">
-            <div class="">
-                <div class="mb-15">
-                    <img src="assets/images/logo-dark.png" alt="Image" class="max-w-33.5" />
-                </div>
-                <div class="trv-side-pnl-content">
-                    <div class="mb-15">
-                        <h3 class="text-28 !text-white mb-5">Dukung Finalis Favoritmu</h3>
-                        <h3 class="!text-secondary text-5xl mb-5 uppercase">
-                            Ayo Berikan Dukunganmu
-                        </h3>
-                        <p class="text-base !text-white/50">
-                            Platform voting online untuk mendukung finalis pilihan kamu. Mudah, aman, dan transparan —
-                            langsung dari Superdev Indonesia.
-                        </p>
-                    </div>
-
-                    <h3 class="text-28 !text-white mb-5">
-                        Informasi Penting
-                    </h3>
-                    <ul class="text-white/80 space-y-2 pb-8 mb-6">
-                        <li class="text-sm">Batas akhir voting: <strong>31 Desember 2025, 23:59 WIB</strong></li>
-                        <li class="text-sm">Harga dukungan mulai dari: <strong>IDR 5,000</strong> per vote</li>
-                        <li class="text-sm">Hubungi: <a href="tel:6285232304965" class="underline">0821-2459-4440</a></li>
-                    </ul>
-
-                    <ul class="mt-5">
-                        <li
-                            class="inline-flex size-11.5 bg-citrusyellow mr-2.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
-                            <a class="inline-flex size-9 bg-primary rounded-full justify-center items-center duration-500 text-white text-lg"
-                                href="https://www.x.com">
-                                <i
-                                    class="fa-brands fa-x-twitter group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
-                            </a>
-                        </li>
-                        <li
-                            class="inline-flex size-11.5 bg-citrusyellow mr-2.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
-                            <a class="inline-flex size-9 bg-primary rounded-full justify-center items-center duration-500 text-white text-lg"
-                                href="https://www.facebook.com">
-                                <i
-                                    class="fa-brands fa-facebook group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
-                            </a>
-                        </li>
-                        <li
-                            class="inline-flex size-11.5 bg-citrusyellow mr-2.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
-                            <a class="inline-flex size-9 bg-primary rounded-full justify-center items-center duration-500 text-white text-lg"
-                                href="https://www.instagram.com">
-                                <i
-                                    class="fa-brands fa-instagram group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
-                            </a>
-                        </li>
-                        <li
-                            class="inline-flex size-11.5 bg-citrusyellow mr-2.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
-                            <a class="inline-flex size-9 bg-primary rounded-full justify-center items-center duration-500 text-white text-lg"
-                                href="https://www.pinterest.com/">
-                                <i
-                                    class="fa-brands fa-pinterest group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Detail Finalis Modal (hidden by default) -->
-    <div class="finalis-modal" id="finalisModal" aria-hidden="true">
-        <div class="modal-panel" role="dialog" aria-modal="true">
-            <div class="modal-header">
-                <h4 class="modal-title">Detail Finalis</h4>
-                <button class="modal-close" id="finalisModalClose" aria-label="Tutup">
-                    ✕
-                </button>
-            </div>
-            <div class="modal-body" id="finalisModalBody">
-                <!-- cloned finalist content will be inserted here -->
-            </div>
-        </div>
-    </div>
-
-    <!-- Payment modal -->
-    <div class="payment-modal" id="paymentModal" aria-hidden="true">
-        <div class="payment-modal-panel" role="dialog" aria-modal="true" aria-labelledby="paymentModalTitle"
-            tabindex="-1">
-            <div class="payment-modal-header">
-                <div class="payment-modal-title-wrap">
-                    <h3 id="paymentModalTitle" class="text-2xl font-black mb-0">Yuk Isi Data Diri Dulu....</h3>
-                    <p class="text-sm text-gray-500 mb-0">Lengkapi data diri untuk melanjutkan</p>
-                </div>
-                <button class="payment-modal-close" id="paymentModalClose" aria-label="Tutup">✕</button>
-            </div>
-
-            <div class="payment-modal-body">
-                <div class="payment-content">
-                    <form id="paymentForm">
-                        <div class="payment-modal-grid">
-                            <!-- Left column: user data -->
-                            <div class="payment-left">
-                                <!-- Data Diri Section -->
-                                <div class="form-section">
-                                    <h4 class="form-section-title">Data Diri</h4>
-                                    <div class="grid grid-cols-1 gap-2">
-                                        <div class="form-group">
-                                            <label class="form-label">Nama Lengkap<span>*</span></label>
-                                            <input id="payerName" name="name" type="text"
-                                                placeholder="Masukkan nama lengkap" class="form-input" required />
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="form-label">No. WhatsApp<span>*</span></label>
-                                            <input id="payerPhone" name="phone" type="tel" placeholder="0812-3456-7890"
-                                                class="form-input" required />
-                                        </div>
-
-                                        <div class="form-group md:col-span-2">
-                                            <label class="form-label">Email</label>
-                                            <input id="payerEmail" name="email" type="email"
-                                                placeholder="nama@email.com" class="form-input" />
-                                        </div>
-
-                                        <div class="form-group md:col-span-2">
-                                            <label class="form-label">Jenis Kelamin<span>*</span></label>
-                                            <div class="gender-selection">
-                                                <div class="gender-options">
-                                                    <label class="gender-card" data-value="male">
-                                                        <input type="radio" name="gender" value="male" class="hidden"
-                                                            required />
-                                                        <div class="gender-icon">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="40"
-                                                                height="40" viewBox="0 0 24 24" fill="none"
-                                                                stroke="currentColor" stroke-width="1.5"
-                                                                stroke-linecap="round" stroke-linejoin="round">
-                                                                <path
-                                                                    d="M10 12h4m-2-2v4m4-10V4h2m0 0h2m-2 0v2m0 4a6 6 0 11-12 0 6 6 0 0112 0z" />
-                                                            </svg>
-                                                        </div>
-                                                        <span>Laki-laki</span>
-                                                    </label>
-
-                                                    <label class="gender-card" data-value="female">
-                                                        <input type="radio" name="gender" value="female"
-                                                            class="hidden" />
-                                                        <div class="gender-icon">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="40"
-                                                                height="40" viewBox="0 0 24 24" fill="none"
-                                                                stroke="currentColor" stroke-width="1.5"
-                                                                stroke-linecap="round" stroke-linejoin="round">
-                                                                <circle cx="12" cy="8" r="4" />
-                                                                <path d="M5 20v-2a7 7 0 0110.577-5.923M15 20l2-2 4 4" />
-                                                            </svg>
-                                                        </div>
-                                                        <span>Perempuan</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Right column: payment methods & actions -->
-                            <div class="payment-right">
-                                <!-- Order Summary -->
-                                <div class="order-summary bg-white border border-gray-100 rounded-2xl">
-                                    <h6 class="font-semibold text-sm mb-3">
-                                        Ringkasan Pembayaran
-                                    </h6>
-                                    <ul class="billing-list text-sm text-gray-600 mb-3">
-                                        <li class="flex justify-between">
-                                            <span>Belva Ayunindya A S (1x)</span><span>IDR 5,000</span>
-                                        </li>
-                                        <li class="flex justify-between">
-                                            <span>Wildan Dhany Fauzan (1x)</span><span>IDR 5,000</span>
-                                        </li>
-                                    </ul>
-                                    <div class="flex justify-between font-semibold text-base">
-                                        <span>Total</span>
-                                        <span>IDR 65,000</span>
-                                    </div>
-                                </div>
-
-                                <!-- Metode Pembayaran Section -->
-                                <div class="form-section">
-                                    <h4 class="form-section-title">Pilih Metode Pembayaran</h4>
-                                    <p class="payment-section-subtitle">
-                                        Pilih metode pembayaran yang paling nyaman untukmu
-                                    </p>
-
-                                    <!-- Scrollable container for payment methods -->
-                                    <div class="payment-methods-scroll">
-                                        <!-- QRIS -->
-                                        <div class="payment-method-group">
-                                            <h5 class="payment-method-group-title">QR Code</h5>
-                                            <div class="payment-methods-grid">
-                                                <label class="payment-method-card" data-value="qris">
-                                                    <input type="radio" name="payment_method" value="qris"
-                                                        class="hidden" />
-                                                    <div class="payment-method-icon">
-                                                        <img src="assets/images/krn/qris.png" alt="QRIS" />
-                                                    </div>
-                                                    <div class="payment-method-info">
-                                                        <div class="payment-method-name">
-                                                            QRIS
-                                                            <span class="payment-method-tag">ID</span>
-                                                        </div>
-                                                        <div class="payment-method-description">
-                                                            Pembayaran cepat dengan scan QR code
-                                                        </div>
-                                                    </div>
-                                                </label>
-                                            </div>
-                                        </div>
-
-                                        <!-- Virtual Account -->
-                                        <div class="payment-method-group">
-                                            <h5 class="payment-method-group-title">
-                                                Virtual Account
-                                            </h5>
-                                            <div class="payment-methods-grid">
-                                                <label class="payment-method-card" data-value="bca_va">
-                                                    <input type="radio" name="payment_method" value="bca_va"
-                                                        class="hidden" />
-                                                    <div class="payment-method-icon">
-                                                        <img src="assets/images/krn/bca.png" alt="BCA" />
-                                                    </div>
-                                                    <div class="payment-method-info">
-                                                        <div class="payment-method-name">
-                                                            BCA Virtual Account
-                                                            <span class="payment-method-tag">ID</span>
-                                                        </div>
-                                                        <div class="payment-method-description">
-                                                            Transfer via BCA tanpa biaya admin
-                                                        </div>
-                                                    </div>
-                                                </label>
-                                            </div>
-                                        </div>
-
-                                        <!-- Debit Bank -->
-                                        <div class="payment-method-group">
-                                            <h5 class="payment-method-group-title">Debit Bank</h5>
-                                            <div class="payment-methods-grid">
-                                                <label class="payment-method-card" data-value="debit_bca">
-                                                    <input type="radio" name="payment_method" value="debit_bca"
-                                                        class="hidden" />
-                                                    <div class="payment-method-icon">
-                                                        <img src="assets/images/krn/bca.png" alt="BCA" />
-                                                    </div>
-                                                    <div class="payment-method-info">
-                                                        <div class="payment-method-name">
-                                                            BCA Debit <span class="payment-method-tag">ID</span>
-                                                        </div>
-                                                        <div class="payment-method-description">
-                                                            Bayar dengan kartu debit BCA
-                                                        </div>
-                                                    </div>
-                                                </label>
-
-                                                <label class="payment-method-card" data-value="debit_mandiri">
-                                                    <input type="radio" name="payment_method" value="debit_mandiri"
-                                                        class="hidden" />
-                                                    <div class="payment-method-icon">
-                                                        <img src="assets/images/krn/mandiri.png" alt="Mandiri" />
-                                                    </div>
-                                                    <div class="payment-method-info">
-                                                        <div class="payment-method-name">
-                                                            Mandiri Debit
-                                                            <span class="payment-method-tag">ID</span>
-                                                        </div>
-                                                        <div class="payment-method-description">
-                                                            Bayar dengan kartu debit Mandiri
-                                                        </div>
-                                                    </div>
-                                                </label>
-
-                                                <label class="payment-method-card" data-value="debit_bri">
-                                                    <input type="radio" name="payment_method" value="debit_bri"
-                                                        class="hidden" />
-                                                    <div class="payment-method-icon">
-                                                        <img src="assets/images/krn/bri.png" alt="BRI" />
-                                                    </div>
-                                                    <div class="payment-method-info">
-                                                        <div class="payment-method-name">
-                                                            BRI Debit <span class="payment-method-tag">ID</span>
-                                                        </div>
-                                                        <div class="payment-method-description">
-                                                            Bayar dengan kartu debit BRI
-                                                        </div>
-                                                    </div>
-                                                </label>
-
-                                                <label class="payment-method-card" data-value="debit_bni">
-                                                    <input type="radio" name="payment_method" value="debit_bni"
-                                                        class="hidden" />
-                                                    <div class="payment-method-icon">
-                                                        <img src="assets/images/krn/bni.png" alt="BNI" />
-                                                    </div>
-                                                    <div class="payment-method-info">
-                                                        <div class="payment-method-name">
-                                                            BNI Debit <span class="payment-method-tag">ID</span>
-                                                        </div>
-                                                        <div class="payment-method-description">
-                                                            Bayar dengan kartu debit BNI
-                                                        </div>
-                                                    </div>
-                                                </label>
-
-                                                <label class="payment-method-card" data-value="debit_permata">
-                                                    <input type="radio" name="payment_method" value="debit_permata"
-                                                        class="hidden" />
-                                                    <div class="payment-method-icon">
-                                                        <img src="assets/images/krn/permata.png" alt="Permata" />
-                                                    </div>
-                                                    <div class="payment-method-info">
-                                                        <div class="payment-method-name">
-                                                            Permata Debit
-                                                            <span class="payment-method-tag">ID</span>
-                                                        </div>
-                                                        <div class="payment-method-description">
-                                                            Bayar dengan kartu debit Permata
-                                                        </div>
-                                                    </div>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Info Boxes -->
-                                    <div class="info-box info-box-help">
-                                        <div class="info-box-content">
-                                            <div class="info-box-title">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                    <circle cx="12" cy="12" r="10" />
-                                                    <path d="M12 16v-4m0-4h.01" />
-                                                </svg>
-                                                Butuh bantuan?
-                                            </div>
-                                            <p class="info-box-text">
-                                                Apakah kamu mengalami masalah dengan transaksi ini?
-                                                <a href="#" class="info-box-link">Dapatkan Bantuan</a>
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="info-box info-box-warning">
-                                        <div class="info-box-content">
-                                            <div class="info-box-title">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path
-                                                        d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
-                                                    <line x1="12" y1="9" x2="12" y2="13" />
-                                                    <line x1="12" y1="17" x2="12.01" y2="17" />
-                                                </svg>
-                                                Perhatian
-                                            </div>
-                                            <p class="info-box-text">
-                                                Vote yang telah diberikan bersifat final dan tidak dapat
-                                                dikembalikan.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Terms & Conditions -->
-                                    <div class="checkbox-group">
-                                        <div class="checkbox-item">
-                                            <input type="checkbox" name="agree_share" id="agree_share"
-                                                class="form-checkbox" />
-                                            <label for="agree_share">
-                                                Saya menyetujui bahwa <span>KREEN</span> dapat
-                                                membagikan informasi saya kepada pihak penyelenggara
-                                                acara untuk keperluan administrasi voting.
-                                            </label>
-                                        </div>
-
-                                        <div class="checkbox-item">
-                                            <input type="checkbox" name="agree_terms" id="agree_terms"
-                                                class="form-checkbox" required />
-                                            <label for="agree_terms">
-                                                Saya telah membaca dan menyetujui
-                                                <span>Syarat & Ketentuan Voting</span>
-                                                yang berlaku.
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-            <div class="payment-modal-footer">
-                <!-- Action Buttons -->
-                <div class="payment-actions">
-                    <button type="button" class="btn btn-primary" id="confirmPayment">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="btn-icon">
-                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
-                            <polyline points="22 4 12 14.01 9 11.01" />
-                        </svg>
-                        Lanjutkan Pembayaran
-                    </button>
-
-                    <button type="button" class="btn btn-secondary" id="cancelPayment">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="btn-icon">
-                            <line x1="18" y1="6" x2="6" y2="18" />
-                            <line x1="6" y1="6" x2="18" y2="18" />
-                        </svg>
-                        Batalkan
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- FOOTER START -->
-    <footer class="pt-20 bg-primary bg-cover" style="
+                <!-- FOOTER START -->
+                <footer class="pt-20 bg-primary bg-cover" style="
               background-image: url(&quot;assets/images/bg-foots.jpg&quot;);
               background-repeat: no-repeat;
               background-position: center;
@@ -3229,372 +2675,819 @@
                     <!-- FOOTER COPYRIGHT -->
                 </footer>
                 <!-- FOOTER END -->
+            </div>
+        </div>
 
-    <!-- JAVASCRIPT  FILES ========================================= -->
-    <script src="assets/vendor/gsap/gsap.min.js"></script>
-    <script src="assets/vendor/gsap/ScrollSmoother.js"></script>
-    <script src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/flatpickr/js/flatpickr.js"></script>
-    <script src="assets/js/jquery-3.7.1.min.js"></script>
-    <script src="assets/js/theia-sticky-sidebar.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/dz.carousel.js"></script>
-    <script src="assets/js/lc_lightbox.lite.js"></script>
-    <script src="assets/vendor/magnific-popup/magnific-popup.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
-    <!-- Google API For Recaptcha  -->
-    <script src="assets/vendor/nouislider/nouislider.min.js"></script>
-    <script src="assets/vendor/group-slide/group-loop.js"></script>
-    <script src="assets/js/dz.ajax.js"></script>
-    <!-- CONTACT JS  -->
-    <script src="assets/vendor/xmenu/xmenu.js"></script>
+        <!-- BUTTON TOP START -->
+        <button class="scroltop">
+            <span class="fa fa-angle-up relative" id="btn-vibrate"></span>
+        </button>
 
-    <script src="assets/js/animation.js"></script>
-    <script src="assets/js/custom.js"></script>
+        <div id="offcanvas-right"
+            class="fixed top-0 right-0 z-9999999 h-screen overflow-y-auto transition-transform translate-x-full bg-black/20 backdrop-blur-[5px] sm:max-w-125 max-w-88 custom-scroll">
+            <button type="button"
+                class="absolute right-0 top-6 text-[#443935] bg-citrusyellow text-base size-7 cursor-pointer rounded m-6.25"
+                data-drawer-hide="offcanvas-right" aria-label="Close">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+            <div class="pt-30 pb-10 px-8">
+                <div class="">
+                    <div class="mb-15">
+                        <img src="assets/images/logo-dark.png" alt="Image" class="max-w-33.5" />
+                    </div>
+                    <div class="trv-side-pnl-content">
+                        <div class="mb-15">
+                            <h3 class="text-28 !text-white mb-5">It's Time to Traveling</h3>
+                            <h3 class="!text-secondary text-5xl mb-5 uppercase">
+                                Plan Your Next Holiday
+                            </h3>
+                            <p class="text-base !text-white/50">
+                                Travlla is a multi-award-winning strategy and content creation
+                                agency that specializes in travel marketing.
+                            </p>
+                        </div>
 
-    <script>
-        let selectedVotes = 0;
-        let selectedPrice = 0;
-        let currentFinalist = {
-            image: '',
-            country: '',
-            number: ''
-        };
+                        <h3 class="text-28 !text-white mb-5">
+                            Don't miss out this offers!
+                        </h3>
+                        <ul
+                            class="flex justify-between pb-10 mb-10 relative after:w-75 after:bg-white/15 after:h-px after:absolute after:left-1/2 after:bottom-0 after:-translate-x-1/2">
+                            <li>
+                                <h2 class="!text-secondary text-34 mb-2">$199</h2>
+                                <span class="!text-white text-lg font-medium font-title">Basic Plan</span>
+                            </li>
+                            <li>
+                                <h2 class="!text-secondary text-34 mb-2">$299</h2>
+                                <span class="!text-white text-lg font-medium font-title">Pro Plan</span>
+                            </li>
+                            <li>
+                                <h2 class="!text-secondary text-34 mb-2">$399</h2>
+                                <span class="!text-white text-lg font-medium font-title">Full Plan</span>
+                            </li>
+                        </ul>
 
-        function openVotingModal(image, country, number) {
-            currentFinalist = {
-                image,
-                country,
-                number
+                        <ul class="mt-5">
+                            <li
+                                class="inline-flex size-11.5 bg-citrusyellow mr-2.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
+                                <a class="inline-flex size-9 bg-primary rounded-full justify-center items-center duration-500 text-white text-lg"
+                                    href="https://www.x.com">
+                                    <i
+                                        class="fa-brands fa-x-twitter group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
+                                </a>
+                            </li>
+                            <li
+                                class="inline-flex size-11.5 bg-citrusyellow mr-2.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
+                                <a class="inline-flex size-9 bg-primary rounded-full justify-center items-center duration-500 text-white text-lg"
+                                    href="https://www.facebook.com">
+                                    <i
+                                        class="fa-brands fa-facebook group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
+                                </a>
+                            </li>
+                            <li
+                                class="inline-flex size-11.5 bg-citrusyellow mr-2.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
+                                <a class="inline-flex size-9 bg-primary rounded-full justify-center items-center duration-500 text-white text-lg"
+                                    href="https://www.instagram.com">
+                                    <i
+                                        class="fa-brands fa-instagram group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
+                                </a>
+                            </li>
+                            <li
+                                class="inline-flex size-11.5 bg-citrusyellow mr-2.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
+                                <a class="inline-flex size-9 bg-primary rounded-full justify-center items-center duration-500 text-white text-lg"
+                                    href="https://www.pinterest.com/">
+                                    <i
+                                        class="fa-brands fa-pinterest group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detail Finalis Modal (hidden by default) -->
+        <div class="finalis-modal" id="finalisModal" aria-hidden="true">
+            <div class="modal-panel" role="dialog" aria-modal="true">
+                <div class="modal-header">
+                    <h4 class="modal-title">Detail Finalis</h4>
+                    <button class="modal-close" id="finalisModalClose" aria-label="Tutup">
+                        ✕
+                    </button>
+                </div>
+                <div class="modal-body" id="finalisModalBody">
+                    <!-- cloned finalist content will be inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Payment modal -->
+        <div class="payment-modal" id="paymentModal" aria-hidden="true">
+            <div class="payment-modal-panel" role="dialog" aria-modal="true" aria-labelledby="paymentModalTitle"
+                tabindex="-1">
+                <div class="payment-modal-header">
+                    <div class="payment-modal-title-wrap">
+                        <h3 id="paymentModalTitle" class="text-2xl font-black mb-0">Yuk Isi Data Diri Dulu....</h3>
+                        <p class="text-sm text-gray-500 mb-0">Lengkapi data diri untuk melanjutkan</p>
+                    </div>
+                    <button class="payment-modal-close" id="paymentModalClose" aria-label="Tutup">✕</button>
+                </div>
+
+                <div class="payment-modal-body">
+                    <div class="payment-content">
+                        <form id="paymentForm">
+                            <div class="payment-modal-grid">
+                                <!-- Left column: user data -->
+                                <div class="payment-left">
+                                    <!-- Data Diri Section -->
+                                    <div class="form-section">
+                                        <h4 class="form-section-title">Data Diri</h4>
+                                        <div class="grid grid-cols-1 gap-2">
+                                            <div class="form-group">
+                                                <label class="form-label">Nama Lengkap<span>*</span></label>
+                                                <input id="payerName" name="name" type="text"
+                                                    placeholder="Masukkan nama lengkap" class="form-input" required />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="form-label">No. WhatsApp<span>*</span></label>
+                                                <input id="payerPhone" name="phone" type="tel"
+                                                    placeholder="0812-3456-7890" class="form-input" required />
+                                            </div>
+
+                                            <div class="form-group md:col-span-2">
+                                                <label class="form-label">Email</label>
+                                                <input id="payerEmail" name="email" type="email"
+                                                    placeholder="nama@email.com" class="form-input" />
+                                            </div>
+
+                                            <div class="form-group md:col-span-2">
+                                                <label class="form-label">Jenis Kelamin<span>*</span></label>
+                                                <div class="gender-selection">
+                                                    <div class="gender-options">
+                                                        <label class="gender-card" data-value="male">
+                                                            <input type="radio" name="gender" value="male"
+                                                                class="hidden" required />
+                                                            <div class="gender-icon">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="40"
+                                                                    height="40" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                    <path
+                                                                        d="M10 12h4m-2-2v4m4-10V4h2m0 0h2m-2 0v2m0 4a6 6 0 11-12 0 6 6 0 0112 0z" />
+                                                                </svg>
+                                                            </div>
+                                                            <span>Laki-laki</span>
+                                                        </label>
+
+                                                        <label class="gender-card" data-value="female">
+                                                            <input type="radio" name="gender" value="female"
+                                                                class="hidden" />
+                                                            <div class="gender-icon">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="40"
+                                                                    height="40" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                    <circle cx="12" cy="8" r="4" />
+                                                                    <path
+                                                                        d="M5 20v-2a7 7 0 0110.577-5.923M15 20l2-2 4 4" />
+                                                                </svg>
+                                                            </div>
+                                                            <span>Perempuan</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Right column: payment methods & actions -->
+                                <div class="payment-right">
+                                    <!-- Order Summary -->
+                                    <div class="order-summary bg-white border border-gray-100 rounded-2xl">
+                                        <h6 class="font-semibold text-sm mb-3">
+                                            Ringkasan Pembayaran
+                                        </h6>
+                                        <ul class="billing-list text-sm text-gray-600 mb-3">
+                                            <li class="flex justify-between">
+                                                <span>Belva Ayunindya A S (1x)</span><span>IDR 5,000</span>
+                                            </li>
+                                            <li class="flex justify-between">
+                                                <span>Wildan Dhany Fauzan (1x)</span><span>IDR 5,000</span>
+                                            </li>
+                                        </ul>
+                                        <div class="flex justify-between font-semibold text-base">
+                                            <span>Total</span>
+                                            <span>IDR 65,000</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Metode Pembayaran Section -->
+                                    <div class="form-section">
+                                        <h4 class="form-section-title">Pilih Metode Pembayaran</h4>
+                                        <p class="payment-section-subtitle">
+                                            Pilih metode pembayaran yang paling nyaman untukmu
+                                        </p>
+
+                                        <!-- Scrollable container for payment methods -->
+                                        <div class="payment-methods-scroll">
+                                            <!-- QRIS -->
+                                            <div class="payment-method-group">
+                                                <h5 class="payment-method-group-title">QR Code</h5>
+                                                <div class="payment-methods-grid">
+                                                    <label class="payment-method-card" data-value="qris">
+                                                        <input type="radio" name="payment_method" value="qris"
+                                                            class="hidden" />
+                                                        <div class="payment-method-icon">
+                                                            <img src="assets/images/krn/qris.png" alt="QRIS" />
+                                                        </div>
+                                                        <div class="payment-method-info">
+                                                            <div class="payment-method-name">
+                                                                QRIS
+                                                                <span class="payment-method-tag">ID</span>
+                                                            </div>
+                                                            <div class="payment-method-description">
+                                                                Pembayaran cepat dengan scan QR code
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Virtual Account -->
+                                            <div class="payment-method-group">
+                                                <h5 class="payment-method-group-title">
+                                                    Virtual Account
+                                                </h5>
+                                                <div class="payment-methods-grid">
+                                                    <label class="payment-method-card" data-value="bca_va">
+                                                        <input type="radio" name="payment_method" value="bca_va"
+                                                            class="hidden" />
+                                                        <div class="payment-method-icon">
+                                                            <img src="assets/images/krn/bca.png" alt="BCA" />
+                                                        </div>
+                                                        <div class="payment-method-info">
+                                                            <div class="payment-method-name">
+                                                                BCA Virtual Account
+                                                                <span class="payment-method-tag">ID</span>
+                                                            </div>
+                                                            <div class="payment-method-description">
+                                                                Transfer via BCA tanpa biaya admin
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Debit Bank -->
+                                            <div class="payment-method-group">
+                                                <h5 class="payment-method-group-title">Debit Bank</h5>
+                                                <div class="payment-methods-grid">
+                                                    <label class="payment-method-card" data-value="debit_bca">
+                                                        <input type="radio" name="payment_method" value="debit_bca"
+                                                            class="hidden" />
+                                                        <div class="payment-method-icon">
+                                                            <img src="assets/images/krn/bca.png" alt="BCA" />
+                                                        </div>
+                                                        <div class="payment-method-info">
+                                                            <div class="payment-method-name">
+                                                                BCA Debit <span class="payment-method-tag">ID</span>
+                                                            </div>
+                                                            <div class="payment-method-description">
+                                                                Bayar dengan kartu debit BCA
+                                                            </div>
+                                                        </div>
+                                                    </label>
+
+                                                    <label class="payment-method-card" data-value="debit_mandiri">
+                                                        <input type="radio" name="payment_method" value="debit_mandiri"
+                                                            class="hidden" />
+                                                        <div class="payment-method-icon">
+                                                            <img src="assets/images/krn/mandiri.png" alt="Mandiri" />
+                                                        </div>
+                                                        <div class="payment-method-info">
+                                                            <div class="payment-method-name">
+                                                                Mandiri Debit
+                                                                <span class="payment-method-tag">ID</span>
+                                                            </div>
+                                                            <div class="payment-method-description">
+                                                                Bayar dengan kartu debit Mandiri
+                                                            </div>
+                                                        </div>
+                                                    </label>
+
+                                                    <label class="payment-method-card" data-value="debit_bri">
+                                                        <input type="radio" name="payment_method" value="debit_bri"
+                                                            class="hidden" />
+                                                        <div class="payment-method-icon">
+                                                            <img src="assets/images/krn/bri.png" alt="BRI" />
+                                                        </div>
+                                                        <div class="payment-method-info">
+                                                            <div class="payment-method-name">
+                                                                BRI Debit <span class="payment-method-tag">ID</span>
+                                                            </div>
+                                                            <div class="payment-method-description">
+                                                                Bayar dengan kartu debit BRI
+                                                            </div>
+                                                        </div>
+                                                    </label>
+
+                                                    <label class="payment-method-card" data-value="debit_bni">
+                                                        <input type="radio" name="payment_method" value="debit_bni"
+                                                            class="hidden" />
+                                                        <div class="payment-method-icon">
+                                                            <img src="assets/images/krn/bni.png" alt="BNI" />
+                                                        </div>
+                                                        <div class="payment-method-info">
+                                                            <div class="payment-method-name">
+                                                                BNI Debit <span class="payment-method-tag">ID</span>
+                                                            </div>
+                                                            <div class="payment-method-description">
+                                                                Bayar dengan kartu debit BNI
+                                                            </div>
+                                                        </div>
+                                                    </label>
+
+                                                    <label class="payment-method-card" data-value="debit_permata">
+                                                        <input type="radio" name="payment_method" value="debit_permata"
+                                                            class="hidden" />
+                                                        <div class="payment-method-icon">
+                                                            <img src="assets/images/krn/permata.png" alt="Permata" />
+                                                        </div>
+                                                        <div class="payment-method-info">
+                                                            <div class="payment-method-name">
+                                                                Permata Debit
+                                                                <span class="payment-method-tag">ID</span>
+                                                            </div>
+                                                            <div class="payment-method-description">
+                                                                Bayar dengan kartu debit Permata
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Info Boxes -->
+                                        <div class="info-box info-box-help">
+                                            <div class="info-box-content">
+                                                <div class="info-box-title">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                        <circle cx="12" cy="12" r="10" />
+                                                        <path d="M12 16v-4m0-4h.01" />
+                                                    </svg>
+                                                    Butuh bantuan?
+                                                </div>
+                                                <p class="info-box-text">
+                                                    Apakah kamu mengalami masalah dengan transaksi ini?
+                                                    <a href="#" class="info-box-link">Dapatkan Bantuan</a>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-box info-box-warning">
+                                            <div class="info-box-content">
+                                                <div class="info-box-title">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path
+                                                            d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
+                                                        <line x1="12" y1="9" x2="12" y2="13" />
+                                                        <line x1="12" y1="17" x2="12.01" y2="17" />
+                                                    </svg>
+                                                    Perhatian
+                                                </div>
+                                                <p class="info-box-text">
+                                                    Vote yang telah diberikan bersifat final dan tidak dapat
+                                                    dikembalikan.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Terms & Conditions -->
+                                        <div class="checkbox-group">
+                                            <div class="checkbox-item">
+                                                <input type="checkbox" name="agree_share" id="agree_share"
+                                                    class="form-checkbox" />
+                                                <label for="agree_share">
+                                                    Saya menyetujui bahwa <span>KREEN</span> dapat
+                                                    membagikan informasi saya kepada pihak penyelenggara
+                                                    acara untuk keperluan administrasi voting.
+                                                </label>
+                                            </div>
+
+                                            <div class="checkbox-item">
+                                                <input type="checkbox" name="agree_terms" id="agree_terms"
+                                                    class="form-checkbox" required />
+                                                <label for="agree_terms">
+                                                    Saya telah membaca dan menyetujui
+                                                    <span>Syarat & Ketentuan Voting</span>
+                                                    yang berlaku.
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="payment-modal-footer">
+                    <!-- Action Buttons -->
+                    <div class="payment-actions">
+                        <button type="button" class="btn btn-primary" id="confirmPayment">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="btn-icon">
+                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                                <polyline points="22 4 12 14.01 9 11.01" />
+                            </svg>
+                            Lanjutkan Pembayaran
+                        </button>
+
+                        <button type="button" class="btn btn-secondary" id="cancelPayment">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="btn-icon">
+                                <line x1="18" y1="6" x2="6" y2="18" />
+                                <line x1="6" y1="6" x2="18" y2="18" />
+                            </svg>
+                            Batalkan
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JAVASCRIPT  FILES ========================================= -->
+        <script src="assets/vendor/gsap/gsap.min.js"></script>
+        <script src="assets/vendor/gsap/ScrollSmoother.js"></script>
+        <script src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="assets/vendor/flatpickr/js/flatpickr.js"></script>
+        <script src="assets/js/jquery-3.7.1.min.js"></script>
+        <script src="assets/js/theia-sticky-sidebar.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/isotope.pkgd.min.js"></script>
+        <script src="assets/js/dz.carousel.js"></script>
+        <script src="assets/js/lc_lightbox.lite.js"></script>
+        <script src="assets/vendor/magnific-popup/magnific-popup.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <!-- Google API For Recaptcha  -->
+        <script src="assets/vendor/nouislider/nouislider.min.js"></script>
+        <script src="assets/vendor/group-slide/group-loop.js"></script>
+        <script src="assets/js/dz.ajax.js"></script>
+        <!-- CONTACT JS  -->
+        <script src="assets/vendor/xmenu/xmenu.js"></script>
+
+        <script src="assets/js/animation.js"></script>
+        <script src="assets/js/custom.js"></script>
+
+        <script>
+            let selectedVotes = 0;
+            let selectedPrice = 0;
+            let currentFinalist = {
+                image: '',
+                country: '',
+                number: ''
             };
-            document.getElementById('modalFinalistImage').src = image;
-            document.getElementById('modalCountryName').textContent = country.toUpperCase();
-            document.getElementById('votingModal').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
 
-        function closeVotingModal() {
-            document.getElementById('votingModal').classList.remove('active');
-            document.body.style.overflow = 'auto';
-            resetVoteSelection();
-        }
-
-        function selectVote(votes, price, element) {
-            // Remove selected class from all options
-            document.querySelectorAll('.vote-option').forEach(opt => {
-                opt.classList.remove('selected');
-            });
-
-            // Add selected class to clicked option
-            element.classList.add('selected');
-
-            selectedVotes = votes;
-            selectedPrice = price;
-
-            document.getElementById('totalQuantity').textContent = votes + ' Votes';
-            document.getElementById('totalAmount').textContent = 'USD ' + price.toFixed(2);
-        }
-
-        function resetVoteSelection() {
-            selectedVotes = 0;
-            selectedPrice = 0;
-            document.querySelectorAll('.vote-option').forEach(opt => {
-                opt.classList.remove('selected');
-            });
-            document.getElementById('totalQuantity').textContent = '0 Votes';
-            document.getElementById('totalAmount').textContent = 'USD 0.00';
-        }
-
-        function openPaymentModal() {
-            if (selectedVotes === 0) {
-                alert('Please select a vote package first!');
-                return;
+            function openVotingModal(image, country, number) {
+                currentFinalist = {
+                    image,
+                    country,
+                    number
+                };
+                document.getElementById('modalFinalistImage').src = image;
+                document.getElementById('modalCountryName').textContent = country.toUpperCase();
+                document.getElementById('votingModal').classList.add('active');
+                document.body.style.overflow = 'hidden';
             }
 
-            // Update payment modal with selected data
-            document.getElementById('paymentFinalistImage').src = currentFinalist.image;
-            document.getElementById('paymentCountryName').textContent = currentFinalist.country;
-            document.getElementById('paymentVoteCount').textContent = selectedVotes + ' Votes';
-            document.getElementById('paymentPrice').textContent = 'USD ' + selectedPrice.toFixed(2);
-
-            // Close voting modal and open payment modal
-            document.getElementById('votingModal').classList.remove('active');
-            document.getElementById('paymentModal').classList.add('active');
-        }
-
-        function closePaymentModal() {
-            document.getElementById('paymentModal').classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-
-        // Add click handlers to all vote buttons
-        document.addEventListener('DOMContentLoaded', function () {
-            // For finalist cards
-            document.querySelectorAll('.finalist-vote-button').forEach((btn, index) => {
-                const card = btn.closest('.finalist-card');
-                const img = card.querySelector('.finalist-photo').src;
-                const country = card.querySelector('.finalist-country').textContent;
-                const number = card.querySelector('.finalist-number').textContent;
-
-                btn.onclick = function (e) {
-                    e.preventDefault();
-                    openVotingModal(img, country, number);
-                };
-            });
-
-            // For list vote buttons
-            document.querySelectorAll('.list-vote-button').forEach((btn, index) => {
-                const item = btn.closest('.list-item');
-                const img = item.querySelector('.list-avatar img').src;
-                const country = item.querySelector('.list-country').textContent;
-                const rank = item.querySelector('.list-rank').textContent;
-
-                btn.onclick = function (e) {
-                    e.preventDefault();
-                    openVotingModal(img, country, 'No. ' + rank);
-                };
-            });
-
-            // For top 3 cards
-            document.querySelectorAll('.vote-button').forEach((btn, index) => {
-                const card = btn.closest('.card');
-                const img = card.querySelector('.avatar-container img').src;
-                const country = card.querySelector('.country-name').textContent;
-                const number = card.querySelector('.country-number').textContent;
-
-                btn.onclick = function (e) {
-                    e.preventDefault();
-                    openVotingModal(img, country, number);
-                };
-            });
-        });
-    </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Respect reduced motion: show all if user prefers reduced motion
-            if (
-                window.matchMedia &&
-                window.matchMedia("(prefers-reduced-motion: reduce)").matches
-            ) {
-                document
-                    .querySelectorAll(".fade-slide > .mb-5")
-                    .forEach(function (el) {
-                        el.classList.add("show");
-                    });
-                return;
+            function closeVotingModal() {
+                document.getElementById('votingModal').classList.remove('active');
+                document.body.style.overflow = 'auto';
+                resetVoteSelection();
             }
 
-            document.querySelectorAll(".fade-slide").forEach(function (container) {
-                const items = Array.from(container.querySelectorAll(".mb-5"));
-                if (!items.length) return;
-                let idx = 0;
-                // initialize
-                items.forEach(function (it) {
-                    it.classList.remove("show");
+            function selectVote(votes, price, element) {
+                // Remove selected class from all options
+                document.querySelectorAll('.vote-option').forEach(opt => {
+                    opt.classList.remove('selected');
                 });
-                items[0].classList.add("show");
 
-                const interval =
-                    parseInt(container.getAttribute("data-interval")) || 3500;
-                setInterval(function () {
-                    items[idx].classList.remove("show");
-                    idx = (idx + 1) % items.length;
-                    items[idx].classList.add("show");
-                }, interval);
-            });
-        });
-    </script>
+                // Add selected class to clicked option
+                element.classList.add('selected');
 
-    <script>
-        // Payment Modal Script
-        document.addEventListener("DOMContentLoaded", function () {
-            let paymentModal = document.getElementById("paymentModal");
-            let paymentModalClose = document.getElementById("paymentModalClose");
-            let paymentForm = document.getElementById("paymentForm");
-            const btnBayar = document.querySelector(".btn-bayar");
-            const paymentConfirm = document.getElementById("confirmPayment");
-            const paymentCancel = document.getElementById("cancelPayment");
-            const genderCards = document.querySelectorAll(".gender-card");
-            const paymentCards = document.querySelectorAll(".payment-method-card");
+                selectedVotes = votes;
+                selectedPrice = price;
 
-            let _modalPrevFocused = null;
-            let _modalKeydownHandler = null;
-
-            function enableFocusTrap(panel) {
-                const focusable = panel.querySelectorAll(
-                    'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])',
-                );
-                const first = focusable[0];
-                const last = focusable[focusable.length - 1];
-
-                _modalKeydownHandler = function (e) {
-                    if (e.key === "Escape") {
-                        e.preventDefault();
-                        closePaymentModal();
-                        return;
-                    }
-                    if (e.key === "Tab") {
-                        if (focusable.length === 0) {
-                            e.preventDefault();
-                            return;
-                        }
-                        if (e.shiftKey) {
-                            if (document.activeElement === first) {
-                                e.preventDefault();
-                                last.focus();
-                            }
-                        } else {
-                            if (document.activeElement === last) {
-                                e.preventDefault();
-                                first.focus();
-                            }
-                        }
-                    }
-                };
-                document.addEventListener("keydown", _modalKeydownHandler);
+                document.getElementById('totalQuantity').textContent = votes + ' Votes';
+                document.getElementById('totalAmount').textContent = 'USD ' + price.toFixed(2);
             }
 
-            function disableFocusTrap() {
-                if (_modalKeydownHandler) {
-                    document.removeEventListener("keydown", _modalKeydownHandler);
-                    _modalKeydownHandler = null;
-                }
+            function resetVoteSelection() {
+                selectedVotes = 0;
+                selectedPrice = 0;
+                document.querySelectorAll('.vote-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                document.getElementById('totalQuantity').textContent = '0 Votes';
+                document.getElementById('totalAmount').textContent = 'USD 0.00';
             }
 
             function openPaymentModal() {
-                // If modal markup is not present or the existing markup is causing issues,
-                // create and inject a self-contained modal into document.body.
-                if (!paymentModal) {
-                    try {
-                        paymentModal = createInjectedPaymentModal();
-                        paymentModalClose = paymentModal.querySelector('.payment-modal-close');
-                        paymentForm = paymentModal.querySelector('#paymentForm');
-                    } catch (err) {
-                        console.error('Failed to create injected modal', err);
-                        return;
-                    }
-                }
-                paymentModal.classList.add("open");
-                paymentModal.setAttribute("aria-hidden", "false");
-
-                // Disable scroll on body
-                document.body.style.overflow = 'hidden';
-
-                // Remember focus for later
-                _modalPrevFocused = document.activeElement;
-
-                // Focus on modal panel for accessibility
-                const panel = paymentModal.querySelector(".payment-modal-panel");
-                if (panel) {
-                    panel.focus();
-                    // ensure internal body resets to top
-                    const modalBody = panel.querySelector('.payment-modal-body');
-                    if (modalBody) modalBody.scrollTop = 0;
-
-                    // If the panel content height is less than viewport, allow panel to expand
-                    // (fallback for environments where internal scrolling is not desired)
-                    const viewportGap = 48; // leave small gap from viewport edges
-                    try {
-                        const panelHeight = panel.scrollHeight;
-                        if (panelHeight <= (window.innerHeight - viewportGap)) {
-                            panel.classList.add('modal-fit-content');
-                        } else {
-                            panel.classList.remove('modal-fit-content');
-                        }
-                    } catch (err) {
-                        // ignore measurement errors and keep default behavior
-                        panel.classList.remove('modal-fit-content');
-                    }
-
-                    // Focus on first input after animation
-                    setTimeout(() => {
-                        const firstInput = panel.querySelector(
-                            'input:not([type="hidden"]), select, textarea');
-                        if (firstInput) firstInput.focus();
-                    }, 100);
+                if (selectedVotes === 0) {
+                    alert('Please select a vote package first!');
+                    return;
                 }
 
-                // --- A: touch / scroll containment helpers for mobile ---
-                (function attachTouchHandlers() {
-                    if (!modalBody) return;
+                // Update payment modal with selected data
+                document.getElementById('paymentFinalistImage').src = currentFinalist.image;
+                document.getElementById('paymentCountryName').textContent = currentFinalist.country;
+                document.getElementById('paymentVoteCount').textContent = selectedVotes + ' Votes';
+                document.getElementById('paymentPrice').textContent = 'USD ' + selectedPrice.toFixed(2);
 
-                    // avoid attaching twice
-                    if (modalBody._touchHandlersAttached) return;
-
-                    let startY = 0;
-
-                    function onTouchStart(e) {
-                        if (!e.touches || e.touches.length !== 1) return;
-                        startY = e.touches[0].clientY;
-                    }
-
-                    function onTouchMove(e) {
-                        // if no touches or multitouch, do nothing special
-                        if (!e.touches || e.touches.length !== 1) return;
-                        const curY = e.touches[0].clientY;
-                        const deltaY = curY - startY;
-                        const el = modalBody;
-
-                        // If element is not scrollable, prevent body rubber banding
-                        if (el.scrollHeight <= el.clientHeight) {
-                            e.preventDefault();
-                            return;
-                        }
-
-                        // At top and pulling down -> prevent overscroll
-                        if (el.scrollTop === 0 && deltaY > 0) {
-                            e.preventDefault();
-                            return;
-                        }
-
-                        // At bottom and pushing up -> prevent overscroll
-                        if (Math.ceil(el.scrollTop + el.clientHeight) >= el.scrollHeight && deltaY <
-                            0) {
-                            e.preventDefault();
-                            return;
-                        }
-
-                        // otherwise allow the scroll to proceed inside modalBody
-                    }
-
-                    // Use passive:false for touchmove so we can call preventDefault
-                    modalBody.addEventListener('touchstart', onTouchStart, {
-                        passive: true
-                    });
-                    modalBody.addEventListener('touchmove', onTouchMove, {
-                        passive: false
-                    });
-
-                    modalBody._touchHandlersAttached = true;
-                    modalBody._touchHandlers = {
-                        onTouchStart,
-                        onTouchMove
-                    };
-                    console.log('Attached modal touch handlers for inner scrolling');
-                })();
-
-                // Enable focus trap
-                if (panel) enableFocusTrap(panel);
-
-                console.log('Payment modal opened');
+                // Close voting modal and open payment modal
+                document.getElementById('votingModal').classList.remove('active');
+                document.getElementById('paymentModal').classList.add('active');
             }
 
-            /* Create an injected modal and append to body. This keeps modal outside
-             of any possibly-broken page markup and ensures JS/CSS work reliably. */
-            function createInjectedPaymentModal() {
-                const container = document.createElement('div');
-                container.className = 'payment-modal';
-                container.id = 'paymentModal';
-                container.setAttribute('aria-hidden', 'true');
+            function closePaymentModal() {
+                document.getElementById('paymentModal').classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
 
-                // basic panel structure — header/body/footer. We'll attempt to reuse
-                // existing `.payment-content` if available, otherwise insert a simple form.
-                const existingContent = document.querySelector('.payment-content');
+            // Add click handlers to all vote buttons
+            document.addEventListener('DOMContentLoaded', function () {
+                // For finalist cards
+                document.querySelectorAll('.finalist-vote-button').forEach((btn, index) => {
+                    const card = btn.closest('.finalist-card');
+                    const img = card.querySelector('.finalist-photo').src;
+                    const country = card.querySelector('.finalist-country').textContent;
+                    const number = card.querySelector('.finalist-number').textContent;
 
-                container.innerHTML = `
+                    btn.onclick = function (e) {
+                        e.preventDefault();
+                        openVotingModal(img, country, number);
+                    };
+                });
+
+                // For list vote buttons
+                document.querySelectorAll('.list-vote-button').forEach((btn, index) => {
+                    const item = btn.closest('.list-item');
+                    const img = item.querySelector('.list-avatar img').src;
+                    const country = item.querySelector('.list-country').textContent;
+                    const rank = item.querySelector('.list-rank').textContent;
+
+                    btn.onclick = function (e) {
+                        e.preventDefault();
+                        openVotingModal(img, country, 'No. ' + rank);
+                    };
+                });
+
+                // For top 3 cards
+                document.querySelectorAll('.vote-button').forEach((btn, index) => {
+                    const card = btn.closest('.card');
+                    const img = card.querySelector('.avatar-container img').src;
+                    const country = card.querySelector('.country-name').textContent;
+                    const number = card.querySelector('.country-number').textContent;
+
+                    btn.onclick = function (e) {
+                        e.preventDefault();
+                        openVotingModal(img, country, number);
+                    };
+                });
+            });
+        </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Respect reduced motion: show all if user prefers reduced motion
+                if (
+                    window.matchMedia &&
+                    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+                ) {
+                    document
+                        .querySelectorAll(".fade-slide > .mb-5")
+                        .forEach(function (el) {
+                            el.classList.add("show");
+                        });
+                    return;
+                }
+
+                document.querySelectorAll(".fade-slide").forEach(function (container) {
+                    const items = Array.from(container.querySelectorAll(".mb-5"));
+                    if (!items.length) return;
+                    let idx = 0;
+                    // initialize
+                    items.forEach(function (it) {
+                        it.classList.remove("show");
+                    });
+                    items[0].classList.add("show");
+
+                    const interval =
+                        parseInt(container.getAttribute("data-interval")) || 3500;
+                    setInterval(function () {
+                        items[idx].classList.remove("show");
+                        idx = (idx + 1) % items.length;
+                        items[idx].classList.add("show");
+                    }, interval);
+                });
+            });
+        </script>
+
+        <script>
+            // Payment Modal Script
+            document.addEventListener("DOMContentLoaded", function () {
+                let paymentModal = document.getElementById("paymentModal");
+                let paymentModalClose = document.getElementById("paymentModalClose");
+                let paymentForm = document.getElementById("paymentForm");
+                const btnBayar = document.querySelector(".btn-bayar");
+                const paymentConfirm = document.getElementById("confirmPayment");
+                const paymentCancel = document.getElementById("cancelPayment");
+                const genderCards = document.querySelectorAll(".gender-card");
+                const paymentCards = document.querySelectorAll(".payment-method-card");
+
+                let _modalPrevFocused = null;
+                let _modalKeydownHandler = null;
+
+                function enableFocusTrap(panel) {
+                    const focusable = panel.querySelectorAll(
+                        'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])',
+                    );
+                    const first = focusable[0];
+                    const last = focusable[focusable.length - 1];
+
+                    _modalKeydownHandler = function (e) {
+                        if (e.key === "Escape") {
+                            e.preventDefault();
+                            closePaymentModal();
+                            return;
+                        }
+                        if (e.key === "Tab") {
+                            if (focusable.length === 0) {
+                                e.preventDefault();
+                                return;
+                            }
+                            if (e.shiftKey) {
+                                if (document.activeElement === first) {
+                                    e.preventDefault();
+                                    last.focus();
+                                }
+                            } else {
+                                if (document.activeElement === last) {
+                                    e.preventDefault();
+                                    first.focus();
+                                }
+                            }
+                        }
+                    };
+                    document.addEventListener("keydown", _modalKeydownHandler);
+                }
+
+                function disableFocusTrap() {
+                    if (_modalKeydownHandler) {
+                        document.removeEventListener("keydown", _modalKeydownHandler);
+                        _modalKeydownHandler = null;
+                    }
+                }
+
+                function openPaymentModal() {
+                    // If modal markup is not present or the existing markup is causing issues,
+                    // create and inject a self-contained modal into document.body.
+                    if (!paymentModal) {
+                        try {
+                            paymentModal = createInjectedPaymentModal();
+                            paymentModalClose = paymentModal.querySelector('.payment-modal-close');
+                            paymentForm = paymentModal.querySelector('#paymentForm');
+                        } catch (err) {
+                            console.error('Failed to create injected modal', err);
+                            return;
+                        }
+                    }
+                    paymentModal.classList.add("open");
+                    paymentModal.setAttribute("aria-hidden", "false");
+
+                    // Disable scroll on body
+                    document.body.style.overflow = 'hidden';
+
+                    // Remember focus for later
+                    _modalPrevFocused = document.activeElement;
+
+                    // Focus on modal panel for accessibility
+                    const panel = paymentModal.querySelector(".payment-modal-panel");
+                    if (panel) {
+                        panel.focus();
+                        // ensure internal body resets to top
+                        const modalBody = panel.querySelector('.payment-modal-body');
+                        if (modalBody) modalBody.scrollTop = 0;
+
+                        // If the panel content height is less than viewport, allow panel to expand
+                        // (fallback for environments where internal scrolling is not desired)
+                        const viewportGap = 48; // leave small gap from viewport edges
+                        try {
+                            const panelHeight = panel.scrollHeight;
+                            if (panelHeight <= (window.innerHeight - viewportGap)) {
+                                panel.classList.add('modal-fit-content');
+                            } else {
+                                panel.classList.remove('modal-fit-content');
+                            }
+                        } catch (err) {
+                            // ignore measurement errors and keep default behavior
+                            panel.classList.remove('modal-fit-content');
+                        }
+
+                        // Focus on first input after animation
+                        setTimeout(() => {
+                            const firstInput = panel.querySelector(
+                                'input:not([type="hidden"]), select, textarea');
+                            if (firstInput) firstInput.focus();
+                        }, 100);
+                    }
+
+                    // --- A: touch / scroll containment helpers for mobile ---
+                    (function attachTouchHandlers() {
+                        if (!modalBody) return;
+
+                        // avoid attaching twice
+                        if (modalBody._touchHandlersAttached) return;
+
+                        let startY = 0;
+
+                        function onTouchStart(e) {
+                            if (!e.touches || e.touches.length !== 1) return;
+                            startY = e.touches[0].clientY;
+                        }
+
+                        function onTouchMove(e) {
+                            // if no touches or multitouch, do nothing special
+                            if (!e.touches || e.touches.length !== 1) return;
+                            const curY = e.touches[0].clientY;
+                            const deltaY = curY - startY;
+                            const el = modalBody;
+
+                            // If element is not scrollable, prevent body rubber banding
+                            if (el.scrollHeight <= el.clientHeight) {
+                                e.preventDefault();
+                                return;
+                            }
+
+                            // At top and pulling down -> prevent overscroll
+                            if (el.scrollTop === 0 && deltaY > 0) {
+                                e.preventDefault();
+                                return;
+                            }
+
+                            // At bottom and pushing up -> prevent overscroll
+                            if (Math.ceil(el.scrollTop + el.clientHeight) >= el.scrollHeight && deltaY <
+                                0) {
+                                e.preventDefault();
+                                return;
+                            }
+
+                            // otherwise allow the scroll to proceed inside modalBody
+                        }
+
+                        // Use passive:false for touchmove so we can call preventDefault
+                        modalBody.addEventListener('touchstart', onTouchStart, {
+                            passive: true
+                        });
+                        modalBody.addEventListener('touchmove', onTouchMove, {
+                            passive: false
+                        });
+
+                        modalBody._touchHandlersAttached = true;
+                        modalBody._touchHandlers = {
+                            onTouchStart,
+                            onTouchMove
+                        };
+                        console.log('Attached modal touch handlers for inner scrolling');
+                    })();
+
+                    // Enable focus trap
+                    if (panel) enableFocusTrap(panel);
+
+                    console.log('Payment modal opened');
+                }
+
+                /* Create an injected modal and append to body. This keeps modal outside
+                 of any possibly-broken page markup and ensures JS/CSS work reliably. */
+                function createInjectedPaymentModal() {
+                    const container = document.createElement('div');
+                    container.className = 'payment-modal';
+                    container.id = 'paymentModal';
+                    container.setAttribute('aria-hidden', 'true');
+
+                    // basic panel structure — header/body/footer. We'll attempt to reuse
+                    // existing `.payment-content` if available, otherwise insert a simple form.
+                    const existingContent = document.querySelector('.payment-content');
+
+                    container.innerHTML = `
                     <div class="payment-modal-panel" role="dialog" aria-modal="true" aria-labelledby="paymentModalTitle" tabindex="-1">
                         <div class="payment-modal-header">
                             <div class="payment-modal-title-wrap">
@@ -3615,24 +3508,24 @@
                     </div>
                 `;
 
-                // If original .payment-content exists, clone its inner form to reuse markup
-                if (existingContent) {
-                    const target = container.querySelector('.payment-content');
-                    try {
-                        const clone = existingContent.cloneNode(true);
-                        // ensure form has id paymentForm for existing scripts
-                        const form = clone.querySelector('form');
-                        if (form) form.id = 'paymentForm';
-                        // attach cloned content
-                        target.innerHTML = '';
-                        target.appendChild(clone);
-                    } catch (err) {
-                        console.warn('Could not clone existing payment-content', err);
-                    }
-                } else {
-                    // fallback minimal form
-                    const target = container.querySelector('.payment-content');
-                    target.innerHTML = `
+                    // If original .payment-content exists, clone its inner form to reuse markup
+                    if (existingContent) {
+                        const target = container.querySelector('.payment-content');
+                        try {
+                            const clone = existingContent.cloneNode(true);
+                            // ensure form has id paymentForm for existing scripts
+                            const form = clone.querySelector('form');
+                            if (form) form.id = 'paymentForm';
+                            // attach cloned content
+                            target.innerHTML = '';
+                            target.appendChild(clone);
+                        } catch (err) {
+                            console.warn('Could not clone existing payment-content', err);
+                        }
+                    } else {
+                        // fallback minimal form
+                        const target = container.querySelector('.payment-content');
+                        target.innerHTML = `
                         <form id="paymentForm">
                             <div style="padding:1rem;max-width:720px;margin:0 auto;">
                                 <label>Nama Lengkap</label>
@@ -3643,309 +3536,309 @@
                             </div>
                         </form>
                     `;
+                    }
+
+                    document.body.appendChild(container);
+
+                    // attach close handlers
+                    container.addEventListener('click', function (e) {
+                        if (e.target === container) closePaymentModal();
+                    });
+
+                    const closeBtn = container.querySelector('.payment-modal-close');
+                    if (closeBtn) closeBtn.addEventListener('click', closePaymentModal);
+                    const cancelBtn = container.querySelector('#cancelPayment');
+                    if (cancelBtn) cancelBtn.addEventListener('click', closePaymentModal);
+
+                    return container;
                 }
 
-                document.body.appendChild(container);
+                function closePaymentModal() {
+                    if (!paymentModal) return;
+                    paymentModal.classList.remove("open");
+                    paymentModal.setAttribute("aria-hidden", "true");
 
-                // attach close handlers
-                container.addEventListener('click', function (e) {
-                    if (e.target === container) closePaymentModal();
+                    // Enable scroll on body
+                    document.body.style.overflow = '';
+
+                    // Disable focus trap
+                    disableFocusTrap();
+
+                    // Restore previous focus
+                    if (_modalPrevFocused) {
+                        try {
+                            _modalPrevFocused.focus();
+                        } catch (err) {
+                            document.body.focus();
+                        }
+                        _modalPrevFocused = null;
+                    }
+
+                    console.log('Payment modal closed');
+                }
+
+                // Prevent modal close when clicking inside the panel
+                if (paymentModal) {
+                    paymentModal.addEventListener("click", function (e) {
+                        if (e.target === paymentModal) {
+                            closePaymentModal();
+                        }
+                    });
+                }
+
+                // Open modal when "Lanjutkan Pembayaran" is clicked
+                if (btnBayar) {
+                    btnBayar.addEventListener("click", function () {
+                        openPaymentModal();
+                    });
+                }
+
+                // Close modal when close button is clicked
+                if (paymentModalClose) {
+                    paymentModalClose.addEventListener("click", closePaymentModal);
+                }
+
+                // Close modal when cancel button is clicked
+                if (paymentCancel) {
+                    paymentCancel.addEventListener("click", closePaymentModal);
+                }
+
+                // Gender card selection
+                genderCards.forEach((card) => {
+                    card.setAttribute("tabindex", "0");
+                    card.addEventListener("click", function (e) {
+                        const input = card.querySelector('input[type="radio"]');
+                        if (input) input.checked = true;
+
+                        // Update visuals
+                        genderCards.forEach((c) => {
+                            c.classList.remove("selected");
+                            c.setAttribute("aria-checked", "false");
+                        });
+                        card.classList.add("selected");
+                        card.setAttribute("aria-checked", "true");
+
+                        // Remove error styling
+                        genderCards.forEach((c) => {
+                            c.style.borderColor = '';
+                        });
+                    });
+
+                    card.addEventListener("keydown", function (e) {
+                        if (e.key === " " || e.key === "Enter") {
+                            e.preventDefault();
+                            card.click();
+                        }
+                    });
                 });
 
-                const closeBtn = container.querySelector('.payment-modal-close');
-                if (closeBtn) closeBtn.addEventListener('click', closePaymentModal);
-                const cancelBtn = container.querySelector('#cancelPayment');
-                if (cancelBtn) cancelBtn.addEventListener('click', closePaymentModal);
+                // Payment method card selection
+                paymentCards.forEach((card) => {
+                    card.setAttribute("tabindex", "0");
+                    card.addEventListener("click", function (e) {
+                        const input = card.querySelector('input[type="radio"]');
+                        if (input) input.checked = true;
 
-                return container;
-            }
+                        // Update visuals
+                        paymentCards.forEach((c) => {
+                            c.classList.remove("selected");
+                            c.setAttribute("aria-checked", "false");
+                        });
+                        card.classList.add("selected");
+                        card.setAttribute("aria-checked", "true");
 
-            function closePaymentModal() {
-                if (!paymentModal) return;
-                paymentModal.classList.remove("open");
-                paymentModal.setAttribute("aria-hidden", "true");
+                        // Remove error styling
+                        paymentCards.forEach((c) => {
+                            c.style.borderColor = '';
+                        });
+                    });
 
-                // Enable scroll on body
-                document.body.style.overflow = '';
+                    card.addEventListener("keydown", function (e) {
+                        if (e.key === " " || e.key === "Enter") {
+                            e.preventDefault();
+                            card.click();
+                        }
+                    });
 
-                // Disable focus trap
-                disableFocusTrap();
-
-                // Restore previous focus
-                if (_modalPrevFocused) {
-                    try {
-                        _modalPrevFocused.focus();
-                    } catch (err) {
-                        document.body.focus();
+                    // Reflect initial input state
+                    const input = card.querySelector('input[type="radio"]');
+                    if (input && input.checked) {
+                        card.classList.add("selected");
+                        card.setAttribute("aria-checked", "true");
+                    } else {
+                        card.setAttribute("aria-checked", "false");
                     }
-                    _modalPrevFocused = null;
-                }
+                });
 
-                console.log('Payment modal closed');
-            }
+                // Payment confirmation handler (delegated) — works for injected or static modal
+                document.addEventListener('click', function (evt) {
+                    const btn = evt.target.closest && evt.target.closest('#confirmPayment');
+                    if (!btn) return;
+                    evt.preventDefault();
 
-            // Prevent modal close when clicking inside the panel
-            if (paymentModal) {
-                paymentModal.addEventListener("click", function (e) {
-                    if (e.target === paymentModal) {
+                    const currentForm = document.querySelector('#paymentForm');
+                    if (!currentForm) return;
+
+                    const name = currentForm.querySelector('#payerName');
+                    const phone = currentForm.querySelector('#payerPhone');
+                    const agreeTerms = currentForm.querySelector('#agree_terms');
+                    const genderChecked = currentForm.querySelector('input[name="gender"]:checked');
+                    const paymentMethodChecked = currentForm.querySelector(
+                        'input[name="payment_method"]:checked');
+
+                    let isValid = true;
+                    let firstInvalidField = null;
+
+                    // Reset error states
+                    const inputs = currentForm.querySelectorAll('.form-input');
+                    inputs.forEach(input => input.classList.remove('border-red-400'));
+
+                    const localPaymentCards = currentForm.querySelectorAll('.payment-method-card');
+                    localPaymentCards.forEach(card => card.style.borderColor = '');
+                    const localGenderCards = currentForm.querySelectorAll('.gender-card');
+                    localGenderCards.forEach(card => card.style.borderColor = '');
+                    if (agreeTerms) agreeTerms.parentElement.style.color = '';
+
+                    if (!name || !name.value.trim()) {
+                        isValid = false;
+                        if (name) name.classList.add('border-red-400');
+                        if (!firstInvalidField) firstInvalidField = name;
+                    }
+                    if (!phone || !phone.value.trim()) {
+                        isValid = false;
+                        if (phone) phone.classList.add('border-red-400');
+                        if (!firstInvalidField) firstInvalidField = phone;
+                    }
+                    if (!genderChecked) {
+                        isValid = false;
+                        localGenderCards.forEach(card => card.style.borderColor = '#ef4444');
+                    }
+                    if (!paymentMethodChecked) {
+                        isValid = false;
+                        localPaymentCards.forEach(card => card.style.borderColor = '#ef4444');
+                    }
+                    if (!agreeTerms || !agreeTerms.checked) {
+                        isValid = false;
+                        if (agreeTerms) agreeTerms.parentElement.style.color = '#ef4444';
+                    }
+
+                    if (!isValid) {
+                        if (firstInvalidField) firstInvalidField.focus();
+                        alert('Mohon lengkapi semua field yang wajib diisi.');
+                        return;
+                    }
+
+                    // perform submit-like feedback
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Memproses...';
+                    btn.disabled = true;
+
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.disabled = false;
                         closePaymentModal();
-                    }
+                        alert(
+                            'Pembayaran berhasil diproses! Silakan selesaikan pembayaran Anda.'
+                        );
+                        currentForm.reset();
+                        document.querySelectorAll(
+                            '.payment-method-card.selected, .gender-card.selected').forEach(
+                            el => el.classList.remove('selected'));
+                    }, 1500);
                 });
-            }
 
-            // Open modal when "Lanjutkan Pembayaran" is clicked
-            if (btnBayar) {
-                btnBayar.addEventListener("click", function () {
-                    openPaymentModal();
-                });
-            }
+                // Prevent scroll chaining in modal
+                const modalBody = document.querySelector('.payment-modal-body');
+                if (modalBody) {
+                    modalBody.addEventListener('wheel', function (e) {
+                        const isAtTop = this.scrollTop === 0;
+                        const isAtBottom = this.scrollTop + this.clientHeight >= this.scrollHeight;
 
-            // Close modal when close button is clicked
-            if (paymentModalClose) {
-                paymentModalClose.addEventListener("click", closePaymentModal);
-            }
-
-            // Close modal when cancel button is clicked
-            if (paymentCancel) {
-                paymentCancel.addEventListener("click", closePaymentModal);
-            }
-
-            // Gender card selection
-            genderCards.forEach((card) => {
-                card.setAttribute("tabindex", "0");
-                card.addEventListener("click", function (e) {
-                    const input = card.querySelector('input[type="radio"]');
-                    if (input) input.checked = true;
-
-                    // Update visuals
-                    genderCards.forEach((c) => {
-                        c.classList.remove("selected");
-                        c.setAttribute("aria-checked", "false");
+                        if ((isAtTop && e.deltaY < 0) || (isAtBottom && e.deltaY > 0)) {
+                            e.stopPropagation();
+                        }
                     });
-                    card.classList.add("selected");
-                    card.setAttribute("aria-checked", "true");
 
-                    // Remove error styling
-                    genderCards.forEach((c) => {
-                        c.style.borderColor = '';
+                    modalBody.addEventListener('touchstart', function (e) {
+                        this.startY = e.touches[0].clientY;
                     });
-                });
 
-                card.addEventListener("keydown", function (e) {
-                    if (e.key === " " || e.key === "Enter") {
-                        e.preventDefault();
-                        card.click();
-                    }
-                });
+                    modalBody.addEventListener('touchmove', function (e) {
+                        const currentY = e.touches[0].clientY;
+                        const diffY = this.startY - currentY;
+                        const isAtTop = this.scrollTop === 0;
+                        const isAtBottom = this.scrollTop + this.clientHeight >= this.scrollHeight;
+
+                        if ((isAtTop && diffY < 0) || (isAtBottom && diffY > 0)) {
+                            e.stopPropagation();
+                        }
+                    });
+                }
             });
+        </script>
 
-            // Payment method card selection
-            paymentCards.forEach((card) => {
-                card.setAttribute("tabindex", "0");
-                card.addEventListener("click", function (e) {
-                    const input = card.querySelector('input[type="radio"]');
-                    if (input) input.checked = true;
+        <script>
+            // Finalist Modal and Search Script
+            document.addEventListener("DOMContentLoaded", function () {
+                // Inisialisasi vote counters
+                const voteButtons = document.querySelectorAll(
+                    ".vote-controls button, .flex.items-center.justify-center.gap-3 button",
+                );
 
-                    // Update visuals
-                    paymentCards.forEach((c) => {
-                        c.classList.remove("selected");
-                        c.setAttribute("aria-checked", "false");
-                    });
-                    card.classList.add("selected");
-                    card.setAttribute("aria-checked", "true");
+                voteButtons.forEach((button) => {
+                    button.addEventListener("click", function () {
+                        const container = this.closest(
+                            ".flex.items-center.justify-center.gap-3",
+                        );
+                        const counter = container.querySelector(".text-2xl");
+                        let currentValue = parseInt(counter.textContent);
 
-                    // Remove error styling
-                    paymentCards.forEach((c) => {
-                        c.style.borderColor = '';
+                        if (this.textContent === "+") {
+                            currentValue++;
+                        } else if (this.textContent === "−" && currentValue > 0) {
+                            currentValue--;
+                        }
+
+                        counter.textContent = currentValue;
+
+                        // Update summary (simplified)
+                        updatePaymentSummary();
                     });
                 });
 
-                card.addEventListener("keydown", function (e) {
-                    if (e.key === " " || e.key === "Enter") {
-                        e.preventDefault();
-                        card.click();
-                    }
-                });
+                // Detail buttons -> open modal with cloned finalist-card content
+                const detailButtons = document.querySelectorAll(".btn-detail-finalis");
+                const modal = document.getElementById("finalisModal");
+                const modalBody = document.getElementById("finalisModalBody");
+                const modalClose = document.getElementById("finalisModalClose");
 
-                // Reflect initial input state
-                const input = card.querySelector('input[type="radio"]');
-                if (input && input.checked) {
-                    card.classList.add("selected");
-                    card.setAttribute("aria-checked", "true");
-                } else {
-                    card.setAttribute("aria-checked", "false");
-                }
-            });
+                function openFinalisModal(card) {
+                    // Extract required fields from the source card
+                    const imgEl = card.querySelector("img");
+                    const imageSrc = imgEl ? imgEl.getAttribute("src") : "";
+                    const name = (
+                        card.querySelector("h3.text-xl") || {
+                            textContent: "",
+                        }
+                    ).textContent.trim();
+                    const number = (
+                        card.querySelector(".text-3xl") || {
+                            textContent: "",
+                        }
+                    ).textContent.trim();
 
-            // Payment confirmation handler (delegated) — works for injected or static modal
-            document.addEventListener('click', function (evt) {
-                const btn = evt.target.closest && evt.target.closest('#confirmPayment');
-                if (!btn) return;
-                evt.preventDefault();
-
-                const currentForm = document.querySelector('#paymentForm');
-                if (!currentForm) return;
-
-                const name = currentForm.querySelector('#payerName');
-                const phone = currentForm.querySelector('#payerPhone');
-                const agreeTerms = currentForm.querySelector('#agree_terms');
-                const genderChecked = currentForm.querySelector('input[name="gender"]:checked');
-                const paymentMethodChecked = currentForm.querySelector(
-                    'input[name="payment_method"]:checked');
-
-                let isValid = true;
-                let firstInvalidField = null;
-
-                // Reset error states
-                const inputs = currentForm.querySelectorAll('.form-input');
-                inputs.forEach(input => input.classList.remove('border-red-400'));
-
-                const localPaymentCards = currentForm.querySelectorAll('.payment-method-card');
-                localPaymentCards.forEach(card => card.style.borderColor = '');
-                const localGenderCards = currentForm.querySelectorAll('.gender-card');
-                localGenderCards.forEach(card => card.style.borderColor = '');
-                if (agreeTerms) agreeTerms.parentElement.style.color = '';
-
-                if (!name || !name.value.trim()) {
-                    isValid = false;
-                    if (name) name.classList.add('border-red-400');
-                    if (!firstInvalidField) firstInvalidField = name;
-                }
-                if (!phone || !phone.value.trim()) {
-                    isValid = false;
-                    if (phone) phone.classList.add('border-red-400');
-                    if (!firstInvalidField) firstInvalidField = phone;
-                }
-                if (!genderChecked) {
-                    isValid = false;
-                    localGenderCards.forEach(card => card.style.borderColor = '#ef4444');
-                }
-                if (!paymentMethodChecked) {
-                    isValid = false;
-                    localPaymentCards.forEach(card => card.style.borderColor = '#ef4444');
-                }
-                if (!agreeTerms || !agreeTerms.checked) {
-                    isValid = false;
-                    if (agreeTerms) agreeTerms.parentElement.style.color = '#ef4444';
-                }
-
-                if (!isValid) {
-                    if (firstInvalidField) firstInvalidField.focus();
-                    alert('Mohon lengkapi semua field yang wajib diisi.');
-                    return;
-                }
-
-                // perform submit-like feedback
-                const originalText = btn.innerHTML;
-                btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Memproses...';
-                btn.disabled = true;
-
-                setTimeout(() => {
-                    btn.innerHTML = originalText;
-                    btn.disabled = false;
-                    closePaymentModal();
-                    alert(
-                        'Pembayaran berhasil diproses! Silakan selesaikan pembayaran Anda.'
-                    );
-                    currentForm.reset();
-                    document.querySelectorAll(
-                        '.payment-method-card.selected, .gender-card.selected').forEach(
-                        el => el.classList.remove('selected'));
-                }, 1500);
-            });
-
-            // Prevent scroll chaining in modal
-            const modalBody = document.querySelector('.payment-modal-body');
-            if (modalBody) {
-                modalBody.addEventListener('wheel', function (e) {
-                    const isAtTop = this.scrollTop === 0;
-                    const isAtBottom = this.scrollTop + this.clientHeight >= this.scrollHeight;
-
-                    if ((isAtTop && e.deltaY < 0) || (isAtBottom && e.deltaY > 0)) {
-                        e.stopPropagation();
-                    }
-                });
-
-                modalBody.addEventListener('touchstart', function (e) {
-                    this.startY = e.touches[0].clientY;
-                });
-
-                modalBody.addEventListener('touchmove', function (e) {
-                    const currentY = e.touches[0].clientY;
-                    const diffY = this.startY - currentY;
-                    const isAtTop = this.scrollTop === 0;
-                    const isAtBottom = this.scrollTop + this.clientHeight >= this.scrollHeight;
-
-                    if ((isAtTop && diffY < 0) || (isAtBottom && diffY > 0)) {
-                        e.stopPropagation();
-                    }
-                });
-            }
-        });
-    </script>
-
-    <script>
-        // Finalist Modal and Search Script
-        document.addEventListener("DOMContentLoaded", function () {
-            // Inisialisasi vote counters
-            const voteButtons = document.querySelectorAll(
-                ".vote-controls button, .flex.items-center.justify-center.gap-3 button",
-            );
-
-            voteButtons.forEach((button) => {
-                button.addEventListener("click", function () {
-                    const container = this.closest(
-                        ".flex.items-center.justify-center.gap-3",
-                    );
-                    const counter = container.querySelector(".text-2xl");
-                    let currentValue = parseInt(counter.textContent);
-
-                    if (this.textContent === "+") {
-                        currentValue++;
-                    } else if (this.textContent === "−" && currentValue > 0) {
-                        currentValue--;
+                    // price and votes: the card contains a .bg-gray-50.rounded-xl.p-3 with two .font-black values
+                    const statBlock = card.querySelector(".bg-gray-50.p-3");
+                    let price = "";
+                    let votes = "";
+                    if (statBlock) {
+                        const vals = statBlock.querySelectorAll(".font-black");
+                        if (vals && vals.length >= 1) price = vals[0].textContent.trim();
+                        if (vals && vals.length >= 2) votes = vals[1].textContent.trim();
                     }
 
-                    counter.textContent = currentValue;
-
-                    // Update summary (simplified)
-                    updatePaymentSummary();
-                });
-            });
-
-            // Detail buttons -> open modal with cloned finalist-card content
-            const detailButtons = document.querySelectorAll(".btn-detail-finalis");
-            const modal = document.getElementById("finalisModal");
-            const modalBody = document.getElementById("finalisModalBody");
-            const modalClose = document.getElementById("finalisModalClose");
-
-            function openFinalisModal(card) {
-                // Extract required fields from the source card
-                const imgEl = card.querySelector("img");
-                const imageSrc = imgEl ? imgEl.getAttribute("src") : "";
-                const name = (
-                    card.querySelector("h3.text-xl") || {
-                        textContent: "",
-                    }
-                ).textContent.trim();
-                const number = (
-                    card.querySelector(".text-3xl") || {
-                        textContent: "",
-                    }
-                ).textContent.trim();
-
-                // price and votes: the card contains a .bg-gray-50.rounded-xl.p-3 with two .font-black values
-                const statBlock = card.querySelector(".bg-gray-50.p-3");
-                let price = "";
-                let votes = "";
-                if (statBlock) {
-                    const vals = statBlock.querySelectorAll(".font-black");
-                    if (vals && vals.length >= 1) price = vals[0].textContent.trim();
-                    if (vals && vals.length >= 2) votes = vals[1].textContent.trim();
-                }
-
-                // Build minimal modal HTML containing only photo, name, number, price and votes
-                const html = `
+                    // Build minimal modal HTML containing only photo, name, number, price and votes
+                    const html = `
                     <div class="finalist-card modal-finalist-card">
                         <div class="poster">
                             <img src="${imageSrc}" alt="${name}" />
@@ -3967,168 +3860,168 @@
                     </div>
                 `;
 
-                modalBody.innerHTML = html;
+                    modalBody.innerHTML = html;
 
-                // Size modal-panel to match source card width (use offsetWidth as reliable measure)
-                const modalPanel = modal.querySelector(".modal-panel");
-                const cardWidth =
-                    card.offsetWidth || card.getBoundingClientRect().width || 320;
-                const cap = Math.max(280, window.innerWidth - 40);
-                const finalWidth = Math.min(cardWidth, cap);
-                modalPanel.style.width = Math.round(finalWidth) + "px";
-                modalPanel.style.maxWidth = "none";
+                    // Size modal-panel to match source card width (use offsetWidth as reliable measure)
+                    const modalPanel = modal.querySelector(".modal-panel");
+                    const cardWidth =
+                        card.offsetWidth || card.getBoundingClientRect().width || 320;
+                    const cap = Math.max(280, window.innerWidth - 40);
+                    const finalWidth = Math.min(cardWidth, cap);
+                    modalPanel.style.width = Math.round(finalWidth) + "px";
+                    modalPanel.style.maxWidth = "none";
 
-                modal.classList.add("open");
-                modal.setAttribute("aria-hidden", "false");
-            }
+                    modal.classList.add("open");
+                    modal.setAttribute("aria-hidden", "false");
+                }
 
-            detailButtons.forEach((button) => {
-                button.addEventListener("click", function (e) {
-                    const card =
-                        this.closest(".finalist-card") || this.closest(".bg-white");
-                    if (!card) return;
-                    openFinalisModal(card);
-                });
-            });
-
-            function closeModal() {
-                modal.classList.remove("open");
-                modal.setAttribute("aria-hidden", "true");
-                modalBody.innerHTML = "";
-            }
-
-            modalClose.addEventListener("click", closeModal);
-            modal.addEventListener("click", function (e) {
-                if (e.target === modal) closeModal();
-            });
-
-            // Search functionality (scoped to finalists)
-            const searchInput = document.getElementById("searchFinalisInput");
-            const searchForm = document.getElementById("searchFinalisForm");
-            const clearSearchBtn = document.getElementById("clearSearchFinalis");
-
-            function filterFinalists(term) {
-                const searchTerm = (term || "").toString().trim().toLowerCase();
-                const cards = document.querySelectorAll(".finalist-card");
-                cards.forEach((card) => {
-                    const nameEl = card.querySelector("h3.text-xl");
-                    const cityEl = card.querySelector(".text-gray-600");
-                    const name = nameEl ? nameEl.textContent.toLowerCase() : "";
-                    const city = cityEl ? cityEl.textContent.toLowerCase() : "";
-                    if (
-                        !searchTerm ||
-                        name.includes(searchTerm) ||
-                        city.includes(searchTerm)
-                    ) {
-                        card.style.display = "";
-                    } else {
-                        card.style.display = "none";
-                    }
-                });
-            }
-
-            if (searchInput) {
-                searchInput.addEventListener("input", function (e) {
-                    filterFinalists(e.target.value);
-                });
-            }
-
-            if (searchForm) {
-                searchForm.addEventListener("submit", function (e) {
-                    e.preventDefault();
-                    filterFinalists(searchInput ? searchInput.value : "");
-                });
-            }
-
-            if (clearSearchBtn) {
-                clearSearchBtn.addEventListener("click", function (e) {
-                    if (!searchInput) return;
-                    searchInput.value = "";
-                    filterFinalists("");
-                });
-            }
-
-            function updatePaymentSummary() {
-                // Simplified update function
-                console.log("Payment summary updated");
-            }
-        });
-    </script>
-
-    <script>
-        // Simple handler for Juara 4-10 Vote buttons
-        document.addEventListener("DOMContentLoaded", function () {
-            document
-                .querySelectorAll(
-                    "#juara-4-10 button, #juara-4-10 a.list-vote-button",
-                )
-                .forEach(function (btn) {
-                    btn.addEventListener("click", function (e) {
-                        if (e && e.preventDefault) e.preventDefault();
-
-                        let el = btn;
-                        while (
-                            el &&
-                            el.parentElement &&
-                            !el.parentElement.classList.contains("grid")
-                        ) {
-                            el = el.parentElement;
-                        }
-                        const row = el;
-                        if (!row) return;
-
-                        const span = row.querySelector(".text-sm .font-bold");
-                        if (!span) return;
-
-                        const curr =
-                            parseInt(span.textContent.replace(/[^0-9]/g, "")) || 0;
-                        span.textContent = curr + 1;
+                detailButtons.forEach((button) => {
+                    button.addEventListener("click", function (e) {
+                        const card =
+                            this.closest(".finalist-card") || this.closest(".bg-white");
+                        if (!card) return;
+                        openFinalisModal(card);
                     });
                 });
-        });
-    </script>
 
-    <!-- Toast Notification Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const toastContainer = document.createElement('div');
-            toastContainer.id = 'toast-container';
-            toastContainer.className = 'toast-container';
-            document.body.appendChild(toastContainer);
-
-            // Sample finalist data - replace with real data
-            const finalists = [{
-                    name: 'Dzakia Sheza Ayu Handayani',
-                    votes: 100
-                },
-                {
-                    name: 'Revalina Liwanathaya Shanum',
-                    votes: 103
-                },
-                {
-                    name: 'Salwa Difa Raihana Hanifah',
-                    votes: 107
-                },
-                {
-                    name: 'Elizabeth Belvania Cahaya P',
-                    votes: 100
-                },
-                {
-                    name: 'Belva Ayunindya A S',
-                    votes: 50
-                },
-                {
-                    name: 'Wildan Dhany Fauzan',
-                    votes: 45
+                function closeModal() {
+                    modal.classList.remove("open");
+                    modal.setAttribute("aria-hidden", "true");
+                    modalBody.innerHTML = "";
                 }
-            ];
 
-            let currentIndex = 0;
+                modalClose.addEventListener("click", closeModal);
+                modal.addEventListener("click", function (e) {
+                    if (e.target === modal) closeModal();
+                });
 
-            function showToast(finalist) {
-                const toast = document.createElement('div');
-                toast.className = 'toast';
-                toast.innerHTML = `
+                // Search functionality (scoped to finalists)
+                const searchInput = document.getElementById("searchFinalisInput");
+                const searchForm = document.getElementById("searchFinalisForm");
+                const clearSearchBtn = document.getElementById("clearSearchFinalis");
+
+                function filterFinalists(term) {
+                    const searchTerm = (term || "").toString().trim().toLowerCase();
+                    const cards = document.querySelectorAll(".finalist-card");
+                    cards.forEach((card) => {
+                        const nameEl = card.querySelector("h3.text-xl");
+                        const cityEl = card.querySelector(".text-gray-600");
+                        const name = nameEl ? nameEl.textContent.toLowerCase() : "";
+                        const city = cityEl ? cityEl.textContent.toLowerCase() : "";
+                        if (
+                            !searchTerm ||
+                            name.includes(searchTerm) ||
+                            city.includes(searchTerm)
+                        ) {
+                            card.style.display = "";
+                        } else {
+                            card.style.display = "none";
+                        }
+                    });
+                }
+
+                if (searchInput) {
+                    searchInput.addEventListener("input", function (e) {
+                        filterFinalists(e.target.value);
+                    });
+                }
+
+                if (searchForm) {
+                    searchForm.addEventListener("submit", function (e) {
+                        e.preventDefault();
+                        filterFinalists(searchInput ? searchInput.value : "");
+                    });
+                }
+
+                if (clearSearchBtn) {
+                    clearSearchBtn.addEventListener("click", function (e) {
+                        if (!searchInput) return;
+                        searchInput.value = "";
+                        filterFinalists("");
+                    });
+                }
+
+                function updatePaymentSummary() {
+                    // Simplified update function
+                    console.log("Payment summary updated");
+                }
+            });
+        </script>
+
+        <script>
+            // Simple handler for Juara 4-10 Vote buttons
+            document.addEventListener("DOMContentLoaded", function () {
+                document
+                    .querySelectorAll(
+                        "#juara-4-10 button, #juara-4-10 a.list-vote-button",
+                    )
+                    .forEach(function (btn) {
+                        btn.addEventListener("click", function (e) {
+                            if (e && e.preventDefault) e.preventDefault();
+
+                            let el = btn;
+                            while (
+                                el &&
+                                el.parentElement &&
+                                !el.parentElement.classList.contains("grid")
+                            ) {
+                                el = el.parentElement;
+                            }
+                            const row = el;
+                            if (!row) return;
+
+                            const span = row.querySelector(".text-sm .font-bold");
+                            if (!span) return;
+
+                            const curr =
+                                parseInt(span.textContent.replace(/[^0-9]/g, "")) || 0;
+                            span.textContent = curr + 1;
+                        });
+                    });
+            });
+        </script>
+
+        <!-- Toast Notification Script -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const toastContainer = document.createElement('div');
+                toastContainer.id = 'toast-container';
+                toastContainer.className = 'toast-container';
+                document.body.appendChild(toastContainer);
+
+                // Sample finalist data - replace with real data
+                const finalists = [{
+                        name: 'Dzakia Sheza Ayu Handayani',
+                        votes: 100
+                    },
+                    {
+                        name: 'Revalina Liwanathaya Shanum',
+                        votes: 103
+                    },
+                    {
+                        name: 'Salwa Difa Raihana Hanifah',
+                        votes: 107
+                    },
+                    {
+                        name: 'Elizabeth Belvania Cahaya P',
+                        votes: 100
+                    },
+                    {
+                        name: 'Belva Ayunindya A S',
+                        votes: 50
+                    },
+                    {
+                        name: 'Wildan Dhany Fauzan',
+                        votes: 45
+                    }
+                ];
+
+                let currentIndex = 0;
+
+                function showToast(finalist) {
+                    const toast = document.createElement('div');
+                    toast.className = 'toast';
+                    toast.innerHTML = `
                         <div class="toast-content">
                             <i class="fa fa-bell toast-icon"></i>
                             <div class="toast-text">
@@ -4137,50 +4030,29 @@
                         </div>
                     `;
 
-                toastContainer.appendChild(toast);
+                    toastContainer.appendChild(toast);
 
-                // Auto remove after 5 seconds
-                setTimeout(() => {
-                    toast.classList.add('fade-out');
+                    // Auto remove after 5 seconds
                     setTimeout(() => {
-                        if (toast.parentNode) {
-                            toast.parentNode.removeChild(toast);
-                        }
-                    }, 500);
-                }, 5000);
-            }
-
-            // Show toast every 8 seconds
-            setInterval(() => {
-                showToast(finalists[currentIndex]);
-                currentIndex = (currentIndex + 1) % finalists.length;
-            }, 8000);
-
-            // Show first toast immediately
-            showToast(finalists[0]);
-        });
-    </script>
-    <script>
-        // Initialize Theia Sticky Sidebar for sidebars with `.my-sticky`.
-        // This ensures the sidebar stops above the footer (additionalMarginBottom).
-        document.addEventListener('DOMContentLoaded', function () {
-            try {
-                if (typeof jQuery === 'undefined' || typeof jQuery.fn.theiaStickySidebar !== 'function') {
-                    console.warn('Theia sticky sidebar not available');
-                    return;
+                        toast.classList.add('fade-out');
+                        setTimeout(() => {
+                            if (toast.parentNode) {
+                                toast.parentNode.removeChild(toast);
+                            }
+                        }, 500);
+                    }, 5000);
                 }
 
-                jQuery('.side-bar.my-sticky').theiaStickySidebar({
-                    additionalMarginTop: 80,
-                    additionalMarginBottom: 140,
-                    updateSidebarHeight: true,
-                    minWidth: 768
-                });
-            } catch (err) {
-                console.warn('Error initializing sticky sidebar', err);
-            }
-        });
-    </script>
+                // Show toast every 8 seconds
+                setInterval(() => {
+                    showToast(finalists[currentIndex]);
+                    currentIndex = (currentIndex + 1) % finalists.length;
+                }, 8000);
+
+                // Show first toast immediately
+                showToast(finalists[0]);
+            });
+        </script>
 </body>
 
 </html>
