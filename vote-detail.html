@@ -1225,6 +1225,158 @@
 
     </div>
 
+    <!-- Compact modal styles (reduce sizes and enable scroll) -->
+    <style id="compact-modal-styles">
+        /* Limit modal width and use column layout so header stays fixed and body scrolls */
+        #votingModal .modal-content,
+        #paymentModal .modal-content {
+            max-width: 900px;
+            width: 92%;
+            box-sizing: border-box;
+            max-height: 90vh;
+            /* padding: 8px; */
+            display: flex;
+            flex-direction: column;
+            /* background: transparent; */
+        }
+
+        /* Make the body expand and become the scrollable area */
+        #votingModal .modal-body,
+        #paymentModal .payment-modal-body {
+            display: flex;
+            /* gap: 12px; */
+            padding: 10px;
+            flex: 1 1 auto;
+            min-height: 0;
+            /* allow flex children to shrink so overflow works */
+            overflow-y: auto;
+            box-sizing: border-box;
+            align-items: flex-start;
+        }
+
+        /* Left / right columns: use balanced flex-basis instead of max-width to avoid empty space */
+        #votingModal .modal-left,
+        #paymentModal .payment-left {
+            flex: 0 0 44%;
+            min-width: 160px;
+            box-sizing: border-box;
+        }
+
+        #votingModal .modal-right,
+        #paymentModal .payment-right {
+            flex: 1 1 56%;
+            box-sizing: border-box;
+        }
+
+        .modal-finalist-photo img,
+        .summary-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        /* Payment summary text colors (make them black for readability) */
+        .summary-title,
+        .summary-country,
+        .summary-votes,
+        .summary-price {
+            color: #000 !important;
+        }
+
+        .modal-country-name {
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        .info-boxes .info-label {
+            font-size: 11px;
+        }
+
+        .info-boxes .info-value {
+            font-size: 12px;
+        }
+
+        .vote-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .vote-option {
+            padding: 8px 10px;
+            font-size: 13px;
+            border-radius: 8px;
+            cursor: pointer;
+            min-width: 110px;
+            box-sizing: border-box;
+        }
+
+        .vote-option .vote-count,
+        .vote-option .vote-price {
+            font-size: 12px;
+        }
+
+        .total-section .total-row .total-label,
+        .total-section .total-row .total-value {
+            font-size: 13px;
+        }
+
+        .continue-payment-btn,
+        .pay-now-btn,
+        .cancel-btn {
+            padding: 8px 10px;
+            font-size: 14px;
+            border-radius: 8px;
+        }
+
+        /* Payment layout adjustments - ensure both sides use available width without creating huge gaps */
+        .payment-left {
+            flex: 0 0 46%;
+            box-sizing: border-box;
+        }
+
+        .payment-right {
+            flex: 1 1 54%;
+            box-sizing: border-box;
+        }
+
+        /* Ensure internal boxes don't overflow horizontally */
+        .payment-right .payment-detail-box,
+        .payment-left .order-summary,
+        .payment-left .form-section {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Mobile: stack and increase scroll area */
+        @media (max-width: 768px) {
+
+            #votingModal .modal-body,
+            #paymentModal .payment-modal-body {
+                flex-direction: column;
+            }
+
+            #votingModal .modal-left,
+            #paymentModal .payment-left,
+            #votingModal .modal-right,
+            #paymentModal .payment-right {
+                flex-basis: 100%;
+                min-width: auto;
+            }
+
+            .modal-finalist-photo img,
+            .summary-avatar img {
+                max-width: 120px;
+                max-height: 120px;
+            }
+
+            .vote-option {
+                min-width: 48%;
+            }
+        }
+    </style>
+
     <!-- Voting Modal (moved here) -->
     <div id="votingModal" class="modal" aria-hidden="true">
         <div class="modal-content modal-panel" role="dialog" aria-modal="true" tabindex="-1">
@@ -1329,7 +1481,9 @@
                         <input type="text" class="form-input" placeholder="Full Name">
                         <input type="tel" class="form-input" placeholder="Phone Number">
                     </div>
+                </div>
 
+                <div class="payment-right">
                     <div class="form-section">
                         <h3 class="payment-method-title">Choose Your Payment Method</h3>
                         <p class="payment-method-subtitle">Let's choose your payment method...</p>
@@ -1343,9 +1497,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="payment-right">
                     <div class="payment-detail-box">
                         <h3 class="detail-title">Detail Payment</h3>
                         <div class="detail-row">
@@ -1560,19 +1711,28 @@
                     });
                 });
 
+                // helper to open voting modal from a container element
+                function openFromContainer(container, rankPrefix) {
+                    if (!container) return;
+                    const imgEl = container.querySelector('img') || container.querySelector(
+                        'img.finalist-photo') || container.querySelector('.finalist-photo');
+                    const img = imgEl ? imgEl.getAttribute('src') || '' : '';
+                    const countryEl = container.querySelector('.finalist-country') || container
+                        .querySelector('.list-country') || container.querySelector('.country-name');
+                    const country = countryEl ? countryEl.textContent.trim() : '';
+                    const numberEl = container.querySelector('.finalist-number') || container.querySelector(
+                        '.list-rank') || container.querySelector('.country-number');
+                    const numberText = numberEl ? numberEl.textContent.trim() : '';
+                    const number = rankPrefix && numberText ? (rankPrefix + ' ' + numberText) : numberText;
+                    openVotingModal(img, country, number);
+                }
+
                 // finalist card buttons
                 document.querySelectorAll('.finalist-vote-button').forEach(btn => {
                     btn.addEventListener('click', function (e) {
                         e.preventDefault();
                         const card = btn.closest('.finalist-card');
-                        if (!card) return;
-                        const img = card.querySelector('.finalist-photo') ? .getAttribute(
-                            'src') || '';
-                        const country = card.querySelector('.finalist-country') ?
-                            .textContent || '';
-                        const number = card.querySelector('.finalist-number') ?
-                            .textContent || '';
-                        openVotingModal(img, country, number);
+                        openFromContainer(card, '');
                     });
                 });
 
@@ -1581,13 +1741,7 @@
                     btn.addEventListener('click', function (e) {
                         e.preventDefault();
                         const item = btn.closest('.list-item');
-                        if (!item) return;
-                        const img = item.querySelector('.list-avatar img') ? .getAttribute(
-                            'src') || '';
-                        const country = item.querySelector('.list-country') ?
-                            .textContent || '';
-                        const rank = item.querySelector('.list-rank') ? .textContent || '';
-                        openVotingModal(img, country, 'No. ' + rank);
+                        openFromContainer(item, 'No.');
                     });
                 });
 
@@ -1596,14 +1750,7 @@
                     btn.addEventListener('click', function (e) {
                         e.preventDefault();
                         const card = btn.closest('.card');
-                        if (!card) return;
-                        const img = card.querySelector('.avatar-container img') ?
-                            .getAttribute('src') || '';
-                        const country = card.querySelector('.country-name') ?
-                            .textContent || '';
-                        const number = card.querySelector('.country-number') ?
-                            .textContent || '';
-                        openVotingModal(img, country, number);
+                        openFromContainer(card, '');
                     });
                 });
 
@@ -1611,15 +1758,37 @@
                 document.addEventListener('click', function (e) {
                     const opt = e.target.closest('.vote-option');
                     if (!opt) return;
-                    const votes = opt.getAttribute('data-votes') || opt.querySelector(
-                        '.vote-count') ? .textContent ? .replace(/\D/g, '') || 0;
-                    const priceRaw = opt.getAttribute('data-price') || opt.querySelector(
-                        '.vote-price') ? .textContent ? .replace(/[^0-9.,]/g, '').replace(',',
-                        '.') || 0;
-                    const price = parseFloat(priceRaw) || 0;
-                    selectVote(Number(votes), Number(price), opt);
+                    // parse votes
+                    let votes = 0;
+                    const votesAttr = opt.getAttribute('data-votes');
+                    if (votesAttr) {
+                        votes = parseInt(votesAttr, 10) || 0;
+                    } else {
+                        const cnt = opt.querySelector('.vote-count');
+                        if (cnt) votes = parseInt(cnt.textContent.replace(/\D/g, ''), 10) || 0;
+                    }
+                    // parse price
+                    let price = 0;
+                    const priceAttr = opt.getAttribute('data-price');
+                    if (priceAttr) {
+                        price = parseFloat(priceAttr) || 0;
+                    } else {
+                        const pEl = opt.querySelector('.vote-price');
+                        if (pEl) {
+                            const pRaw = pEl.textContent.replace(/[^0-9.,]/g, '').replace(',', '.');
+                            price = parseFloat(pRaw) || 0;
+                        }
+                    }
+                    selectVote(votes, price, opt);
                 });
 
+                // preselect smallest package when modal opens
+                const votingModal = document.getElementById('votingModal');
+                if (votingModal) {
+                    votingModal.addEventListener('transitionstart', function () {
+                        // no-op; keep for future
+                    });
+                }
             });
 
             // expose small API on window for inline onclick handlers (backwards compatible)
