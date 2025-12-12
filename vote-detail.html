@@ -1,75 +1,681 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-
     <!-- Character Encoding -->
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
 
     <!-- Responsive Design -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Title -->
-    <title>Travlla - Travel & Tour Tailwind CSS Template | Home Page 2</title>
+    <title>Voting Superdev</title>
 
-    <meta name="title" content="Travlla - Travel & Tour Tailwind CSS Template | DexignZone">
+    <meta name="title" content="Voting Superdev" />
     <meta name="description"
-        content="Travlla is a responsive Travel & Tour Tailwind CSS template designed for travel agencies, tour operators, holiday planners, and booking websites.">
+        content="Voting Superdev is a responsive platform designed for efficient and secure voting processes." />
     <meta name="keywords"
-        content="travel HTML template, tour booking template, Tailwind travel website, tourism Tailwind template, holiday booking, responsive travel design, tour operator website, Travlla template, modern travel design, travel agency web design">
-    <meta name="author" content="DexignZone">
-    <meta name="robots" content="index, follow">
+        content="voting platform, secure voting, online voting, responsive design, voting system, Superdev" />
+    <meta name="author" content="Superdev" />
+    <meta name="robots" content="index, follow" />
 
     <!-- CANONICAL URL -->
-    <link rel="canonical" href="https://travlla.dexignzone.com/tailwind/demo/index-2.html">
+    <link rel="canonical" href="https://superdev.com" />
 
     <!-- FAVICONS ICON -->
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="icon" type="image/png" href="assets/images/slogo.jpg" />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="Travlla - Travel & Tour Tailwind CSS Template | DexignZone">
+    <meta property="og:title" content="Voting Superdev" />
     <meta property="og:description"
-        content="Travlla is a responsive Travel & Tour Tailwind CSS template designed for travel agencies, tour operators, holiday planners, and booking websites.">
-    <meta property="og:image" content="https://travlla.dexignzone.com/tailwind/demo/social-image.png">
-    <meta property="og:url" content="https://travlla.dexignzone.com/demo/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Travlla">
+        content="Voting Superdev is a responsive platform designed for efficient and secure voting processes." />
+    <meta property="og:image" content="assets/images/superdev_.jpg" />
+    <meta property="og:url" content="https://superdev.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Voting Superdev" />
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Travlla - Travel & Tour Tailwind CSS Template | DexignZone">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Voting Superdev" />
     <meta name="twitter:description"
-        content="Travlla is a responsive Travel & Tour Tailwind CSS template designed for travel agencies, tour operators, holiday planners, and booking websites.">
-    <meta name="twitter:image" content="https://travlla.dexignzone.com/tailwind/demo/social-image.png">
+        content="Voting Superdev is a responsive platform designed for efficient and secure voting processes." />
+    <meta name="twitter:image" content="assets/images/superdev_.jpg" />
 
     <!-- IE Compatibility -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="telephone=no" />
 
+    <link rel="stylesheet" type="text/css" href="assets/icons/line-awesome/css/line-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/icons/flaticon/flaticon.css" />
+    <link rel="stylesheet" type="text/css" href="assets/icons/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/icons/themify-icons/css/themify-icons.css" />
+    <link rel="stylesheet" type="text/css" href="assets/icons/feather/css/feather.css" />
 
-    <link rel="stylesheet" type="text/css" href="assets/icons/line-awesome/css/line-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/icons/flaticon/flaticon.css">
-    <link rel="stylesheet" type="text/css" href="assets/icons/fontawesome/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/icons/themify-icons/css/themify-icons.css">
-    <link rel="stylesheet" type="text/css" href="assets/icons/feather/css/feather.css">
-
-    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/vendor/flatpickr/css/flatpicker.css">
-    <link rel="stylesheet" href="assets/css/lc_lightbox.css">
-    <link rel="stylesheet" href="assets/vendor/magnific-popup/magnific-popup.css">
-    <link rel="stylesheet" href="assets/vendor/nouislider/nouislider.min.css">
-
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/vendor/flatpickr/css/flatpicker.css" />
+    <link rel="stylesheet" href="assets/css/lc_lightbox.css" />
+    <link rel="stylesheet" href="assets/vendor/magnific-popup/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/vendor/nouislider/nouislider.min.css" />
 
     <!-- style -->
-    <link rel="stylesheet" href="assets/css/tailwind.build.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="assets/css/tailwind.build.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Kaushan+Script&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
 
+    <style>
+        .marquee {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 18s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .top-bar-fixed-placeholder {
+            height: 3rem;
+        }
+
+        @media (min-width: 1024px) {
+            .top-bar-fixed-placeholder {
+                height: 3rem;
+            }
+        }
+
+        /* Payment modal UI improvements - UPDATED */
+        .payment-modal {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.45);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 240ms ease-in-out;
+            z-index: 99999;
+            overflow-y: auto;
+            padding: 1rem;
+        }
+
+        .payment-modal.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .payment-modal-panel {
+            width: auto;
+            max-width: 760px;
+            margin: auto;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 20px 40px rgba(2, 6, 23, 0.2);
+            transform: translateY(10px);
+            transition: transform 240ms ease, opacity 240ms ease;
+            /* limit to viewport but leave small gap */
+            max-height: calc(100vh - 48px);
+            min-height: 0;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            overflow: hidden;
+        }
+
+        /* When modal content fits viewport, allow panel to expand to full content height */
+        .payment-modal-panel.modal-fit-content {
+            max-height: none;
+        }
+
+        .payment-modal.open .payment-modal-panel {
+            transform: translateY(0);
+        }
+
+        .payment-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #f3f4f6;
+            flex-shrink: 0;
+        }
+
+        .payment-modal-close {
+            background: transparent;
+            border: 0;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 0.25rem 0.5rem;
+            color: #374151;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+
+        .payment-modal-close:hover {
+            background: #f3f4f6;
+        }
+
+        .payment-modal-title-wrap h3 {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .payment-modal-title-wrap p {
+            margin: 0;
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+
+        /* Footer */
+        .payment-modal-footer {
+            /* border-top: 1px solid #f3f4f6; */
+            padding: 1rem;
+            background: #fff;
+            flex-shrink: 0;
+        }
+
+        .payment-modal-footer .payment-actions {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        @media (max-width: 767px) {
+            .payment-modal-footer .payment-actions {
+                flex-direction: column;
+            }
+        }
+
+        .payment-modal-body {
+            padding: 0;
+            /* belong to row 2 of panel grid so header/footer stay fixed */
+            grid-row: 2;
+            min-height: 0;
+            /* allow internal scrolling in a flex/grid parent */
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            overscroll-behavior: contain;
+            touch-action: pan-y;
+        }
+
+        .payment-content {
+            padding: 1.5rem;
+            max-width: 720px;
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Grid layout untuk dua kolom */
+        .payment-modal-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .payment-modal-grid {
+                grid-template-columns: 1fr 360px;
+                align-items: start;
+            }
+
+            .payment-right {
+                position: sticky;
+                top: 0;
+                max-height: calc(90vh - 120px);
+                overflow-y: auto;
+            }
+        }
+
+        /* Container metode pembayaran yang bisa discroll */
+        .payment-methods-scroll {
+            overflow-y: auto;
+            margin-bottom: 1rem;
+            padding-right: 8px;
+        }
+
+        .payment-methods-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .payment-methods-scroll::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+
+        .payment-methods-scroll::-webkit-scrollbar-thumb {
+            background: #ddd;
+            border-radius: 4px;
+        }
+
+        .payment-methods-scroll::-webkit-scrollbar-thumb:hover {
+            background: #ccc;
+        }
+
+        /* Grid metode pembayaran */
+        .payment-methods-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .payment-method-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .payment-method-group-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #4b5563;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Card metode pembayaran */
+        .payment-method-card {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 0.875rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .payment-method-card:hover {
+            border-color: #fb7185;
+            box-shadow: 0 4px 12px rgba(251, 113, 133, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .payment-method-card.selected {
+            border-color: #fb7185;
+            background: linear-gradient(to bottom right, #fff7f8, #fff);
+            box-shadow: 0 8px 20px rgba(251, 113, 133, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .payment-method-card.selected::after {
+            content: "✓";
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: linear-gradient(90deg, #fb7185, #ef4444);
+            color: #fff;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .payment-method-icon {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f9fafb;
+            border-radius: 8px;
+            padding: 8px;
+        }
+
+        .payment-method-icon img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .payment-method-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .payment-method-name {
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: #1f2937;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .payment-method-tag {
+            background: #ffe4e6;
+            color: #b91c1c;
+            font-size: 0.65rem;
+            padding: 0.125rem 0.375rem;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .payment-method-description {
+            font-size: 0.75rem;
+            color: #6b7280;
+            line-height: 1.4;
+        }
+
+        /* Tombol */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+            width: 100%;
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, #fb7185, #ef4444);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(90deg, #ef4444, #dc2626);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(251, 113, 133, 0.3);
+        }
+
+        .btn-secondary {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            color: #374151;
+        }
+
+        .btn-secondary:hover {
+            background: #f9fafb;
+            border-color: #d1d5db;
+        }
+
+        /* Info boxes */
+        .info-box {
+            padding: 0.875rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+        }
+
+        .info-box-help {
+            background: #eff6ff;
+            border: 1px solid #dbeafe;
+        }
+
+        .info-box-warning {
+            background: #fef3c7;
+            border: 1px solid #fde68a;
+        }
+
+        .info-box-title {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1e40af;
+        }
+
+        .info-box-warning .info-box-title {
+            color: #92400e;
+        }
+
+        .info-box-text {
+            color: #4b5563;
+            line-height: 1.5;
+        }
+
+        .info-box-link {
+            color: #3b82f6;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .info-box-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Checkboxes */
+        .checkbox-group {
+            margin-top: 1.5rem;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.8125rem;
+            color: #4b5563;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            margin-top: 0.125rem;
+            flex-shrink: 0;
+        }
+
+        .checkbox-item label {
+            line-height: 1.5;
+        }
+
+        /* Order summary */
+        .order-summary {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .order-summary h6 {
+            font-size: 0.9375rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.75rem;
+        }
+
+        .billing-list {
+            font-size: 0.8125rem;
+            color: #6b7280;
+        }
+
+        .billing-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.25rem 0;
+        }
+
+        /* Form elements */
+        .form-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-section-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.75rem;
+        }
+
+        .payment-section-subtitle {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-bottom: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #374151;
+            margin-bottom: 0.375rem;
+        }
+
+        .form-label span {
+            color: #ef4444;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.625rem 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 0.9375rem;
+            transition: all 0.2s;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #fb7185;
+            box-shadow: 0 0 0 3px rgba(251, 113, 133, 0.1);
+        }
+
+        /* Gender selection */
+        .gender-selection {
+            margin-top: 0.5rem;
+        }
+
+        .gender-options {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .gender-card {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s;
+            flex: 1;
+            min-width: 140px;
+        }
+
+        .gender-card:hover {
+            border-color: #fb7185;
+            background: #fff7f8;
+        }
+
+        .gender-card.selected {
+            border-color: #fb7185;
+            background: linear-gradient(to bottom right, #fff7f8, #fff);
+            box-shadow: 0 4px 12px rgba(251, 113, 133, 0.1);
+        }
+
+        .gender-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f9fafb;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .gender-card span {
+            font-weight: 500;
+            color: #374151;
+        }
+
+        /* Responsive improvements */
+        @media (max-width: 767px) {
+            .payment-modal {
+                padding: 0.5rem;
+            }
+
+            .payment-modal-panel {
+                max-height: 95vh;
+            }
+
+            .payment-modal-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .payment-right {
+                position: static;
+                max-height: none;
+                overflow-y: visible;
+            }
+
+            .payment-methods-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gender-options {
+                flex-direction: column;
+            }
+
+            .gender-card {
+                min-width: 100%;
+            }
+        }
+
+        /* Payment modal input error state */
+        .form-input.border-red-400 {
+            border-color: #ef4444;
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+        }
+
+        .payment-confirm {
+            box-shadow: 0 10px 30px rgba(6, 95, 96, 0.12);
+        }
+
+        /* Small screens: full width under the header */
+        @media (max-width: 480px) {
+            .payment-modal-panel {
+                width: 96%;
+                border-radius: 10px;
+            }
+
+            .payment-modal-body {
+                padding: 1rem;
+            }
+
+            .gender-card img,
+            .payment-method-card img {
+                display: block;
+                max-height: 26px;
+            }
+        }
+    </style>
 </head>
 
 <body id="bg" class="selection:bg-[#484848] selection:text-white">
@@ -93,129 +699,168 @@
     <div class="cursor"></div>
     <div class="cursor2"></div>
     <div class="page-wraper">
-
+        <div class="top-bar fixed top-0 left-0 right-0 bg-primary text-white py-2.5 px-5 overflow-hidden z-2">
+            <div class="marquee container mx-auto">
+                <span class="text-md font-normal">Superdev Vote - Your Trusted Voting Partner - Dukung finalis
+                    pilihan kamu pada Mister Friendship International 2025
+                </span>
+            </div>
+        </div>
+        <div class="top-bar-fixed-placeholder" aria-hidden="true"></div>
         <!-- HEADER START -->
         <header
-            class="site-header sticky-header absolute lg:left-8.75 lg:right-8.75 lg:top-8.75 left-0 right-0 top-0 duration-500 z-999 [.site-header.is-fixed]:fixed [.site-header.is-fixed]:animate-header-scroll-animation [.site-header.is-fixed]:bg-primary [.site-header.is-fixed]:rounded-b-3xl [.site-header.is-fixed]:top-0">
+            class="site-header sticky-header fixed duration-500 z-1 before:absolute before:w-62.5 before:h-37.5 w-full before:-translate-x-1/2 before:bg-white before:shadow-header before:-z-1 max-4xl:before:hidden [.site-header.is-fixed]:animate-header-scroll-animation [.site-header.is-fixed]:top-0"
+            style="top: 2.5rem">
             <div class="main-bar-wraper">
                 <div
-                    class="w-full lg:min-h-30 min-h-20 lg:ps-8.75 px-4 lg:pe-13.75 duration-500 rounded-5xl flex items-center justify-between">
-                    <div class="flex relative w-full">
-                        <div class="flex items-center relative z-9 h-20 lg:w-44 w-30">
+                    class="flex items-center justify-between relative w-full bg-white 2xl:min-h-20 min-h-20 2xxl:ps-8.75 px-4.5 2xxl:pe-13.75 duration-500">
+                    <div class="flex items-center z-9 h-20 lg:w-44 w-30 4xl:absolute 4xl:left-1/2 4xl:-translate-x-1/2">
+                        <a href="index.html" class="table-cell align-middle">
+                            <img src="assets/images/superdev_.png" alt="logo"
+                                class="object-contain duration-500 lg:max-w-40 sm:max-w-30 max-w-27.5" />
+                        </a>
+                    </div>
+                    <button
+                        class="xmenu-toggler lg:hidden float-right mt-4.5 mb-4 md:ml-7 ml-4 size-11 bg-dark-600 relative cursor-pointer max-lg:order-1"
+                        type="button">
+                        <span
+                            class="block absolute left-2.5 h-0.5 rounded-px bg-primary duration-300 top-3.25 w-5.5"></span>
+                        <span
+                            class="block absolute left-2.5 h-0.5 rounded-px bg-primary duration-0 top-5.5 w-6.25"></span>
+                        <span class="block absolute left-2.5 h-0.5 rounded-px bg-primary duration-300 top-8 w-4"></span>
+                    </button>
+                    <div
+                        class="lg:hidden fixed top-0 left-0 bg-black size-full duration-300 z-999 opacity-0 visible pointer-events-none menu-close fade-overlay">
+                    </div>
+                    <div
+                        class="flex lg:basis-auto lg:grow max-lg:flex-col 4xl:justify-start lg:justify-center justify-start font-base max-lg:fixed max-lg:h-screen max-lg:px-5 max-lg:top-0 max-lg:-left-75 max-lg:z-9999 max-lg:bg-white max-lg:w-72 max-lg:overflow-auto max-lg:duration-700 header-nav custom-scroll">
+                        <div class="flex items-center relative z-9 py-2.25 lg:hidden">
                             <a href="index.html" class="table-cell align-middle">
-                                <img src="assets/images/logo-dark.png" alt="logo" class="object-contain duration-500">
+                                <img src="assets/images/superdev_.png" alt="" class="object-contain duration-500" />
                             </a>
                         </div>
-                        <button
-                            class="xmenu-toggler lg:hidden float-right mt-4.5 mb-4 md:ml-7 ml-4 size-11 bg-dark-600 relative cursor-pointer max-lg:order-1"
-                            type="button">
-                            <span
-                                class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-300 top-3.25 w-5.5"></span>
-                            <span
-                                class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-0 top-5.5 w-6.25"></span>
-                            <span
-                                class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-300 top-8 w-4"></span>
-                        </button>
-                        <div
-                            class="lg:hidden fixed top-0 left-0 bg-black size-full duration-300 z-999 opacity-0 visible pointer-events-none menu-close fade-overlay">
-                        </div>
-                        <div
-                            class="flex lg:justify-center lg:basis-auto lg:grow max-lg:flex-col justify-start font-base max-lg:fixed max-lg:h-screen max-lg:px-5 max-lg:top-0 max-lg:-left-75 max-lg:z-9999 max-lg:bg-white max-lg:w-72 max-lg:overflow-auto max-lg:duration-700 header-nav custom-scroll">
-                            <div class="flex items-center relative z-9 py-6.25 lg:hidden">
-                                <a href="index.html" class="table-cell align-middle">
-                                    <img src="assets/images/logo-dark.png" alt="" class="object-contain duration-500">
+                        <ul class="lg:flex flex-wrap navbar-nav">
+                            <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
+                                <a class="lg:py-7.5 py-2 3xxl:px-5 2xxl:px-3 lg:px-2 relative lg:inline-block block text-lg font-medium text-primary hover:text-primary"
+                                    href="#deskripsi">
+                                    <span class="inline-block">Deskripsi</span>
                                 </a>
-                            </div>
-                            <ul class="lg:flex flex-wrap navbar-nav">
-                                <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
-                                    <a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary"
-                                        href="#home">
-                                        <span class="inline-block">Home</span>
-                                    </a>
+                            </li>
+                            <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
+                                <a class="lg:py-7.5 py-2 3xxl:px-5 2xxl:px-3 lg:px-2 relative lg:inline-block block text-lg font-medium text-primary hover:text-primary"
+                                    href="#leaderboard">
+                                    <span class="inline-block">Leaderboard</span>
+                                </a>
+                            </li>
+                            <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
+                                <a class="lg:py-7.5 py-2 3xxl:px-5 2xxl:px-3 lg:px-2 relative lg:inline-block block text-lg font-medium text-primary hover:text-primary"
+                                    href="#finalis">
+                                    <span class="inline-block">Finalis</span>
+                                </a>
+                            </li>
+                            <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
+                                <a class="lg:py-7.5 py-2 3xxl:px-5 2xxl:px-3 lg:px-2 relative lg:inline-block block text-lg font-medium text-primary hover:text-primary"
+                                    href="#dukungan">
+                                    <span class="inline-block">Dukungan</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="lg:hidden block max-lg:p-5 text-center mt-auto">
+                            <ul>
+                                <li class="inline-block mx-0.5">
+                                    <a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-facebook-f"
+                                        target="_blank" href="https://www.facebook.com/dexignzone"></a>
                                 </li>
-                                <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
-                                    <a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary"
-                                        href="#about">
-                                        <span class="inline-block">About</span>
-                                    </a>
+                                <li class="inline-block mx-0.5">
+                                    <a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-twitter"
+                                        target="_blank" href="https://twitter.com/dexignzones"></a>
                                 </li>
-                                <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
-                                    <a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary"
-                                        href="#rules">
-                                        <span class="inline-block">Rules</span>
-                                    </a>
+                                <li class="inline-block mx-0.5">
+                                    <a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-linkedin-in"
+                                        target="_blank" href="https://www.linkedin.com/showcase/3686700/admin/"></a>
+                                </li>
+                                <li class="inline-block mx-0.5">
+                                    <a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-instagram"
+                                        target="_blank" href="https://www.instagram.com/dexignzone/"></a>
                                 </li>
                             </ul>
-                            <div class="lg:hidden block max-lg:p-5 text-center mt-auto">
-                                <ul>
-                                    <li class="inline-block mx-0.5">
-                                        <a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-facebook-f"
-                                            target="_blank" href="https://www.facebook.com/dexignzone"></a>
-                                    </li>
-                                    <li class="inline-block mx-0.5">
-                                        <a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-twitter"
-                                            target="_blank" href="https://twitter.com/dexignzones"></a>
-                                    </li>
-                                    <li class="inline-block mx-0.5">
-                                        <a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-linkedin-in"
-                                            target="_blank" href="https://www.linkedin.com/showcase/3686700/admin/"></a>
-                                    </li>
-                                    <li class="inline-block mx-0.5">
-                                        <a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-instagram"
-                                            target="_blank" href="https://www.instagram.com/dexignzone/"></a>
-                                    </li>
-                                </ul>
+                        </div>
+                    </div>
+                    <div class="flex lg:justify-end lg:items-center z-9 h-20 xl:pl-8 max-lg:ms-auto">
+                        <div class="flex items-center">
+                            <ul class="ml-5 flex items-center -mr-2.5">
+                                <li class="inline-block max-xl:hidden">
+                                    <ul class="flex">
+                                        <li>
+                                            <a class="text-xl text-primary mr-5 block" href="javascript:;"><i
+                                                    class="fa-brands fa-facebook-f"></i></a>
+                                        </li>
+                                        <li>
+                                            <a class="text-xl text-primary mr-5 block" href="javascript:;"><i
+                                                    class="fa-brands fa-instagram"></i></a>
+                                        </li>
+                                        <li>
+                                            <a class="text-xl text-primary mr-5 block" href="javascript:;"><i
+                                                    class="fa-brands fa-linkedin-in"></i></a>
+                                        </li>
+                                        <li>
+                                            <a class="text-xl text-primary mr-5 block" href="javascript:;"><i
+                                                    class="fa-brands fa-x-twitter"></i></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="inline-block">
+                                    <button type="button"
+                                        class="flex items-center justify-center sm:size-14 size-8 sm:px-4 quick-search cursor-pointer text-primary"
+                                        data-target="#searchOverlay1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-search">
+                                            <circle cx="11" cy="11" r="8"></circle>
+                                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="inline-block" data-drawer="#offcanvas-right" data-drawer-placement="right">
+                                    <button
+                                        class="lg:mt-4.5 lg:mb-4 lg:ml-5 lg:size-11 bg-dark-600 relative cursor-pointer max-lg:order-1 max-md:ms-auto toggle-nav-btn"
+                                        type="button" aria-label="Toggle drawer">
+                                        <span
+                                            class="block absolute left-2.5 h-0.5 rounded-px bg-primary duration-300 top-3.25 w-6 max-lg:hidden"></span>
+                                        <span
+                                            class="block absolute left-2.5 h-0.5 rounded-px bg-primary duration-0 top-5.5 w-6 max-lg:hidden"></span>
+                                        <span
+                                            class="block absolute left-2.5 h-0.5 rounded-px bg-primary duration-300 top-8 w-6 max-lg:hidden"></span>
+                                        <b
+                                            class="lg:hidden uppercase fixed -rotate-90 -translate-y-1/2 -right-7.5 bg-primary px-5 rounded-t-2lg text-white tracking-[2px] top-1/2">Info</b>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="fixed -top-full left-0 size-full bg-body-bg z-999 flex items-center justify-center p-8 duration-500 xmenu-search"
+                        id="searchOverlay1">
+                        <form
+                            class="absolute top-1/2 left-1/2 -translate-1/2 w-[calc(100%_-_80px)] max-w-150 text-primary text-3xl font-light text-left outline-none p-1.5 duration-500 bg-paleaqua rounded-25xl"
+                            action="#">
+                            <div
+                                class="relative flex flex-wrap items-stretch w-full bg-white rounded-25xl overflow-hidden">
+                                <input name="search" value="" type="text"
+                                    class="h-17.5 pr-3 pl-7.5 text-lg text-primary w-[1%] flex-1 outline-none duration-300 placeholder:text-primary focus:border-primary"
+                                    placeholder="Search..." />
+                                <span class="flex">
+                                    <button type="button"
+                                        class="px-2.5 outline-none size-17.5 bg-primary text-2xl text-white rounded-full flex-1 ml-2.5 duration-500 cursor-pointer">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
                             </div>
-                        </div>
-                        <div class="flex lg:justify-end lg:items-center z-9 h-20 xl:pl-8 max-lg:ms-auto">
-                            <div class="flex items-center">
-                                <ul class="ml-5 flex items-center -mr-2.5">
-                                    <li class="inline-block">
-                                        <button type="button"
-                                            class="flex items-center justify-center size-14 px-4 quick-search cursor-pointer text-white"
-                                            data-target="#searchOverlay1">
-                                            <i class="fa fa-search text-xl"></i>
-                                        </button>
-                                    </li>
-                                    <li class="inline-block" data-drawer="#offcanvas-right"
-                                        data-drawer-placement="right">
-                                        <button
-                                            class="lg:mt-4.5 lg:mb-4 lg:ml-5 lg:size-11 bg-dark-600 relative cursor-pointer max-lg:order-1 max-md:ms-auto toggle-nav-btn"
-                                            type="button" aria-label="Toggle drawer">
-                                            <span
-                                                class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-300 top-3.25 w-7 max-lg:hidden"></span>
-                                            <span
-                                                class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-0 top-5.5 w-7 max-lg:hidden"></span>
-                                            <span
-                                                class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-300 top-8 w-7 max-lg:hidden"></span>
-                                            <b
-                                                class="lg:hidden uppercase fixed -rotate-90 -translate-y-1/2 -right-7.5 bg-primary px-5 rounded-t-2lg text-white tracking-[2px] top-1/2">Info</b>
-                                        </button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="fixed -top-full left-0 size-full bg-body-bg z-999 flex items-center justify-center p-8 duration-500 xmenu-search"
-                            id="searchOverlay1">
-                            <form
-                                class="absolute top-1/2 left-1/2 -translate-1/2 w-[calc(100%_-_80px)] max-w-150 text-primary text-3xl font-light text-left outline-none p-1.5 duration-500 bg-paleaqua rounded-25xl"
-                                action="#">
-                                <div
-                                    class="relative flex flex-wrap items-stretch w-full bg-white rounded-25xl overflow-hidden">
-                                    <input name="search" value="" type="text"
-                                        class="h-17.5 pr-3 pl-7.5 text-lg text-primary w-[1%] flex-1 outline-none duration-300 placeholder:text-primary focus:border-primary"
-                                        placeholder="Search...">
-                                    <span class="flex">
-                                        <button type="button"
-                                            class="px-2.5 outline-none size-17.5 bg-primary text-2xl text-white rounded-full flex-1 ml-2.5 duration-500 cursor-pointer"><i
-                                                class="fa fa-search"></i></button>
-                                    </span>
-                                </div>
-                            </form>
-                            <button type="button"
-                                class="absolute right-8 top-8 text-primary bg-citrusyellow text-base size-10 cursor-pointer rounded search-remove"><i
-                                    class="fa fa-close"></i></button>
-                        </div>
+                        </form>
+                        <button type="button"
+                            class="absolute right-8 top-8 text-primary bg-citrusyellow text-base size-10 cursor-pointer rounded search-remove">
+                            <i class="fa fa-close"></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -229,8 +874,8 @@
                     <!-- Banner Style One -->
                     <div class="2xl:h-237.5 lg:h-192 overflow-hidden relative"
                         style="background-image: url(assets/images/main-slider/slider2/slider-bg.jpg);">
-                        <div
-                            class="bg-black/20 lg:rounded-3xl lg:m-8.75 lg:mt-0 lg:top-8.75 2xl:h-220 lg:h-174.5 relative z-2 flex justify-between max-lg:text-center">
+                        <div class="bg-black/20 lg:rounded-3xl lg:p-8.75 2xl:h-220 lg:h-174.5 absolute top-0 left-0 right-0 z-9999999 flex justify-between max-lg:text-center"
+                            style="z-index:1;">
                             <div class="max-w-480 mx-auto relative w-full lg:pb-0 pb-10">
                                 <div class="px-5 pt-30 sm:pt-37.5 lg:pl-7.5 2xl:pt-50 2xl:pl-17.5 lg:pr-0 max-w-255">
                                     <div class="mb-10 lg:pl-12.5 relative z-4"><a href="#"
@@ -324,17 +969,17 @@
 
                                 </div>
 
-                                <div class="lg:absolute top-0 right-0 z-12 h-full">
+                                <div class="lg:absolute top-0 right-0 z-3 h-full" style="z-index:3;">
                                     <div
-                                        class="relative lg:top-0 h-full ml-auto 2xxl:w-full xl:w-full lg:w-4/5 w-3/4 max-2xl:mr-12.5 max-lg:!mr-auto">
-                                        <img src="assets/images/krn/120.png" alt="Image"
+                                        class="relative h-full ml-auto 2xl:w-full xl:w-full lg:w-4/5 w-3/4 max-2xl:mr-12.5 max-lg:!mr-auto">
+                                        <img id="hero-overlap-img" src="assets/images/krn/120.png" alt="Image"
                                             class="w-auto lg:w-full h-full object-cover max-w-none" width="1200"
                                             height="1200" loading="lazy">
                                     </div>
                                 </div>
 
-                                <div
-                                    class="lg:absolute xl:right-12.5 lg:right-5 lg:top-1/2 lg:-translate-y-1/2 text-white z-15">
+                                <div class="lg:absolute xl:right-12.5 lg:right-5 lg:top-1/2 lg:-translate-y-1/2 text-white"
+                                    style="z-index:10000000;">
                                     <span
                                         class="block font-light text-base xl:text-22 leading-6.5 italic rotate-[-15deg]">Most
                                         Favorite</span>
@@ -355,7 +1000,8 @@
                                 <!-- Rank 2 - Mexico (Left) -->
                                 <div class="card">
                                     <div class="crown silver">
-                                        <i class="fa-solid fa-crown"></i>
+                                        <img src="assets/images/krn/silver_crown.png" alt="Silver Crown"
+                                            style="display:block; width:3.5rem; height:auto;" />
                                     </div>
 
                                     <div class="avatar-container">
@@ -376,7 +1022,8 @@
                                 <!-- Rank 1 - Canada (Center) -->
                                 <div class="card winner">
                                     <div class="crown gold">
-                                        <i class="fa-solid fa-crown"></i>
+                                        <img src="assets/images/krn/gold_crown.gif" alt="Gold Crown"
+                                            style="display:block; width:4.5rem; height:auto;" />
                                     </div>
 
                                     <div class="avatar-container">
@@ -397,7 +1044,8 @@
                                 <!-- Rank 3 - Japan (Right) -->
                                 <div class="card">
                                     <div class="crown bronze">
-                                        <i class="fa-solid fa-crown"></i>
+                                        <img src="assets/images/krn/bronze_crown.png" alt="Bronze Crown"
+                                            style="display:block; width:3.5rem; height:auto;" />
                                     </div>
 
                                     <div class="avatar-container">
@@ -914,20 +1562,29 @@
                 <!-- CONTENT END -->
 
                 <!-- FOOTER START -->
-                <footer class="pt-20 bg-primary bg-cover bg-[url(../images/background/ftr-dark-bg.png)]">
+                <footer class="pt-20 bg-primary bg-cover" style="
+              background-image: url(&quot;assets/images/bg-foots.jpg&quot;);
+              background-repeat: no-repeat;
+              background-position: center;
+            ">
                     <div class="-mt-40">
                         <div
                             class="container bg-citrusyellow rounded-3xl md:flex items-center justify-between !py-6.25 lg:!px-17.5 sm:!px-10.5 !px-5.5 max-w-324">
                             <div class="pr-5 max-lg:w-1/2 max-md:w-full">
                                 <div
                                     class="text-primary font-display lg:text-60 sm:text-46 text-28 leading-[0.75] sm:text-shadow-[2px_3px_0px_rgba(255,255,255,0.72)] pb-5">
-                                    <span class="text-white inline-block">Buat Voting</span> Sekarang!</div>
+                                    <span class="text-white inline-block">Buat Voting</span>
+                                    Sekarang!
+                                </div>
                                 <div class="text-primary text-xl font-medium font-title max-md:mb-5">
-                                    Rasakan kemudahan dalam mengelola distribusi tiket dan sistem voting kamu dengan
-                                    Superdev Indonesia </div>
+                                    Rasakan kemudahan dalam mengelola distribusi tiket dan
+                                    sistem voting kamu dengan Superdev Indonesia
+                                </div>
                             </div>
                             <div>
-                                <a href="destination-detail.html" class="site-button butn-bg-shape btn-white">Buat
+                                <!-- Link Whatsapp -->
+                                <a href="https://wa.me/6285232304965" target="_blank"
+                                    class="site-button butn-bg-shape btn-white">Buat
                                     Votemu
                                 </a>
                             </div>
@@ -937,15 +1594,59 @@
                     <div class="container">
                         <div class="sm:pt-20 pt-10 text-white/06 border-b border-primary">
                             <div class="grid grid-cols-12">
-                                <div class="lg:col-span-3 col-span-12 sm:px-3.75">
+                                <div class="lg:col-span-6 col-span-12 sm:px-3.75">
                                     <div class="mb-10">
                                         <div class="mb-10 text-center block max-w-48.25 after:table after:clear-both">
-                                            <a href="index.html"><img src="assets/images/logo-dark.png" alt="logo"
-                                                    width="193" height="81" loading="lazy"></a>
+                                            <a href="index.html"><img src="assets/images/superdev_.png" alt="logo"
+                                                    width="193" height="81" loading="lazy" /></a>
                                         </div>
-                                        <p class="sm:pr-12.5 mb-4 text-base text-white/50">Travlla is a
-                                            multi-award-winning strategy and content creation agency that specializes in
-                                            travel marketing.</p>
+                                        <p class="sm:pr-12.5 mb-4 text-base text-white/50">
+                                            Platform ticketing dan voting online yang terpercaya.
+                                            Hanya dengan 1 website, kamu dapat langsung memberikan
+                                            dukungan pada finalis favorit kamu atau membeli tiket
+                                            dari event yang kamu inginkan. Transparan dan kenyamanan
+                                            user adalah kunci utama dari Superdev Indonesia.
+                                        </p>
+
+                                        <!-- Contact buttons -->
+                                        <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                            <a href="tel:6285232304965"
+                                                class="block w-full sm:max-w-[360px] flex items-center gap-4 mb-2 rounded-2xl p-4 bg-transparent border border-white text-white">
+                                                <span
+                                                    class="w-12 h-12 flex items-center justify-center bg-white/10 text-white rounded-full">
+                                                    <i class="fa-solid fa-headset text-xl"></i>
+                                                </span>
+                                                <div>
+                                                    <div class="font-semibold">Customer Support</div>
+                                                    <div class="text-sm">Irwan Sanjaya - 62 852-3230-4965</div>
+                                                </div>
+                                            </a>
+
+                                            <a href="https://wa.me/6282124594440"
+                                                class="block w-full sm:max-w-[360px] flex items-center gap-4 mb-2 rounded-2xl p-4 bg-transparent border border-white text-white">
+                                                <span
+                                                    class="w-12 h-12 flex items-center justify-center bg-white/10 text-white rounded-full">
+                                                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                                                </span>
+                                                <div>
+                                                    <div class="font-semibold">Event dan Vote</div>
+                                                    <div class="text-sm">Irwan Sanjaya - 62 821-2459-4440</div>
+                                                </div>
+                                            </a>
+
+                                            <a href="mailto:info@kreen.id"
+                                                class="block w-full sm:max-w-[740px] mx-auto flex items-center gap-4 mb-2 rounded-2xl p-4 bg-transparent border border-white text-white sm:col-span-2">
+                                                <span
+                                                    class="w-12 h-12 flex items-center justify-center bg-white/10 text-white rounded-full">
+                                                    <i class="fa-solid fa-envelope text-xl"></i>
+                                                </span>
+                                                <div>
+                                                    <div class="font-semibold">Contact Us</div>
+                                                    <div class="text-sm">info@superdev_.id</div>
+                                                </div>
+                                            </a>
+                                        </div>
+
                                         <ul class="mt-5">
                                             <li
                                                 class="inline-flex xl:size-11.5 size-10.5 bg-citrusyellow xl:mr-2.5 mr-1.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
@@ -982,239 +1683,64 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="lg:col-span-2 col-span-6 mb-5 sm:px-3.75">
+                                <div class="lg:col-span-3 col-span-6 mb-5 sm:px-3.75">
                                     <div class="mb-10">
-                                        <h3 class="!text-white mb-7.5 relative xl:text-28 text-2xl">Explore</h3>
+                                        <h3 class="!text-white mb-7.5 relative xl:text-28 text-2xl">
+                                            Tentang Kami
+                                        </h3>
                                         <ul>
-                                            <li class="block w-full py-0.5 overflow-hidden"><a
-                                                    class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
-                                                    href="about-1.html">About us</a></li>
-                                            <li class="block w-full py-0.5 overflow-hidden"><a
-                                                    class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
-                                                    href="faq.html">FAQ's</a></li>
-                                            <li class="block w-full py-0.5 overflow-hidden"><a
-                                                    class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
-                                                    href="services.html">Services</a></li>
-                                            <li class="block w-full py-0.5 overflow-hidden"><a
-                                                    class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
-                                                    href="our-team.html">Team</a></li>
-                                            <li class="block w-full py-0.5 overflow-hidden"><a
-                                                    class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
-                                                    href="contact.html">News & Articles</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="lg:col-span-2 col-span-6 mb-5 sm:px-3.75">
-                                    <div class="mb-10">
-                                        <h3 class="!text-white mb-7.5 relative xl:text-28 text-2xl">Destinations</h3>
-                                        <ul>
-                                            <li class="block w-full py-0.5 overflow-hidden"><a
-                                                    class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
-                                                    href="about-1.html">Tokyo</a></li>
-                                            <li class="block w-full py-0.5 overflow-hidden"><a
-                                                    class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
-                                                    href="faq.html">France</a></li>
-                                            <li class="block w-full py-0.5 overflow-hidden"><a
-                                                    class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
-                                                    href="services.html">Dubai</a></li>
-                                            <li class="block w-full py-0.5 overflow-hidden"><a
-                                                    class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
-                                                    href="our-team.html">Kenya</a></li>
-                                            <li class="block w-full py-0.5 overflow-hidden"><a
-                                                    class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
-                                                    href="contact.html">Vietnam</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="lg:col-span-2 col-span-6 mb-5 sm:px-3.75">
-                                    <div class="mb-10">
-                                        <h3 class="!text-white mb-7.5 relative xl:text-28 text-2xl">Legal</h3>
-                                        <ul>
-                                            <li class="block w-full py-0.5 overflow-hidden"><a
-                                                    class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
-                                                    href="about-1.html">Terms & Condition</a></li>
-                                            <li class="block w-full py-0.5 overflow-hidden"><a
-                                                    class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
-                                                    href="faq.html">Privacy Policy</a></li>
-                                            <li class="block w-full py-0.5 overflow-hidden"><a
-                                                    class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
-                                                    href="services.html">Contact</a></li>
-                                            <li class="block w-full py-0.5 overflow-hidden"><a
-                                                    class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
-                                                    href="our-team.html">Careers</a></li>
-                                            <li class="block w-full py-0.5 overflow-hidden"><a
-                                                    class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
-                                                    href="contact.html">Help</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="lg:col-span-3 sm:col-span-6 col-span-12 sm:px-3.75">
-                                    <div class="mb-10">
-                                        <ul>
-                                            <li class="mb-2.5 relative flex items-center">
-                                                <div
-                                                    class="xl:size-14 size-12 xl:min-w-14 min-w-12 rounded-full mr-3.5 bg-white/40 flex items-center justify-center">
-                                                    <i class="fa-solid fa-phone text-xl text-white"></i>
-                                                </div>
-                                                <a href="tel:1236540214">
-                                                    <span
-                                                        class="xl:text-3xl text-2xl text-citrusyellow font-normal font-display">123
-                                                        654 0214</span>
-                                                </a>
+                                            <li class="block w-full py-0.5 overflow-hidden">
+                                                <a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
+                                                    href="tentang.html">Tentang Kami</a>
                                             </li>
-                                            <li class="mb-2.5 relative flex items-center">
-                                                <div
-                                                    class="xl:size-14 size-12 xl:min-w-14 min-w-12 rounded-full mr-3.5 bg-white/40 flex items-center justify-center">
-                                                    <i class="fa-solid fa-envelope text-xl text-white"></i>
-                                                </div>
-                                                <a class="black text-paleaqua font-semibold xl:text-lg text-sm font-base"
-                                                    href="mailto:info@example.com">travllainfo@gmail.com</a>
+                                            <li class="block w-full py-0.5 overflow-hidden">
+                                                <a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
+                                                    href="kontak.html">Kontak Kami</a>
                                             </li>
-                                            <li class="relative flex items-center">
-                                                <div
-                                                    class="xl:size-14 size-12 xl:min-w-14 min-w-12 rounded-full mr-3.5 bg-white/40 flex items-center justify-center">
-                                                    <i class="fa-solid fa-house text-xl text-white"></i>
-                                                </div>
-                                                <span
-                                                    class="black text-paleaqua font-semibold xl:text-lg text-sm font-base">55/11
-                                                    ronin tower New York</span>
+                                            <li class="block w-full py-0.5 overflow-hidden">
+                                                <a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
+                                                    href="pusat-bantuan.html">Pusat Bantuan</a>
+                                            </li>
+                                            <li class="block w-full py-0.5 overflow-hidden">
+                                                <a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
+                                                    href="voting.html">Voting</a>
+                                            </li>
+                                            <li class="block w-full py-0.5 overflow-hidden">
+                                                <a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
+                                                    href="berita-event.html">Berita Event</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="lg:col-span-3 col-span-6 mb-5 sm:px-3.75">
+                                    <div class="mb-10">
+                                        <h3 class="!text-white mb-7.5 relative xl:text-28 text-2xl">
+                                            Legal
+                                        </h3>
+                                        <ul>
+                                            <li class="block w-full py-0.5 overflow-hidden">
+                                                <a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
+                                                    href="about-1.html">Terms & Condition</a>
+                                            </li>
+                                            <li class="block w-full py-0.5 overflow-hidden">
+                                                <a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
+                                                    href="faq.html">Privacy Policy</a>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="xl:py-10 py-1.25 xl:flex items-center">
-                            <h3 class="whitespace-nowrap mr-11.5 !text-white relative text-28 max-xl:mb-7.5">Follow
-                                Instagram</h3>
-                            <ul class="flex xl:gap-5 gap-y-2.5 gap-x-[2%] flex-wrap">
-                                <li class="xl:w-[9.43%] lg:w-[9.33%] sm:w-[18.4%] w-[32%]">
-                                    <a href="javascript:void(0);"
-                                        class="relative rounded-2xl overflow-hidden flex items-center justify-center duration-500 bg-primary group">
-                                        <img src="assets/images/insta-gallery/pic1.jpg" alt="pic1"
-                                            class="group-hover:opacity-80 group-hover:[filter:blur(3px)]" width="100"
-                                            height="100" loading="lazy">
-                                        <span
-                                            class="absolute top-1/2 left-1/2 table -translate-1/2 size-22.5 after:absolute after:block after:w-[0%] after:h-1.5 after:border-t after:border-b after:border-white after:opacity-80 after:top-1/2 after:-translate-y-1/2 after:duration-500 before:absolute before:block before:w-[0%] before:h-1.5 before:border-t before:border-b before:border-white before:opacity-80 before:top-1/2 before:-translate-y-1/2 before:duration-500 before:-right-3/5 after:-left-3/5 group-hover:opacity-100 group-hover:before:w-4/5 group-hover:after:w-4/5">
-                                            <i
-                                                class="fa-brands fa-instagram absolute left-1/2 top-1/2 translate-1/2 text-white opacity-0 duration-500 group-hover:scale-[1.1] group-hover:-translate-1/2 group-hover:opacity-100"></i>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="xl:w-[9.43%] lg:w-[9.33%] sm:w-[18.4%] w-[32%]">
-                                    <a href="javascript:void(0);"
-                                        class="relative rounded-2xl overflow-hidden flex items-center justify-center duration-500 bg-primary group">
-                                        <img src="assets/images/insta-gallery/pic2.jpg" alt="pic2"
-                                            class="group-hover:opacity-80 group-hover:[filter:blur(3px)]" width="100"
-                                            height="100" loading="lazy">
-                                        <span
-                                            class="absolute top-1/2 left-1/2 table -translate-1/2 size-22.5 after:absolute after:block after:w-[0%] after:h-1.5 after:border-t after:border-b after:border-white after:opacity-80 after:top-1/2 after:-translate-y-1/2 after:duration-500 before:absolute before:block before:w-[0%] before:h-1.5 before:border-t before:border-b before:border-white before:opacity-80 before:top-1/2 before:-translate-y-1/2 before:duration-500 before:-right-3/5 after:-left-3/5 group-hover:opacity-100 group-hover:before:w-4/5 group-hover:after:w-4/5">
-                                            <i
-                                                class="fa-brands fa-instagram absolute left-1/2 top-1/2 translate-1/2 text-white opacity-0 duration-500 group-hover:scale-[1.1] group-hover:-translate-1/2 group-hover:opacity-100"></i>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="xl:w-[9.43%] lg:w-[9.33%] sm:w-[18.4%] w-[32%]">
-                                    <a href="javascript:void(0);"
-                                        class="relative rounded-2xl overflow-hidden flex items-center justify-center duration-500 bg-primary group">
-                                        <img src="assets/images/insta-gallery/pic3.jpg" alt="pic3"
-                                            class="group-hover:opacity-80 group-hover:[filter:blur(3px)]" width="100"
-                                            height="100" loading="lazy">
-                                        <span
-                                            class="absolute top-1/2 left-1/2 table -translate-1/2 size-22.5 after:absolute after:block after:w-[0%] after:h-1.5 after:border-t after:border-b after:border-white after:opacity-80 after:top-1/2 after:-translate-y-1/2 after:duration-500 before:absolute before:block before:w-[0%] before:h-1.5 before:border-t before:border-b before:border-white before:opacity-80 before:top-1/2 before:-translate-y-1/2 before:duration-500 before:-right-3/5 after:-left-3/5 group-hover:opacity-100 group-hover:before:w-4/5 group-hover:after:w-4/5">
-                                            <i
-                                                class="fa-brands fa-instagram absolute left-1/2 top-1/2 translate-1/2 text-white opacity-0 duration-500 group-hover:scale-[1.1] group-hover:-translate-1/2 group-hover:opacity-100"></i>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="xl:w-[9.43%] lg:w-[9.33%] sm:w-[18.4%] w-[32%]">
-                                    <a href="javascript:void(0);"
-                                        class="relative rounded-2xl overflow-hidden flex items-center justify-center duration-500 bg-primary group">
-                                        <img src="assets/images/insta-gallery/pic4.jpg" alt="pic4"
-                                            class="group-hover:opacity-80 group-hover:[filter:blur(3px)]" width="100"
-                                            height="100" loading="lazy">
-                                        <span
-                                            class="absolute top-1/2 left-1/2 table -translate-1/2 size-22.5 after:absolute after:block after:w-[0%] after:h-1.5 after:border-t after:border-b after:border-white after:opacity-80 after:top-1/2 after:-translate-y-1/2 after:duration-500 before:absolute before:block before:w-[0%] before:h-1.5 before:border-t before:border-b before:border-white before:opacity-80 before:top-1/2 before:-translate-y-1/2 before:duration-500 before:-right-3/5 after:-left-3/5 group-hover:opacity-100 group-hover:before:w-4/5 group-hover:after:w-4/5">
-                                            <i
-                                                class="fa-brands fa-instagram absolute left-1/2 top-1/2 translate-1/2 text-white opacity-0 duration-500 group-hover:scale-[1.1] group-hover:-translate-1/2 group-hover:opacity-100"></i>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="xl:w-[9.43%] lg:w-[9.33%] sm:w-[18.4%] w-[32%]">
-                                    <a href="javascript:void(0);"
-                                        class="relative rounded-2xl overflow-hidden flex items-center justify-center duration-500 bg-primary group">
-                                        <img src="assets/images/insta-gallery/pic5.jpg" alt="pic5"
-                                            class="group-hover:opacity-80 group-hover:[filter:blur(3px)]" width="100"
-                                            height="100" loading="lazy">
-                                        <span
-                                            class="absolute top-1/2 left-1/2 table -translate-1/2 size-22.5 after:absolute after:block after:w-[0%] after:h-1.5 after:border-t after:border-b after:border-white after:opacity-80 after:top-1/2 after:-translate-y-1/2 after:duration-500 before:absolute before:block before:w-[0%] before:h-1.5 before:border-t before:border-b before:border-white before:opacity-80 before:top-1/2 before:-translate-y-1/2 before:duration-500 before:-right-3/5 after:-left-3/5 group-hover:opacity-100 group-hover:before:w-4/5 group-hover:after:w-4/5">
-                                            <i
-                                                class="fa-brands fa-instagram absolute left-1/2 top-1/2 translate-1/2 text-white opacity-0 duration-500 group-hover:scale-[1.1] group-hover:-translate-1/2 group-hover:opacity-100"></i>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="xl:w-[9.43%] lg:w-[9.33%] sm:w-[18.4%] w-[32%]">
-                                    <a href="javascript:void(0);"
-                                        class="relative rounded-2xl overflow-hidden flex items-center justify-center duration-500 bg-primary group">
-                                        <img src="assets/images/insta-gallery/pic6.jpg" alt="pic6"
-                                            class="group-hover:opacity-80 group-hover:[filter:blur(3px)]" width="100"
-                                            height="100" loading="lazy">
-                                        <span
-                                            class="absolute top-1/2 left-1/2 table -translate-1/2 size-22.5 after:absolute after:block after:w-[0%] after:h-1.5 after:border-t after:border-b after:border-white after:opacity-80 after:top-1/2 after:-translate-y-1/2 after:duration-500 before:absolute before:block before:w-[0%] before:h-1.5 before:border-t before:border-b before:border-white before:opacity-80 before:top-1/2 before:-translate-y-1/2 before:duration-500 before:-right-3/5 after:-left-3/5 group-hover:opacity-100 group-hover:before:w-4/5 group-hover:after:w-4/5">
-                                            <i
-                                                class="fa-brands fa-instagram absolute left-1/2 top-1/2 translate-1/2 text-white opacity-0 duration-500 group-hover:scale-[1.1] group-hover:-translate-1/2 group-hover:opacity-100"></i>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="xl:w-[9.43%] lg:w-[9.33%] sm:w-[18.4%] w-[32%]">
-                                    <a href="javascript:void(0);"
-                                        class="relative rounded-2xl overflow-hidden flex items-center justify-center duration-500 bg-primary group">
-                                        <img src="assets/images/insta-gallery/pic7.jpg" alt="pic7"
-                                            class="group-hover:opacity-80 group-hover:[filter:blur(3px)]" width="100"
-                                            height="100" loading="lazy">
-                                        <span
-                                            class="absolute top-1/2 left-1/2 table -translate-1/2 size-22.5 after:absolute after:block after:w-[0%] after:h-1.5 after:border-t after:border-b after:border-white after:opacity-80 after:top-1/2 after:-translate-y-1/2 after:duration-500 before:absolute before:block before:w-[0%] before:h-1.5 before:border-t before:border-b before:border-white before:opacity-80 before:top-1/2 before:-translate-y-1/2 before:duration-500 before:-right-3/5 after:-left-3/5 group-hover:opacity-100 group-hover:before:w-4/5 group-hover:after:w-4/5">
-                                            <i
-                                                class="fa-brands fa-instagram absolute left-1/2 top-1/2 translate-1/2 text-white opacity-0 duration-500 group-hover:scale-[1.1] group-hover:-translate-1/2 group-hover:opacity-100"></i>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="xl:w-[9.43%] lg:w-[9.33%] sm:w-[18.4%] w-[32%]">
-                                    <a href="javascript:void(0);"
-                                        class="relative rounded-2xl overflow-hidden flex items-center justify-center duration-500 bg-primary group">
-                                        <img src="assets/images/insta-gallery/pic8.jpg" alt="pic8"
-                                            class="group-hover:opacity-80 group-hover:[filter:blur(3px)]" width="100"
-                                            height="100" loading="lazy">
-                                        <span
-                                            class="absolute top-1/2 left-1/2 table -translate-1/2 size-22.5 after:absolute after:block after:w-[0%] after:h-1.5 after:border-t after:border-b after:border-white after:opacity-80 after:top-1/2 after:-translate-y-1/2 after:duration-500 before:absolute before:block before:w-[0%] before:h-1.5 before:border-t before:border-b before:border-white before:opacity-80 before:top-1/2 before:-translate-y-1/2 before:duration-500 before:-right-3/5 after:-left-3/5 group-hover:opacity-100 group-hover:before:w-4/5 group-hover:after:w-4/5">
-                                            <i
-                                                class="fa-brands fa-instagram absolute left-1/2 top-1/2 translate-1/2 text-white opacity-0 duration-500 group-hover:scale-[1.1] group-hover:-translate-1/2 group-hover:opacity-100"></i>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="xl:w-[9.43%] lg:w-[9.33%] sm:w-[18.4%] w-[32%]">
-                                    <a href="javascript:void(0);"
-                                        class="relative rounded-2xl overflow-hidden flex items-center justify-center duration-500 bg-primary group">
-                                        <img src="assets/images/insta-gallery/pic9.jpg" alt="pic9"
-                                            class="group-hover:opacity-80 group-hover:[filter:blur(3px)]" width="100"
-                                            height="100" loading="lazy">
-                                        <span
-                                            class="absolute top-1/2 left-1/2 table -translate-1/2 size-22.5 after:absolute after:block after:w-[0%] after:h-1.5 after:border-t after:border-b after:border-white after:opacity-80 after:top-1/2 after:-translate-y-1/2 after:duration-500 before:absolute before:block before:w-[0%] before:h-1.5 before:border-t before:border-b before:border-white before:opacity-80 before:top-1/2 before:-translate-y-1/2 before:duration-500 before:-right-3/5 after:-left-3/5 group-hover:opacity-100 group-hover:before:w-4/5 group-hover:after:w-4/5">
-                                            <i
-                                                class="fa-brands fa-instagram absolute left-1/2 top-1/2 translate-1/2 text-white opacity-0 duration-500 group-hover:scale-[1.1] group-hover:-translate-1/2 group-hover:opacity-100"></i>
-                                        </span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
                         <div
                             class="py-10 text-white relative z-1 font-normal after:absolute after:bg-primary after:max-w-135 after:h-px after:left-1/2 after:top-0 after:-translate-x-1/2">
                             <div class="container">
-                                <p class="copyrights-text text-center text-sm font-semibold">© <span
-                                        class="current-year">2024</span> <a
-                                        href="https://themeforest.net/user/dexignzone" target="_blank"><span
-                                            class="inline-block text-citrusyellow uppercase text-center text-sm font-semibold">DexignZone</span></a>
-                                    All Rights Reserved.</p>
+                                <p class="copyrights-text text-center text-sm font-semibold">
+                                    © <span class="current-year">2025</span>
+                                    <a href="#" target="_blank"><span
+                                            class="inline-block text-citrusyellow uppercase text-center text-sm font-semibold">Superdev
+                                            Indonesia</span></a>
+                                    All Rights Reserved.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -1310,8 +1836,8 @@
     </div>
 
     <!-- Voting Modal (moved here) -->
-    <div id="votingModal" class="modal">
-        <div class="modal-content">
+    <div id="votingModal" class="modal" aria-hidden="true">
+        <div class="modal-content modal-panel" role="dialog" aria-modal="true" tabindex="-1">
             <div class="modal-header">
                 <h2 class="modal-title">Mister Friendship International 2025</h2>
                 <button class="modal-close" onclick="closeVotingModal()">×</button>
@@ -1385,8 +1911,8 @@
     </div>
 
     <!-- Payment Modal (moved here) -->
-    <div id="paymentModal" class="modal">
-        <div class="modal-content">
+    <div id="paymentModal" class="modal" aria-hidden="true">
+        <div class="modal-content modal-panel" role="dialog" aria-modal="true" tabindex="-1">
             <div class="modal-header">
                 <h2 class="modal-title">Mister Friendship International 2025</h2>
                 <button class="modal-close" onclick="closePaymentModal()">×</button>
@@ -1489,121 +2015,230 @@
 
 
     <script>
-        let selectedVotes = 0;
-        let selectedPrice = 0;
-        let currentFinalist = {
-            image: '',
-            country: '',
-            number: ''
-        };
-
-        function openVotingModal(image, country, number) {
-            currentFinalist = {
-                image,
-                country,
-                number
+        (function () {
+            let selectedVotes = 0;
+            let selectedPrice = 0;
+            let currentFinalist = {
+                image: '',
+                country: '',
+                number: ''
             };
-            document.getElementById('modalFinalistImage').src = image;
-            document.getElementById('modalCountryName').textContent = country.toUpperCase();
-            document.getElementById('votingModal').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
+            let _modalPrevFocused = null;
+            let _modalKeydownHandler = null;
 
-        function closeVotingModal() {
-            document.getElementById('votingModal').classList.remove('active');
-            document.body.style.overflow = 'auto';
-            resetVoteSelection();
-        }
+            function trapFocus(panel, e) {
+                const focusable = panel.querySelectorAll(
+                    'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])');
+                if (!focusable.length) return;
+                const first = focusable[0];
+                const last = focusable[focusable.length - 1];
 
-        function selectVote(votes, price, element) {
-            // Remove selected class from all options
-            document.querySelectorAll('.vote-option').forEach(opt => {
-                opt.classList.remove('selected');
-            });
-
-            // Add selected class to clicked option
-            element.classList.add('selected');
-
-            selectedVotes = votes;
-            selectedPrice = price;
-
-            document.getElementById('totalQuantity').textContent = votes + ' Votes';
-            document.getElementById('totalAmount').textContent = 'USD ' + price.toFixed(2);
-        }
-
-        function resetVoteSelection() {
-            selectedVotes = 0;
-            selectedPrice = 0;
-            document.querySelectorAll('.vote-option').forEach(opt => {
-                opt.classList.remove('selected');
-            });
-            document.getElementById('totalQuantity').textContent = '0 Votes';
-            document.getElementById('totalAmount').textContent = 'USD 0.00';
-        }
-
-        function openPaymentModal() {
-            if (selectedVotes === 0) {
-                alert('Please select a vote package first!');
-                return;
+                if (e.key === 'Tab') {
+                    if (e.shiftKey) { // shift + tab
+                        if (document.activeElement === first) {
+                            e.preventDefault();
+                            last.focus();
+                        }
+                    } else { // tab
+                        if (document.activeElement === last) {
+                            e.preventDefault();
+                            first.focus();
+                        }
+                    }
+                }
             }
 
-            // Update payment modal with selected data
-            document.getElementById('paymentFinalistImage').src = currentFinalist.image;
-            document.getElementById('paymentCountryName').textContent = currentFinalist.country;
-            document.getElementById('paymentVoteCount').textContent = selectedVotes + ' Votes';
-            document.getElementById('paymentPrice').textContent = 'USD ' + selectedPrice.toFixed(2);
+            function openModal(id) {
+                const modal = document.getElementById(id);
+                if (!modal) return;
+                _modalPrevFocused = document.activeElement;
+                modal.classList.add('active');
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
 
-            // Close voting modal and open payment modal
-            document.getElementById('votingModal').classList.remove('active');
-            document.getElementById('paymentModal').classList.add('active');
-        }
+                const panel = modal.querySelector('.modal-panel') || modal.querySelector('.modal-content');
+                try {
+                    if (panel) panel.focus();
+                } catch (e) {}
 
-        function closePaymentModal() {
-            document.getElementById('paymentModal').classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-
-        // Add click handlers to all vote buttons
-        document.addEventListener('DOMContentLoaded', function () {
-            // For finalist cards
-            document.querySelectorAll('.finalist-vote-button').forEach((btn, index) => {
-                const card = btn.closest('.finalist-card');
-                const img = card.querySelector('.finalist-photo').src;
-                const country = card.querySelector('.finalist-country').textContent;
-                const number = card.querySelector('.finalist-number').textContent;
-
-                btn.onclick = function (e) {
-                    e.preventDefault();
-                    openVotingModal(img, country, number);
+                _modalKeydownHandler = function (ev) {
+                    if (ev.key === 'Escape') closeModal(id);
+                    trapFocus(panel, ev);
                 };
+                document.addEventListener('keydown', _modalKeydownHandler);
+
+                // backdrop click
+                modal.addEventListener('click', onBackdropClick);
+            }
+
+            function closeModal(id) {
+                const modal = document.getElementById(id);
+                if (!modal) return;
+                modal.classList.remove('active');
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = 'auto';
+
+                if (_modalKeydownHandler) {
+                    document.removeEventListener('keydown', _modalKeydownHandler);
+                    _modalKeydownHandler = null;
+                }
+                modal.removeEventListener('click', onBackdropClick);
+
+                try {
+                    if (_modalPrevFocused) _modalPrevFocused.focus();
+                } catch (e) {}
+                _modalPrevFocused = null;
+            }
+
+            function onBackdropClick(e) {
+                if (e.target && e.target.classList && e.target.classList.contains('modal')) {
+                    const id = e.target.id;
+                    closeModal(id);
+                }
+            }
+
+            function openVotingModal(image, country, number) {
+                currentFinalist = {
+                    image,
+                    country,
+                    number
+                };
+                const imgEl = document.getElementById('modalFinalistImage');
+                const nameEl = document.getElementById('modalCountryName');
+                if (imgEl) imgEl.src = image || '';
+                if (nameEl) nameEl.textContent = (country || '').toUpperCase();
+                openModal('votingModal');
+            }
+
+            function closeVotingModal() {
+                closeModal('votingModal');
+                resetVoteSelection();
+            }
+
+            function selectVote(votes, price, element) {
+                document.querySelectorAll('.vote-option').forEach(opt => opt.classList.remove('selected'));
+                if (element) element.classList.add('selected');
+                selectedVotes = Number(votes) || 0;
+                selectedPrice = Number(price) || 0;
+                const qty = document.getElementById('totalQuantity');
+                const amt = document.getElementById('totalAmount');
+                if (qty) qty.textContent = selectedVotes + ' Votes';
+                if (amt) amt.textContent = 'USD ' + selectedPrice.toFixed(2);
+            }
+
+            function resetVoteSelection() {
+                selectedVotes = 0;
+                selectedPrice = 0;
+                document.querySelectorAll('.vote-option').forEach(opt => opt.classList.remove('selected'));
+                const qty = document.getElementById('totalQuantity');
+                const amt = document.getElementById('totalAmount');
+                if (qty) qty.textContent = '0 Votes';
+                if (amt) amt.textContent = 'USD 0.00';
+            }
+
+            function openPaymentModal() {
+                if (selectedVotes === 0) {
+                    alert('Please select a vote package first!');
+                    return;
+                }
+                const pfImg = document.getElementById('paymentFinalistImage');
+                const pCountry = document.getElementById('paymentCountryName');
+                const pCount = document.getElementById('paymentVoteCount');
+                const pPrice = document.getElementById('paymentPrice');
+                if (pfImg) pfImg.src = currentFinalist.image || '';
+                if (pCountry) pCountry.textContent = currentFinalist.country || '';
+                if (pCount) pCount.textContent = selectedVotes + ' Votes';
+                if (pPrice) pPrice.textContent = 'USD ' + selectedPrice.toFixed(2);
+
+                // switch modals
+                closeModal('votingModal');
+                openModal('paymentModal');
+            }
+
+            function closePaymentModal() {
+                closeModal('paymentModal');
+            }
+
+            // wire up buttons and vote triggers safely
+            document.addEventListener('DOMContentLoaded', function () {
+                // close buttons
+                document.querySelectorAll('.modal-close').forEach(btn => {
+                    btn.addEventListener('click', function (e) {
+                        const modal = btn.closest('.modal');
+                        if (!modal) return;
+                        closeModal(modal.id);
+                    });
+                });
+
+                // finalist card buttons
+                document.querySelectorAll('.finalist-vote-button').forEach(btn => {
+                    btn.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const card = btn.closest('.finalist-card');
+                        if (!card) return;
+                        const img = card.querySelector('.finalist-photo') ? .getAttribute(
+                            'src') || '';
+                        const country = card.querySelector('.finalist-country') ?
+                            .textContent || '';
+                        const number = card.querySelector('.finalist-number') ?
+                            .textContent || '';
+                        openVotingModal(img, country, number);
+                    });
+                });
+
+                // list vote buttons
+                document.querySelectorAll('.list-vote-button').forEach(btn => {
+                    btn.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const item = btn.closest('.list-item');
+                        if (!item) return;
+                        const img = item.querySelector('.list-avatar img') ? .getAttribute(
+                            'src') || '';
+                        const country = item.querySelector('.list-country') ?
+                            .textContent || '';
+                        const rank = item.querySelector('.list-rank') ? .textContent || '';
+                        openVotingModal(img, country, 'No. ' + rank);
+                    });
+                });
+
+                // top cards
+                document.querySelectorAll('.vote-button').forEach(btn => {
+                    btn.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const card = btn.closest('.card');
+                        if (!card) return;
+                        const img = card.querySelector('.avatar-container img') ?
+                            .getAttribute('src') || '';
+                        const country = card.querySelector('.country-name') ?
+                            .textContent || '';
+                        const number = card.querySelector('.country-number') ?
+                            .textContent || '';
+                        openVotingModal(img, country, number);
+                    });
+                });
+
+                // vote-option clickable behavior (delegated)
+                document.addEventListener('click', function (e) {
+                    const opt = e.target.closest('.vote-option');
+                    if (!opt) return;
+                    const votes = opt.getAttribute('data-votes') || opt.querySelector(
+                        '.vote-count') ? .textContent ? .replace(/\D/g, '') || 0;
+                    const priceRaw = opt.getAttribute('data-price') || opt.querySelector(
+                        '.vote-price') ? .textContent ? .replace(/[^0-9.,]/g, '').replace(',',
+                        '.') || 0;
+                    const price = parseFloat(priceRaw) || 0;
+                    selectVote(Number(votes), Number(price), opt);
+                });
+
             });
 
-            // For list vote buttons
-            document.querySelectorAll('.list-vote-button').forEach((btn, index) => {
-                const item = btn.closest('.list-item');
-                const img = item.querySelector('.list-avatar img').src;
-                const country = item.querySelector('.list-country').textContent;
-                const rank = item.querySelector('.list-rank').textContent;
-
-                btn.onclick = function (e) {
-                    e.preventDefault();
-                    openVotingModal(img, country, 'No. ' + rank);
-                };
-            });
-
-            // For top 3 cards
-            document.querySelectorAll('.vote-button').forEach((btn, index) => {
-                const card = btn.closest('.card');
-                const img = card.querySelector('.avatar-container img').src;
-                const country = card.querySelector('.country-name').textContent;
-                const number = card.querySelector('.country-number').textContent;
-
-                btn.onclick = function (e) {
-                    e.preventDefault();
-                    openVotingModal(img, country, number);
-                };
-            });
-        });
+            // expose small API on window for inline onclick handlers (backwards compatible)
+            window.openVotingModal = openVotingModal;
+            window.closeVotingModal = closeVotingModal;
+            window.openPaymentModal = openPaymentModal;
+            window.closePaymentModal = closePaymentModal;
+            window.selectVote = selectVote;
+        })();
     </script>
 </body>
 
