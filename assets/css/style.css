@@ -14535,7 +14535,7 @@ button.scroltop span {
 }
 
 .list-vote-button:hover {
-  background: #1a9991;
+  background: #3a55a4;
   transform: scale(1.05);
 }
 
@@ -14731,7 +14731,7 @@ button.scroltop span {
 }
 
 .finalist-vote-button:hover {
-  background: #1a9991;
+  background: #3a55a4;
   transform: scale(1.05);
 }
 
