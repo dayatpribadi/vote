@@ -16648,6 +16648,59 @@ button.scroltop span {
   stroke: #fff !important;
 }
 
+/* WhatsApp CTA: stronger hover effect (green, lift, icon motion) */
+.btn.btn-primary[href^="whatsapp://"] {
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* ensure content is above the overlay pseudo-element */
+  z-index: 1;
+}
+
+.btn.btn-primary[href^="whatsapp://"] i {
+  transition: transform 180ms ease;
+  margin-right: 0.4rem;
+}
+
+.btn.btn-primary[href^="whatsapp://"]:hover {
+  background: linear-gradient(90deg, #25D366 0%, #128C7E 100%) !important;
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.18) !important;
+  color: #fff !important;
+}
+
+.btn.btn-primary[href^="whatsapp://"]:hover i {
+  transform: rotate(-12deg) translateY(-1px);
+  color: #fff !important;
+}
+
+/* Make sure the pseudo overlay sits behind the content so text stays visible */
+.btn.btn-primary[href^="whatsapp://"]::before {
+  z-index: 0;
+}
+
+/* Ensure explicit label inside button stays visible above overlays */
+.btn.btn-primary .btn-label {
+  position: relative;
+  z-index: 2;
+  color: inherit;
+  transition: color 150ms ease;
+}
+
+.btn.btn-primary:hover .btn-label {
+  color: #fff !important;
+}
+
+
+/* General safeguard: ensure any .btn-primary children (icons/text/SVG) stay visible on hover */
+.btn.btn-primary:hover,
+.btn.btn-primary:hover * {
+  color: #fff !important;
+  fill: #fff !important;
+  stroke: #fff !important;
+}
+
 /* Progress Indicator (optional) */
 .payment-progress {
   display: flex;
