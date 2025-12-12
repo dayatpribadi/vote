@@ -4160,6 +4160,27 @@
             showToast(finalists[0]);
         });
     </script>
+    <script>
+        // Initialize Theia Sticky Sidebar for sidebars with `.my-sticky`.
+        // This ensures the sidebar stops above the footer (additionalMarginBottom).
+        document.addEventListener('DOMContentLoaded', function () {
+            try {
+                if (typeof jQuery === 'undefined' || typeof jQuery.fn.theiaStickySidebar !== 'function') {
+                    console.warn('Theia sticky sidebar not available');
+                    return;
+                }
+
+                jQuery('.side-bar.my-sticky').theiaStickySidebar({
+                    additionalMarginTop: 80,
+                    additionalMarginBottom: 140,
+                    updateSidebarHeight: true,
+                    minWidth: 768
+                });
+            } catch (err) {
+                console.warn('Error initializing sticky sidebar', err);
+            }
+        });
+    </script>
 </body>
 
 </html>
