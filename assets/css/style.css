@@ -18074,3 +18074,29 @@ select.news-search-select option {
   margin-bottom: 2.5rem !important;
   /* larger gap with finalists */
 }
+
+/* Voting grid: ensure 3 columns on large, 2 on medium, 1 on small
+   Overrides .row { display:flex } by increasing specificity and loading last. */
+.trv-blog-grid-inner-row .row.grid {
+  display: grid !important;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.875rem; /* equals 7.5 spacing used in markup */
+}
+
+@media (min-width: 768px) {
+  .trv-blog-grid-inner-row .row.grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .trv-blog-grid-inner-row .row.grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Ensure vote-item fills its grid cell and reset flex-basis if any */
+.trv-blog-grid-inner-row .vote-item {
+  width: 100% !important;
+  flex: 0 0 auto !important;
+}
