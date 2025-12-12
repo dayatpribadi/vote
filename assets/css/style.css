@@ -18025,6 +18025,75 @@ select.news-search-select option {
   margin-bottom: 2px;
 }
 
+/* FAQ navtabs (left column) */
+.page-faq-nav {
+  padding: 0.5rem 0;
+}
+
+.faq-navtabs {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0));
+  border-radius: 1rem;
+  border: 1px solid rgba(67, 56, 49, 0.04);
+}
+
+.faq-navtabs li {
+  margin: 0;
+}
+
+.faq-navlink {
+  display: block;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  color: var(--color-black, #222);
+  background: transparent;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 180ms ease;
+  box-shadow: none;
+}
+
+.faq-navlink:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 170, 13, 0.06);
+  color: var(--color-citrusyellow);
+}
+
+.faq-navlink[aria-selected="true"],
+.faq-navlink.active {
+  background: linear-gradient(90deg, rgba(255, 170, 13, 0.12), rgba(255, 170, 13, 0.04));
+  color: var(--color-citrusyellow) !important;
+  box-shadow: 0 6px 18px rgba(255, 170, 13, 0.06);
+}
+
+/* Small screens: make it horizontal and scrollable */
+@media (max-width: 1024px) {
+  .faq-navtabs {
+    flex-direction: row;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding: 0.5rem 0.75rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .faq-navlink {
+    white-space: nowrap;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Keep focus outline accessible */
+.faq-navlink:focus {
+  outline: 2px solid rgba(99, 102, 241, 0.12);
+  outline-offset: 3px;
+}
+
 .toast.fade-out {
   animation: fadeOut 0.5s ease-out forwards;
 }
@@ -18080,7 +18149,8 @@ select.news-search-select option {
 .trv-blog-grid-inner-row .row.grid {
   display: grid !important;
   grid-template-columns: repeat(1, 1fr);
-  gap: 1.875rem; /* equals 7.5 spacing used in markup */
+  gap: 1.875rem;
+  /* equals 7.5 spacing used in markup */
 }
 
 @media (min-width: 768px) {
