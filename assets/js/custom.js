@@ -434,6 +434,24 @@ const Travlla = (function () {
     });
   };
 
+  // Generic vote controls handler: looks for buttons with data-action and updates nearest .vote-counter
+  const handleVoteControls = () => {
+    document.addEventListener('click', function (e) {
+      const btn = e.target.closest('button[data-action]');
+      if (!btn) return;
+      const action = btn.getAttribute('data-action');
+      // Look for nearest container (the vote control wrapper)
+      const container = btn.closest('.flex.items-center') || btn.parentElement;
+      if (!container) return;
+      const counter = container.querySelector('.vote-counter');
+      if (!counter) return;
+      let value = parseInt((counter.textContent || '').trim(), 10) || 0;
+      if (action === 'increment') value++;
+      else value = Math.max(0, value - 1);
+      counter.textContent = value;
+    });
+  };
+
   const handleflatpickr = () => {
     if (jQuery(".flatpickr1").length > 0) {
       flatpickr(".flatpickr1", {});
@@ -508,6 +526,7 @@ const Travlla = (function () {
       handleAccordion();
       handleLightboxPopup();
       handleTouchSpin();
+      handleVoteControls();
       handleflatpickr();
       handleTagSlider();
       handleShopProductPrice();
