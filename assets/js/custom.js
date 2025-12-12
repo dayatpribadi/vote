@@ -511,6 +511,107 @@ const Travlla = (function () {
     $(".loading-area").fadeOut(1500);
   };
 
+  const handleContactModal = () => {
+    const DEFAULT_PHONE = "+6282173750055";
+
+    function createModal() {
+      if (document.querySelector('.contact-modal-backdrop')) return;
+
+      const backdrop = document.createElement('div');
+      backdrop.className = 'contact-modal-backdrop';
+
+      const modal = document.createElement('div');
+      modal.className = 'contact-modal';
+      modal.innerHTML = `
+        <h3>Hubungi Kami</h3>
+        <p>Butuh bantuan atau ingin menyelenggarakan voting? Pilih cara menghubungi kami.</p>
+        <div class="modal-actions">
+          <button class="btn-ghost btn-close" type="button">Batal</button>
+          <button class="btn-primary-modal btn-open-wa" type="button">Buka WhatsApp</button>
+        </div>
+        <div class="modal-note">Atau salin nomor: <strong class="modal-phone">${DEFAULT_PHONE}</strong></div>
+      `;
+
+      backdrop.appendChild(modal);
+      document.body.appendChild(backdrop);
+
+      backdrop.addEventListener('click', function (e) {
+        if (e.target === backdrop) hideModal();
+      });
+
+      modal.querySelector('.btn-close').addEventListener('click', hideModal);
+
+      modal.querySelector('.btn-open-wa').addEventListener('click', function () {
+        const phone = extractPhone() || DEFAULT_PHONE;
+        const web = `https://wa.me/${phone.replace(/[^0-9]/g, '')}`;
+        // try open whatsapp protocol first
+        window.location.href = web;
+      });
+
+      const phoneEl = modal.querySelector('.modal-phone');
+      phoneEl.addEventListener('click', function () {
+        const phone = phoneEl.textContent.trim();
+        copyToClipboard(phone);
+      });
+    }
+
+    function extractPhone() {
+      // try to find a whatsapp link in the nav that contains the phone
+      const a = document.querySelector('a[href^="whatsapp://send"], a[href*="wa.me"], a[href*="whatsapp.com/send"]');
+      if (!a) return null;
+      const href = a.getAttribute('href');
+      const m1 = href.match(/phone=([^&]+)/);
+      if (m1) return m1[1];
+      const m2 = href.match(/wa.me\/(\+?[0-9]+)/);
+      if (m2) return m2[1];
+      const m3 = href.match(/send\?phone=(\+?[0-9]+)/);
+      if (m3) return m3[1];
+      return null;
+    }
+
+    function copyToClipboard(text) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () {
+          alert('Nomor tersalin ke clipboard');
+        });
+      } else {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); alert('Nomor tersalin ke clipboard'); } catch (e) {}
+        ta.remove();
+      }
+    }
+
+    function showModal() {
+      createModal();
+      const b = document.querySelector('.contact-modal-backdrop');
+      if (b) b.classList.add('active');
+    }
+
+    function hideModal() {
+      const b = document.querySelector('.contact-modal-backdrop');
+      if (b) b.classList.remove('active');
+    }
+
+    // delegate clicks on nav/contact links
+    document.addEventListener('click', function (e) {
+      const a = e.target.closest('a');
+      if (!a) return;
+      const href = a.getAttribute('href') || '';
+      const text = (a.textContent || '').trim().toLowerCase();
+
+      const isContactLink = href.startsWith('whatsapp://') || href.includes('wa.me') || text.includes('kontak kami') || text === 'kontak';
+
+      if (isContactLink) {
+        // prevent in-page navigations that go to kontak.html or whatsapp protocol
+        e.preventDefault();
+        showModal();
+      }
+    });
+  };
+
   return {
     init: function () {
       handleCursorsection();
@@ -530,6 +631,7 @@ const Travlla = (function () {
       handleflatpickr();
       handleTagSlider();
       handleShopProductPrice();
+      handleContactModal();
       handlePageLoader();
     },
   };
