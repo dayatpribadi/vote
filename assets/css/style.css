@@ -1121,6 +1121,10 @@ utilities;
     margin-top: calc(var(--spacing) * 12.5);
   }
 
+  .mt-25 {
+    margin-top: calc(var(--spacing) * 25);
+  }
+
   .mt-45 {
     margin-top: calc(var(--spacing) * 45);
   }
