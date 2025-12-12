@@ -16707,7 +16707,7 @@ button.scroltop span {
 
 /* Modern news search card styles */
 .news-search-card {
-  background: linear-gradient(180deg, #ffffff 0%, #fbfbfb 100%);
+  background: linear-gradient(180deg, #374c93 0%, #3a55a4 100%);
   padding: 18px;
   border-radius: 14px;
   box-shadow: 0 8px 30px rgba(16, 24, 40, 0.06);
@@ -16797,11 +16797,12 @@ select.news-search-select option {
 }
 
 .news-search-btn {
-  background: linear-gradient(90deg, #fb7185 0%, #ef4444 100%);
-  color: #fff;
+  /* background: linear-gradient(90deg, #fb7185 0%, #ef4444 100%); */
+  background: linear-gradient(90deg, #feb916 0%, #fecc0e 100%);
+  color: #374c93;
   border-radius: 10px;
+  border: 1px solid #FFF;
   padding: 10px 18px;
-  border: none;
   box-shadow: 0 8px 24px rgba(239, 68, 68, 0.12);
   cursor: pointer;
   font-weight: 600;
@@ -18111,32 +18112,38 @@ select.news-search-select option {
   pointer-events: none;
   transition: opacity 180ms ease;
 }
+
 .contact-modal-backdrop.active {
   opacity: 1;
   pointer-events: auto;
 }
+
 .contact-modal {
   width: 100%;
   max-width: 420px;
   background: #fff;
   border-radius: 12px;
   padding: 1.25rem;
-  box-shadow: 0 12px 40px rgba(2,6,23,0.25);
+  box-shadow: 0 12px 40px rgba(2, 6, 23, 0.25);
   transform: translateY(8px);
 }
+
 .contact-modal h3 {
   margin: 0 0 0.5rem 0;
   font-size: 1.25rem;
 }
+
 .contact-modal p {
   margin: 0 0 1rem 0;
   color: #374151;
 }
+
 .contact-modal .modal-actions {
   display: flex;
   gap: 0.75rem;
   justify-content: flex-end;
 }
+
 .contact-modal .btn-ghost {
   background: transparent;
   border: 1px solid rgba(15, 23, 42, 0.06);
@@ -18144,13 +18151,15 @@ select.news-search-select option {
   padding: 0.5rem 0.9rem;
   border-radius: 8px;
 }
+
 .contact-modal .btn-primary-modal {
-  background: linear-gradient(90deg,#25D366 0%,#128C7E 100%);
+  background: linear-gradient(90deg, #25D366 0%, #128C7E 100%);
   color: #fff;
   padding: 0.6rem 1rem;
   border-radius: 8px;
   border: none;
 }
+
 .contact-modal .modal-note {
   font-size: 0.85rem;
   color: #6b7280;
