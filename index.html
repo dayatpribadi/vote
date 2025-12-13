@@ -231,6 +231,35 @@
                             </button>
                         </div>
                     </div>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            if (typeof Swiper === 'undefined') return;
+                            new Swiper('.brand-swiper', {
+                                loop: true,
+                                spaceBetween: 18,
+                                autoplay: {
+                                    delay: 2400,
+                                    disableOnInteraction: false
+                                },
+                                slidesPerView: 3,
+                                navigation: {
+                                    nextEl: '.brand-swiper-next',
+                                    prevEl: '.brand-swiper-prev'
+                                },
+                                breakpoints: {
+                                    480: {
+                                        slidesPerView: 3
+                                    },
+                                    768: {
+                                        slidesPerView: 5
+                                    },
+                                    1024: {
+                                        slidesPerView: 8
+                                    }
+                                }
+                            });
+                        });
+                    </script>
                 </div>
             </div>
         </header>
@@ -2030,6 +2059,98 @@
 
                     <!-- CLIENT LOGO SECTION START -->
                     <div class="p-5 mt-7.5 mb-30 bg-lightturquoise">
+                        <style>
+                            /* Client logo design: uniform cards, subtle border, grayscale->color on hover */
+                            .brand-swiper .swiper-slide {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+
+                            .brand-card-wrap {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+
+                            .brand-card {
+                                width: 170px;
+                                height: 72px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background: #ffffff;
+                                border-radius: 12px;
+                                padding: 10px 14px;
+                                box-shadow: 0 6px 18px rgba(2, 6, 23, 0.06);
+                                transition: transform .28s cubic-bezier(.2, .9, .3, 1), box-shadow .28s ease, filter .28s ease, opacity .28s ease;
+                                filter: grayscale(100%);
+                                opacity: 0.82;
+                                border: 1px solid rgba(15, 23, 42, 0.06);
+                            }
+
+                            .brand-card img {
+                                max-width: 100%;
+                                max-height: 100%;
+                                object-fit: contain;
+                            }
+
+                            .brand-card:hover {
+                                transform: translateY(-6px) scale(1.03);
+                                box-shadow: 0 12px 30px rgba(2, 6, 23, 0.12);
+                                filter: none;
+                                opacity: 1;
+                            }
+
+                            .brand-swiper {
+                                padding: 8px 4px;
+                            }
+
+                            @media (max-width: 640px) {
+                                .brand-card {
+                                    width: 120px;
+                                    height: 56px;
+                                    padding: 8px;
+                                }
+                            }
+
+                            .brand-swiper-nav {
+                                position: relative;
+                            }
+
+                            .brand-swiper-prev,
+                            .brand-swiper-next {
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                width: 40px;
+                                height: 40px;
+                                border-radius: 999px;
+                                background: rgba(2, 6, 23, 0.06);
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: #0f172a;
+                                cursor: pointer;
+                                box-shadow: 0 6px 18px rgba(2, 6, 23, 0.06);
+                                transition: background .18s ease, transform .12s ease;
+                            }
+
+                            .brand-swiper-prev:hover,
+                            .brand-swiper-next:hover {
+                                background: rgba(2, 6, 23, 0.12);
+                                transform: translateY(-50%) scale(1.05);
+                            }
+
+                            .brand-swiper-prev {
+                                left: -18px;
+                            }
+
+                            .brand-swiper-next {
+                                right: -18px;
+                            }
+                        </style>
+
                         <div class="py-5">
                             <div class="container">
                                 <div class="grid grid-cols-12 items-center">
@@ -2043,390 +2164,473 @@
                                         </div>
                                     </div>
                                     <div class="xl:col-span-9 col-span-12">
-                                        <div class="swiper brand-swiper">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <div class="text-center">
-                                                        <a href="about-1.html"><img src="assets/images/superdev_.png"
-                                                                class="w-auto h-11.25 mx-auto opacity-100" alt="img"
-                                                                width="339" height="82" loading="lazy"></a>
+                                        <div class="brand-swiper-nav">
+                                            <div class="swiper brand-swiper">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="brand-card-wrap">
+                                                            <div class="brand-card"><img
+                                                                    src="assets/images/bgp/Bujang Gadis Balaputradewa.png"
+                                                                    alt="Bujang Gadis Balaputradewa" loading="lazy">
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="text-center">
-                                                        <a href="about-1.html"><img src="assets/images/superdev_.png"
-                                                                class="w-auto h-11.25 mx-auto opacity-100" alt="img"
-                                                                width="232" height="91" loading="lazy"></a>
+                                                    <div class="swiper-slide">
+                                                        <div class="brand-card-wrap">
+                                                            <div class="brand-card"><img
+                                                                    src="assets/images/bgp/Bujang Gadis Candradimuka.png"
+                                                                    alt="Candradimuka" loading="lazy"></div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="text-center">
-                                                        <a href="about-1.html"><img src="assets/images/superdev_.png"
-                                                                class="w-auto h-11.25 mx-auto opacity-100" alt="img"
-                                                                width="389" height="91" loading="lazy"></a>
+                                                    <div class="swiper-slide">
+                                                        <div class="brand-card-wrap">
+                                                            <div class="brand-card"><img
+                                                                    src="assets/images/bgp/Bujang Gadis Pendidikan Sumsel.jpeg"
+                                                                    alt="Pendidikan Sumsel" loading="lazy"></div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="text-center">
-                                                        <a href="about-1.html"><img src="assets/images/superdev_.png"
-                                                                class="w-auto h-11.25 mx-auto opacity-100" alt="img"
-                                                                width="219" height="91" loading="lazy"></a>
+                                                    <div class="swiper-slide">
+                                                        <div class="brand-card-wrap">
+                                                            <div class="brand-card"><img
+                                                                    src="assets/images/bgp/Bujang Gadis Penjas PGRI .png"
+                                                                    alt="Penjas PGRI" loading="lazy"></div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="text-center">
-                                                        <a href="about-1.html"><img src="assets/images/superdev_.png"
-                                                                class="w-auto h-11.25 mx-auto opacity-100" alt="img"
-                                                                width="211" height="91" loading="lazy"></a>
+                                                    <div class="swiper-slide">
+                                                        <div class="brand-card-wrap">
+                                                            <div class="brand-card"><img
+                                                                    src="assets/images/bgp/Bujang Gadis PGRI.png"
+                                                                    alt="PGRI" loading="lazy"></div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="text-center">
-                                                        <a href="about-1.html"><img src="assets/images/superdev_.png"
-                                                                class="w-auto h-11.25 mx-auto opacity-100" alt="img"
-                                                                width="339" height="81" loading="lazy"></a>
+                                                    <div class="swiper-slide">
+                                                        <div class="brand-card-wrap">
+                                                            <div class="brand-card"><img
+                                                                    src="assets/images/bgp/Bujang Gadis Polsri.png"
+                                                                    alt="Polsri" loading="lazy"></div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="text-center">
-                                                        <a href="about-1.html"><img src="assets/images/superdev_.png"
-                                                                class="w-auto h-11.25 mx-auto opacity-100" alt="img"
-                                                                width="232" height="91" loading="lazy"></a>
+                                                    <div class="swiper-slide">
+                                                        <div class="brand-card-wrap">
+                                                            <div class="brand-card"><img
+                                                                    src="assets/images/bgp/Bujang Gadis SMAN22.png"
+                                                                    alt="SMAN22" loading="lazy"></div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="text-center">
-                                                        <a href="about-1.html"><img src="assets/images/superdev_.png"
-                                                                class="w-auto h-11.25 mx-auto opacity-100" alt="img"
-                                                                width="339" height="91" loading="lazy"></a>
+                                                    <div class="swiper-slide">
+                                                        <div class="brand-card-wrap">
+                                                            <div class="brand-card"><img
+                                                                    src="assets/images/bgp/Bujang Gadis UIN Raden Fatah.png"
+                                                                    alt="UIN Raden Fatah" loading="lazy"></div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="text-center">
-                                                        <a href="about-1.html"><img src="assets/images/superdev_.png"
-                                                                class="w-auto h-11.25 mx-auto opacity-100" alt="img"
-                                                                width="219" height="91" loading="lazy"></a>
+                                                    <div class="swiper-slide">
+                                                        <div class="brand-card-wrap">
+                                                            <div class="brand-card"><img
+                                                                    src="assets/images/bgp/Bujang Gadis Unbara.png"
+                                                                    alt="Unbara" loading="lazy"></div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="text-center">
-                                                        <a href="about-1.html"><img src="assets/images/superdev_.png"
-                                                                class="w-auto h-11.25 mx-auto opacity-100" alt="img"
-                                                                width="211" height="91" loading="lazy"></a>
+                                                    <div class="swiper-slide">
+                                                        <div class="brand-card-wrap">
+                                                            <div class="brand-card"><img
+                                                                    src="assets/images/bgp/Duta Genre Musi Banyuasin(MuBa).png"
+                                                                    alt="MuBa" loading="lazy"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="brand-card-wrap">
+                                                            <div class="brand-card"><img
+                                                                    src="assets/images/bgp/DUTA KESEHATAN SUMATERA SELATAN.png.png"
+                                                                    alt="Duta Kesehatan" loading="lazy"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="brand-card-wrap">
+                                                            <div class="brand-card"><img
+                                                                    src="assets/images/bgp/Duta Lingkungan Sumsel.png"
+                                                                    alt="Duta Lingkungan" loading="lazy"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="brand-card-wrap">
+                                                            <div class="brand-card"><img
+                                                                    src="assets/images/bgp/Duta Pelajar Remaja Nusantara.png"
+                                                                    alt="Duta Pelajar" loading="lazy"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="brand-card-wrap">
+                                                            <div class="brand-card"><img
+                                                                    src="assets/images/bgp/logo bg wisata musi.png"
+                                                                    alt="Logo Wisata" loading="lazy"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="brand-card-wrap">
+                                                            <div class="brand-card"><img
+                                                                    src="assets/images/bgp/logo-missbeutysumsel.png"
+                                                                    alt="Miss Beauty" loading="lazy"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="brand-card-wrap">
+                                                            <div class="brand-card"><img
+                                                                    src="assets/images/bgp/Miss Beauty Indonesia.PNG"
+                                                                    alt="Miss Beauty Indonesia" loading="lazy"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="brand-card-wrap">
+                                                            <div class="brand-card"><img
+                                                                    src="assets/images/bgp/Miss beauty Jabar.png"
+                                                                    alt="Miss Beauty Jabar" loading="lazy"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="brand-card-wrap">
+                                                            <div class="brand-card"><img
+                                                                    src="assets/images/bgp/Putra Putri Pendidikan Sumsel.png"
+                                                                    alt="Putra Putri" loading="lazy"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="brand-card-wrap">
+                                                            <div class="brand-card"><img
+                                                                    src="assets/images/bgp/Putra Putri SMAN3 Palemabang.png"
+                                                                    alt="SMAN3" loading="lazy"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="brand-card-wrap">
+                                                            <div class="brand-card"><img
+                                                                    src="assets/images/bgp/Putri Muslimah Nusantara.jpeg"
+                                                                    alt="Putri Muslimah" loading="lazy"></div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <button class="brand-swiper-prev" aria-label="Previous brand"><svg
+                                                    width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round" /></svg></button>
+                                            <button class="brand-swiper-next" aria-label="Next brand"><svg width="12"
+                                                    height="12" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round" /></svg></button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- CLIENT LOGO  SECTION End -->
                     </div>
-                    <!-- CLIENT LOGO  SECTION End -->
-                </div>
-                <!-- CONTENT END -->
+                    <!-- CONTENT END -->
 
-                <!-- FOOTER START -->
-                <footer class="pt-20 bg-primary bg-cover" style="
+                    <!-- FOOTER START -->
+                    <footer class="pt-20 bg-primary bg-cover" style="
               background-image: url(&quot;assets/images/bg-foots.jpg&quot;);
               background-repeat: no-repeat;
               background-position: center;
             ">
-                    <div class="-mt-40">
-                        <div
-                            class="container bg-citrusyellow rounded-3xl md:flex items-center justify-between !py-6.25 lg:!px-17.5 sm:!px-10.5 !px-5.5 max-w-324">
-                            <div class="pr-5 max-lg:w-1/2 max-md:w-full">
-                                <div
-                                    class="text-primary font-display lg:text-60 sm:text-46 text-28 leading-[0.75] sm:text-shadow-[2px_3px_0px_rgba(255,255,255,0.72)] pb-5">
-                                    <span class="text-white inline-block">Buat Voting</span>
-                                    Sekarang!
-                                </div>
-                                <div class="text-primary text-xl font-medium font-title max-md:mb-5">
-                                    Rasakan kemudahan dalam mengelola distribusi tiket dan
-                                    sistem voting kamu dengan Superdev Indonesia
-                                </div>
-                            </div>
-                            <div>
-                                <!-- Link Whatsapp -->
-                                <a href="https://wa.me/6285232304965" target="_blank"
-                                    class="site-button butn-bg-shape btn-white">Buat
-                                    Votemu
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FOOTER BLOCKES START -->
-                    <div class="container">
-                        <div class="sm:pt-20 pt-10 text-white/06 border-b border-primary">
-                            <div class="grid grid-cols-12">
-                                <div class="lg:col-span-8 col-span-12 sm:px-3.75">
-                                    <div class="mb-10">
-                                        <div class="mb-10 text-center block max-w-48.25 after:table after:clear-both">
-                                            <a href="index.html"><img src="assets/images/superdev_.png" alt="logo"
-                                                    width="193" height="81" loading="lazy" /></a>
-                                        </div>
-                                        <p class="sm:pr-12.5 mb-4 text-base text-white/50">
-                                            Platform ticketing dan voting online yang terpercaya.
-                                            Hanya dengan 1 website, kamu dapat langsung memberikan
-                                            dukungan pada finalis favorit kamu atau membeli tiket
-                                            dari event yang kamu inginkan. Transparan dan kenyamanan
-                                            user adalah kunci utama dari Superdev Indonesia.
-                                        </p>
-
-                                        <!-- Contact buttons -->
-                                        <div class="flex flex-row gap-4 flex-wrap m-5">
-                                            <a href="tel:6285232304965"
-                                                class="flex items-center rounded-2xl gap-3 p-4 bg-transparent border border-white text-white flex-1"
-                                                style="margin:10px !important; padding:10px !important;">
-                                                <span
-                                                    class="w-12 h-12 flex items-center justify-center bg-white/10 text-white rounded-full flex-shrink-0">
-                                                    <i class="fa-solid fa-headset text-xl"></i>
-                                                </span>
-                                                <div>
-                                                    <div class="font-semibold">Customer Support</div>
-                                                    <div class="text-sm">Irwan Sanjaya <br> +62 852-3230-4965</div>
-                                                </div>
-                                            </a>
-
-                                            <a href="https://wa.me/6282124594440"
-                                                class="flex items-center rounded-2xl gap-3 p-4 bg-transparent border border-white text-white flex-1"
-                                                style="margin:10px !important; padding:10px !important;">
-                                                <span
-                                                    class="w-12 h-12 flex items-center justify-center bg-white/10 text-white rounded-full flex-shrink-0">
-                                                    <i class="fa-brands fa-whatsapp text-xl"></i>
-                                                </span>
-                                                <div>
-                                                    <div class="font-semibold">Event dan Vote</div>
-                                                    <div class="text-sm">Irwan Sanjaya <br> +62 821-2459-4440</div>
-                                                </div>
-                                            </a>
-
-                                            <a href="mailto:info@kreen.id"
-                                                class="flex items-center rounded-2xl gap-3 p-4 bg-transparent border border-white text-white flex-1"
-                                                style="margin:10px !important; padding:10px !important;">
-                                                <span
-                                                    class="w-12 h-12 flex items-center justify-center bg-white/10 text-white rounded-full flex-shrink-0">
-                                                    <i class="fa-solid fa-envelope text-xl"></i>
-                                                </span>
-                                                <div>
-                                                    <div class="font-semibold">Contact Us</div>
-                                                    <div class="text-sm">info@superdev_.id</div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <ul class="mt-5">
-                                            <li
-                                                class="inline-flex xl:size-11.5 size-10.5 bg-citrusyellow xl:mr-2.5 mr-1.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
-                                                <a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg"
-                                                    href="https://www.x.com" target="_blank">
-                                                    <i
-                                                        class="fa-brands fa-x-twitter group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
-                                                </a>
-                                            </li>
-                                            <li
-                                                class="inline-flex xl:size-11.5 size-10.5 bg-citrusyellow xl:mr-2.5 mr-1.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
-                                                <a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg"
-                                                    href="https://www.facebook.com" target="_blank">
-                                                    <i
-                                                        class="fa-brands fa-facebook group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
-                                                </a>
-                                            </li>
-                                            <li
-                                                class="inline-flex xl:size-11.5 size-10.5 bg-citrusyellow xl:mr-2.5 mr-1.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
-                                                <a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg"
-                                                    href="https://www.instagram.com" target="_blank">
-                                                    <i
-                                                        class="fa-brands fa-instagram group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
-                                                </a>
-                                            </li>
-                                            <li
-                                                class="inline-flex xl:size-11.5 size-10.5 bg-citrusyellow xl:mr-2.5 mr-1.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
-                                                <a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg"
-                                                    href="https://www.pinterest.com/" target="_blank">
-                                                    <i
-                                                        class="fa-brands fa-pinterest group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
+                        <div class="-mt-40">
+                            <div
+                                class="container bg-citrusyellow rounded-3xl md:flex items-center justify-between !py-6.25 lg:!px-17.5 sm:!px-10.5 !px-5.5 max-w-324">
+                                <div class="pr-5 max-lg:w-1/2 max-md:w-full">
+                                    <div
+                                        class="text-primary font-display lg:text-60 sm:text-46 text-28 leading-[0.75] sm:text-shadow-[2px_3px_0px_rgba(255,255,255,0.72)] pb-5">
+                                        <span class="text-white inline-block">Buat Voting</span>
+                                        Sekarang!
+                                    </div>
+                                    <div class="text-primary text-xl font-medium font-title max-md:mb-5">
+                                        Rasakan kemudahan dalam mengelola distribusi tiket dan
+                                        sistem voting kamu dengan Superdev Indonesia
                                     </div>
                                 </div>
-                                <div class="lg:col-span-2 col-span-6 mb-5 sm:px-3.75">
-                                    <div class="mb-10">
-                                        <h3 class="!text-white mb-7.5 relative xl:text-28 text-2xl">
-                                            Tentang Kami
-                                        </h3>
-                                        <ul>
-                                            <li class="block w-full py-0.5 overflow-hidden">
-                                                <a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
-                                                    href="tentang.html">Tentang Kami</a>
-                                            </li>
-                                            <li class="block w-full py-0.5 overflow-hidden">
-                                                <a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
-                                                    href="kontak.html">Kontak Kami</a>
-                                            </li>
-                                            <li class="block w-full py-0.5 overflow-hidden">
-                                                <a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
-                                                    href="pusat-bantuan.html">Pusat Bantuan</a>
-                                            </li>
-                                            <li class="block w-full py-0.5 overflow-hidden">
-                                                <a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
-                                                    href="voting.html">Voting</a>
-                                            </li>
-                                            <li class="block w-full py-0.5 overflow-hidden">
-                                                <a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
-                                                    href="berita-event.html">Berita Event</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="lg:col-span-2 col-span-6 mb-5 sm:px-3.75">
-                                    <div class="mb-10">
-                                        <h3 class="!text-white mb-7.5 relative xl:text-28 text-2xl">
-                                            Legal
-                                        </h3>
-                                        <ul>
-                                            <li class="block w-full py-0.5 overflow-hidden">
-                                                <a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
-                                                    href="about-1.html">Terms & Condition</a>
-                                            </li>
-                                            <li class="block w-full py-0.5 overflow-hidden">
-                                                <a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
-                                                    href="faq.html">Privacy Policy</a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                <div>
+                                    <!-- Link Whatsapp -->
+                                    <a href="https://wa.me/6285232304965" target="_blank"
+                                        class="site-button butn-bg-shape btn-white">Buat
+                                        Votemu
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div
-                            class="py-10 text-white relative z-1 font-normal after:absolute after:bg-primary after:max-w-135 after:h-px after:left-1/2 after:top-0 after:-translate-x-1/2">
-                            <div class="container">
-                                <p class="copyrights-text text-center text-sm font-semibold">
-                                    © <span class="current-year">2025</span>
-                                    <a href="#" target="_blank"><span
-                                            class="inline-block text-citrusyellow uppercase text-center text-sm font-semibold">Superdev
-                                            Indonesia</span></a>
-                                    All Rights Reserved.
+                        <!-- FOOTER BLOCKES START -->
+                        <div class="container">
+                            <div class="sm:pt-20 pt-10 text-white/06 border-b border-primary">
+                                <div class="grid grid-cols-12">
+                                    <div class="lg:col-span-8 col-span-12 sm:px-3.75">
+                                        <div class="mb-10">
+                                            <div
+                                                class="mb-10 text-center block max-w-48.25 after:table after:clear-both">
+                                                <a href="index.html"><img src="assets/images/superdev_.png" alt="logo"
+                                                        width="193" height="81" loading="lazy" /></a>
+                                            </div>
+                                            <p class="sm:pr-12.5 mb-4 text-base text-white/50">
+                                                Platform ticketing dan voting online yang terpercaya.
+                                                Hanya dengan 1 website, kamu dapat langsung memberikan
+                                                dukungan pada finalis favorit kamu atau membeli tiket
+                                                dari event yang kamu inginkan. Transparan dan kenyamanan
+                                                user adalah kunci utama dari Superdev Indonesia.
+                                            </p>
+
+                                            <!-- Contact buttons -->
+                                            <div class="flex flex-row gap-4 flex-wrap m-5">
+                                                <a href="tel:6285232304965"
+                                                    class="flex items-center rounded-2xl gap-3 p-4 bg-transparent border border-white text-white flex-1"
+                                                    style="margin:10px !important; padding:10px !important;">
+                                                    <span
+                                                        class="w-12 h-12 flex items-center justify-center bg-white/10 text-white rounded-full flex-shrink-0">
+                                                        <i class="fa-solid fa-headset text-xl"></i>
+                                                    </span>
+                                                    <div>
+                                                        <div class="font-semibold">Customer Support</div>
+                                                        <div class="text-sm">Irwan Sanjaya <br> +62 852-3230-4965</div>
+                                                    </div>
+                                                </a>
+
+                                                <a href="https://wa.me/6282124594440"
+                                                    class="flex items-center rounded-2xl gap-3 p-4 bg-transparent border border-white text-white flex-1"
+                                                    style="margin:10px !important; padding:10px !important;">
+                                                    <span
+                                                        class="w-12 h-12 flex items-center justify-center bg-white/10 text-white rounded-full flex-shrink-0">
+                                                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                                                    </span>
+                                                    <div>
+                                                        <div class="font-semibold">Event dan Vote</div>
+                                                        <div class="text-sm">Irwan Sanjaya <br> +62 821-2459-4440</div>
+                                                    </div>
+                                                </a>
+
+                                                <a href="mailto:info@kreen.id"
+                                                    class="flex items-center rounded-2xl gap-3 p-4 bg-transparent border border-white text-white flex-1"
+                                                    style="margin:10px !important; padding:10px !important;">
+                                                    <span
+                                                        class="w-12 h-12 flex items-center justify-center bg-white/10 text-white rounded-full flex-shrink-0">
+                                                        <i class="fa-solid fa-envelope text-xl"></i>
+                                                    </span>
+                                                    <div>
+                                                        <div class="font-semibold">Contact Us</div>
+                                                        <div class="text-sm">info@superdev_.id</div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <ul class="mt-5">
+                                                <li
+                                                    class="inline-flex xl:size-11.5 size-10.5 bg-citrusyellow xl:mr-2.5 mr-1.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
+                                                    <a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg"
+                                                        href="https://www.x.com" target="_blank">
+                                                        <i
+                                                            class="fa-brands fa-x-twitter group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
+                                                    </a>
+                                                </li>
+                                                <li
+                                                    class="inline-flex xl:size-11.5 size-10.5 bg-citrusyellow xl:mr-2.5 mr-1.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
+                                                    <a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg"
+                                                        href="https://www.facebook.com" target="_blank">
+                                                        <i
+                                                            class="fa-brands fa-facebook group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
+                                                    </a>
+                                                </li>
+                                                <li
+                                                    class="inline-flex xl:size-11.5 size-10.5 bg-citrusyellow xl:mr-2.5 mr-1.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
+                                                    <a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg"
+                                                        href="https://www.instagram.com" target="_blank">
+                                                        <i
+                                                            class="fa-brands fa-instagram group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
+                                                    </a>
+                                                </li>
+                                                <li
+                                                    class="inline-flex xl:size-11.5 size-10.5 bg-citrusyellow xl:mr-2.5 mr-1.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
+                                                    <a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg"
+                                                        href="https://www.pinterest.com/" target="_blank">
+                                                        <i
+                                                            class="fa-brands fa-pinterest group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="lg:col-span-2 col-span-6 mb-5 sm:px-3.75">
+                                        <div class="mb-10">
+                                            <h3 class="!text-white mb-7.5 relative xl:text-28 text-2xl">
+                                                Tentang Kami
+                                            </h3>
+                                            <ul>
+                                                <li class="block w-full py-0.5 overflow-hidden">
+                                                    <a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
+                                                        href="tentang.html">Tentang Kami</a>
+                                                </li>
+                                                <li class="block w-full py-0.5 overflow-hidden">
+                                                    <a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
+                                                        href="kontak.html">Kontak Kami</a>
+                                                </li>
+                                                <li class="block w-full py-0.5 overflow-hidden">
+                                                    <a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
+                                                        href="pusat-bantuan.html">Pusat Bantuan</a>
+                                                </li>
+                                                <li class="block w-full py-0.5 overflow-hidden">
+                                                    <a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
+                                                        href="voting.html">Voting</a>
+                                                </li>
+                                                <li class="block w-full py-0.5 overflow-hidden">
+                                                    <a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
+                                                        href="berita-event.html">Berita Event</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="lg:col-span-2 col-span-6 mb-5 sm:px-3.75">
+                                        <div class="mb-10">
+                                            <h3 class="!text-white mb-7.5 relative xl:text-28 text-2xl">
+                                                Legal
+                                            </h3>
+                                            <ul>
+                                                <li class="block w-full py-0.5 overflow-hidden">
+                                                    <a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
+                                                        href="about-1.html">Terms & Condition</a>
+                                                </li>
+                                                <li class="block w-full py-0.5 overflow-hidden">
+                                                    <a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow"
+                                                        href="faq.html">Privacy Policy</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="py-10 text-white relative z-1 font-normal after:absolute after:bg-primary after:max-w-135 after:h-px after:left-1/2 after:top-0 after:-translate-x-1/2">
+                                <div class="container">
+                                    <p class="copyrights-text text-center text-sm font-semibold">
+                                        © <span class="current-year">2025</span>
+                                        <a href="#" target="_blank"><span
+                                                class="inline-block text-citrusyellow uppercase text-center text-sm font-semibold">Superdev
+                                                Indonesia</span></a>
+                                        All Rights Reserved.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FOOTER COPYRIGHT -->
+                    </footer>
+                    <!-- FOOTER END -->
+                </div>
+            </div>
+
+            <!-- BUTTON TOP START -->
+            <button class="scroltop">
+                <span class="fa fa-angle-up relative" id="btn-vibrate"></span>
+            </button>
+
+            <div id="offcanvas-right"
+                class="fixed top-0 right-0 z-9999999 h-screen overflow-y-auto transition-transform translate-x-full bg-black/20 backdrop-blur-[5px] sm:max-w-125 max-w-88 custom-scroll">
+                <button type="button"
+                    class="absolute right-0 top-6 text-[#443935] bg-citrusyellow text-base size-7 cursor-pointer rounded m-6.25"
+                    data-drawer-hide="offcanvas-right" aria-label="Close">
+                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+                <div class="pt-30 pb-10 px-8">
+                    <div class="">
+                        <div class="mb-15">
+                            <img src="assets/images/superdev_.png" alt="Image" class="max-w-33.5" />
+                        </div>
+                        <div class="trv-side-pnl-content">
+                            <div class="mb-15">
+                                <p class="text-base !text-white/50">
+                                    Platform ticketing dan voting online yang terpercaya. Hanya
+                                    dengan 1 website, kamu dapat langsung memberikan dukungan pada
+                                    finalis favorit kamu atau membeli tiket dari event yang kamu
+                                    inginkan. Transparan dan kenyamanan user adalah kunci utama
+                                    dari Superdev Indonesia.
                                 </p>
                             </div>
+
+                            <h3 class="text-28 !text-white mb-5">
+                                Don't miss out this offers!
+                            </h3>
+                            <ul
+                                class="flex justify-between pb-10 mb-10 relative after:w-75 after:bg-white/15 after:h-px after:absolute after:left-1/2 after:bottom-0 after:-translate-x-1/2">
+                                <li>
+                                    <h2 class="!text-secondary text-34 mb-2">$199</h2>
+                                    <span class="!text-white text-lg font-medium font-title">Basic Plan</span>
+                                </li>
+                                <li>
+                                    <h2 class="!text-secondary text-34 mb-2">$299</h2>
+                                    <span class="!text-white text-lg font-medium font-title">Pro Plan</span>
+                                </li>
+                                <li>
+                                    <h2 class="!text-secondary text-34 mb-2">$399</h2>
+                                    <span class="!text-white text-lg font-medium font-title">Full Plan</span>
+                                </li>
+                            </ul>
+
+                            <ul class="mt-5">
+                                <li
+                                    class="inline-flex size-11.5 bg-citrusyellow mr-2.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
+                                    <a class="inline-flex size-9 bg-primary rounded-full justify-center items-center duration-500 text-white text-lg"
+                                        href="https://www.x.com">
+                                        <i
+                                            class="fa-brands fa-x-twitter group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
+                                    </a>
+                                </li>
+                                <li
+                                    class="inline-flex size-11.5 bg-citrusyellow mr-2.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
+                                    <a class="inline-flex size-9 bg-primary rounded-full justify-center items-center duration-500 text-white text-lg"
+                                        href="https://www.facebook.com">
+                                        <i
+                                            class="fa-brands fa-facebook group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
+                                    </a>
+                                </li>
+                                <li
+                                    class="inline-flex size-11.5 bg-citrusyellow mr-2.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
+                                    <a class="inline-flex size-9 bg-primary rounded-full justify-center items-center duration-500 text-white text-lg"
+                                        href="https://www.instagram.com">
+                                        <i
+                                            class="fa-brands fa-instagram group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
+                                    </a>
+                                </li>
+                                <li
+                                    class="inline-flex size-11.5 bg-citrusyellow mr-2.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
+                                    <a class="inline-flex size-9 bg-primary rounded-full justify-center items-center duration-500 text-white text-lg"
+                                        href="https://www.pinterest.com/">
+                                        <i
+                                            class="fa-brands fa-pinterest group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
-                    <!-- FOOTER COPYRIGHT -->
-                </footer>
-                <!-- FOOTER END -->
-            </div>
-        </div>
-
-        <!-- BUTTON TOP START -->
-        <button class="scroltop">
-            <span class="fa fa-angle-up relative" id="btn-vibrate"></span>
-        </button>
-
-        <div id="offcanvas-right"
-            class="fixed top-0 right-0 z-9999999 h-screen overflow-y-auto transition-transform translate-x-full bg-black/20 backdrop-blur-[5px] sm:max-w-125 max-w-88 custom-scroll">
-            <button type="button"
-                class="absolute right-0 top-6 text-[#443935] bg-citrusyellow text-base size-7 cursor-pointer rounded m-6.25"
-                data-drawer-hide="offcanvas-right" aria-label="Close">
-                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-            </button>
-            <div class="pt-30 pb-10 px-8">
-                <div class="">
-                    <div class="mb-15">
-                        <img src="assets/images/superdev_.png" alt="Image" class="max-w-33.5" />
-                    </div>
-                    <div class="trv-side-pnl-content">
-                        <div class="mb-15">
-                            <p class="text-base !text-white/50">
-                                Platform ticketing dan voting online yang terpercaya. Hanya
-                                dengan 1 website, kamu dapat langsung memberikan dukungan pada
-                                finalis favorit kamu atau membeli tiket dari event yang kamu
-                                inginkan. Transparan dan kenyamanan user adalah kunci utama
-                                dari Superdev Indonesia.
-                            </p>
-                        </div>
-
-                        <h3 class="text-28 !text-white mb-5">
-                            Don't miss out this offers!
-                        </h3>
-                        <ul
-                            class="flex justify-between pb-10 mb-10 relative after:w-75 after:bg-white/15 after:h-px after:absolute after:left-1/2 after:bottom-0 after:-translate-x-1/2">
-                            <li>
-                                <h2 class="!text-secondary text-34 mb-2">$199</h2>
-                                <span class="!text-white text-lg font-medium font-title">Basic Plan</span>
-                            </li>
-                            <li>
-                                <h2 class="!text-secondary text-34 mb-2">$299</h2>
-                                <span class="!text-white text-lg font-medium font-title">Pro Plan</span>
-                            </li>
-                            <li>
-                                <h2 class="!text-secondary text-34 mb-2">$399</h2>
-                                <span class="!text-white text-lg font-medium font-title">Full Plan</span>
-                            </li>
-                        </ul>
-
-                        <ul class="mt-5">
-                            <li
-                                class="inline-flex size-11.5 bg-citrusyellow mr-2.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
-                                <a class="inline-flex size-9 bg-primary rounded-full justify-center items-center duration-500 text-white text-lg"
-                                    href="https://www.x.com">
-                                    <i
-                                        class="fa-brands fa-x-twitter group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
-                                </a>
-                            </li>
-                            <li
-                                class="inline-flex size-11.5 bg-citrusyellow mr-2.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
-                                <a class="inline-flex size-9 bg-primary rounded-full justify-center items-center duration-500 text-white text-lg"
-                                    href="https://www.facebook.com">
-                                    <i
-                                        class="fa-brands fa-facebook group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
-                                </a>
-                            </li>
-                            <li
-                                class="inline-flex size-11.5 bg-citrusyellow mr-2.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
-                                <a class="inline-flex size-9 bg-primary rounded-full justify-center items-center duration-500 text-white text-lg"
-                                    href="https://www.instagram.com">
-                                    <i
-                                        class="fa-brands fa-instagram group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
-                                </a>
-                            </li>
-                            <li
-                                class="inline-flex size-11.5 bg-citrusyellow mr-2.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
-                                <a class="inline-flex size-9 bg-primary rounded-full justify-center items-center duration-500 text-white text-lg"
-                                    href="https://www.pinterest.com/">
-                                    <i
-                                        class="fa-brands fa-pinterest group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
-                                </a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- JAVASCRIPT  FILES ========================================= -->
-    <script src="assets/vendor/gsap/gsap.min.js"></script>
-    <script src="assets/vendor/gsap/ScrollSmoother.js"></script>
-    <script src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/flatpickr/js/flatpickr.js"></script>
-    <script src="assets/js/jquery-3.7.1.min.js"></script>
-    <script src="assets/js/theia-sticky-sidebar.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/dz.carousel.js"></script>
-    <script src="assets/js/lc_lightbox.lite.js"></script>
-    <script src="assets/vendor/magnific-popup/magnific-popup.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
-    <!-- Google API For Recaptcha  -->
-    <script src="assets/vendor/nouislider/nouislider.min.js"></script>
-    <script src="assets/vendor/group-slide/group-loop.js"></script>
-    <script src="assets/js/dz.ajax.js"></script>
-    <!-- CONTACT JS  -->
-    <script src="assets/vendor/xmenu/xmenu.js"></script>
-    <script src="assets/js/animation.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <!-- Removed runtime Tailwind script `assets/js/3.4.17.js` to use compiled Tailwind CSS instead -->
+        <!-- JAVASCRIPT  FILES ========================================= -->
+        <script src="assets/vendor/gsap/gsap.min.js"></script>
+        <script src="assets/vendor/gsap/ScrollSmoother.js"></script>
+        <script src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="assets/vendor/flatpickr/js/flatpickr.js"></script>
+        <script src="assets/js/jquery-3.7.1.min.js"></script>
+        <script src="assets/js/theia-sticky-sidebar.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/isotope.pkgd.min.js"></script>
+        <script src="assets/js/dz.carousel.js"></script>
+        <script src="assets/js/lc_lightbox.lite.js"></script>
+        <script src="assets/vendor/magnific-popup/magnific-popup.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <!-- Google API For Recaptcha  -->
+        <script src="assets/vendor/nouislider/nouislider.min.js"></script>
+        <script src="assets/vendor/group-slide/group-loop.js"></script>
+        <script src="assets/js/dz.ajax.js"></script>
+        <!-- CONTACT JS  -->
+        <script src="assets/vendor/xmenu/xmenu.js"></script>
+        <script src="assets/js/animation.js"></script>
+        <script src="assets/js/custom.js"></script>
+        <!-- Removed runtime Tailwind script `assets/js/3.4.17.js` to use compiled Tailwind CSS instead -->
 </body>
 
 </html>
