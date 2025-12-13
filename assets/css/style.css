@@ -18855,3 +18855,98 @@ select.news-search-select option {
     max-height: 26px;
   }
 }
+
+/* Client logo design: uniform cards, subtle border, grayscale->color on hover */
+.brand-swiper .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-card-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-card {
+  width: 190px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 10px 14px;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.06);
+  transition: transform .28s cubic-bezier(.2, .9, .3, 1), box-shadow .28s ease, filter .28s ease, opacity .28s ease;
+  filter: grayscale(100%);
+  opacity: 0.82;
+  border: 1px solid rgba(58, 85, 164, 0.379);
+}
+
+.brand-card img {
+  width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.brand-card span {
+  font-size: 10px;
+}
+
+.brand-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(2, 6, 23, 0.12);
+  filter: none;
+  opacity: 1;
+  border: 1px solid rgb(58, 85, 164);
+}
+
+.brand-swiper {
+  padding: 8px 4px;
+}
+
+@media (max-width: 640px) {
+  .brand-card {
+    width: 120px;
+    height: 56px;
+    padding: 8px;
+  }
+}
+
+.brand-swiper-nav {
+  position: relative;
+}
+
+.brand-swiper-prev,
+.brand-swiper-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: rgba(2, 6, 23, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f172a;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.06);
+  transition: background .18s ease, transform .12s ease;
+}
+
+.brand-swiper-prev:hover,
+.brand-swiper-next:hover {
+  background: rgba(2, 6, 23, 0.12);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.brand-swiper-prev {
+  left: -18px;
+}
+
+.brand-swiper-next {
+  right: -18px;
+}

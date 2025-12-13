@@ -2059,97 +2059,6 @@
 
                     <!-- CLIENT LOGO SECTION START -->
                     <div class="p-5 mt-7.5 mb-30 bg-lightturquoise">
-                        <style>
-                            /* Client logo design: uniform cards, subtle border, grayscale->color on hover */
-                            .brand-swiper .swiper-slide {
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                            }
-
-                            .brand-card-wrap {
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                            }
-
-                            .brand-card {
-                                width: 170px;
-                                height: 72px;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                background: #ffffff;
-                                border-radius: 12px;
-                                padding: 10px 14px;
-                                box-shadow: 0 6px 18px rgba(2, 6, 23, 0.06);
-                                transition: transform .28s cubic-bezier(.2, .9, .3, 1), box-shadow .28s ease, filter .28s ease, opacity .28s ease;
-                                filter: grayscale(100%);
-                                opacity: 0.82;
-                                border: 1px solid rgba(15, 23, 42, 0.06);
-                            }
-
-                            .brand-card img {
-                                max-width: 100%;
-                                max-height: 100%;
-                                object-fit: contain;
-                            }
-
-                            .brand-card:hover {
-                                transform: translateY(-6px) scale(1.03);
-                                box-shadow: 0 12px 30px rgba(2, 6, 23, 0.12);
-                                filter: none;
-                                opacity: 1;
-                            }
-
-                            .brand-swiper {
-                                padding: 8px 4px;
-                            }
-
-                            @media (max-width: 640px) {
-                                .brand-card {
-                                    width: 120px;
-                                    height: 56px;
-                                    padding: 8px;
-                                }
-                            }
-
-                            .brand-swiper-nav {
-                                position: relative;
-                            }
-
-                            .brand-swiper-prev,
-                            .brand-swiper-next {
-                                position: absolute;
-                                top: 50%;
-                                transform: translateY(-50%);
-                                width: 40px;
-                                height: 40px;
-                                border-radius: 999px;
-                                background: rgba(2, 6, 23, 0.06);
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                color: #0f172a;
-                                cursor: pointer;
-                                box-shadow: 0 6px 18px rgba(2, 6, 23, 0.06);
-                                transition: background .18s ease, transform .12s ease;
-                            }
-
-                            .brand-swiper-prev:hover,
-                            .brand-swiper-next:hover {
-                                background: rgba(2, 6, 23, 0.12);
-                                transform: translateY(-50%) scale(1.05);
-                            }
-
-                            .brand-swiper-prev {
-                                left: -18px;
-                            }
-
-                            .brand-swiper-next {
-                                right: -18px;
-                            }
-                        </style>
 
                         <div class="py-5">
                             <div class="container">
@@ -2169,9 +2078,10 @@
                                                 <div class="swiper-wrapper">
                                                     <div class="swiper-slide">
                                                         <div class="brand-card-wrap">
-                                                            <div class="brand-card"><img
-                                                                    src="assets/images/bgp/Bujang Gadis Balaputradewa.png"
+                                                            <div class="brand-card">
+                                                                <img src="assets/images/bgp/Bujang Gadis Balaputradewa.png"
                                                                     alt="Bujang Gadis Balaputradewa" loading="lazy">
+                                                                <span>Bujang Gadis Balaputradewa</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -2179,133 +2089,171 @@
                                                         <div class="brand-card-wrap">
                                                             <div class="brand-card"><img
                                                                     src="assets/images/bgp/Bujang Gadis Candradimuka.png"
-                                                                    alt="Candradimuka" loading="lazy"></div>
+                                                                    alt="Candradimuka" loading="lazy">
+                                                                <span>Bujang Gadis Candradimuka</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <div class="brand-card-wrap">
                                                             <div class="brand-card"><img
                                                                     src="assets/images/bgp/Bujang Gadis Pendidikan Sumsel.jpeg"
-                                                                    alt="Pendidikan Sumsel" loading="lazy"></div>
+                                                                    alt="Pendidikan Sumsel" loading="lazy">
+                                                                <span>Bujang Gadis Pendidikan Sumsel</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <div class="brand-card-wrap">
                                                             <div class="brand-card"><img
                                                                     src="assets/images/bgp/Bujang Gadis Penjas PGRI .png"
-                                                                    alt="Penjas PGRI" loading="lazy"></div>
+                                                                    alt="Penjas PGRI" loading="lazy">
+                                                                <span>Bujang Gadis Penjas PGRI</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <div class="brand-card-wrap">
                                                             <div class="brand-card"><img
                                                                     src="assets/images/bgp/Bujang Gadis PGRI.png"
-                                                                    alt="PGRI" loading="lazy"></div>
+                                                                    alt="PGRI" loading="lazy">
+                                                                <span>Bujang Gadis PGRI</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <div class="brand-card-wrap">
                                                             <div class="brand-card"><img
                                                                     src="assets/images/bgp/Bujang Gadis Polsri.png"
-                                                                    alt="Polsri" loading="lazy"></div>
+                                                                    alt="Polsri" loading="lazy">
+                                                                <span>Bujang Gadis Polsri</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <div class="brand-card-wrap">
                                                             <div class="brand-card"><img
                                                                     src="assets/images/bgp/Bujang Gadis SMAN22.png"
-                                                                    alt="SMAN22" loading="lazy"></div>
+                                                                    alt="SMAN22" loading="lazy">
+                                                                <span>Bujang Gadis SMAN22</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <div class="brand-card-wrap">
                                                             <div class="brand-card"><img
                                                                     src="assets/images/bgp/Bujang Gadis UIN Raden Fatah.png"
-                                                                    alt="UIN Raden Fatah" loading="lazy"></div>
+                                                                    alt="UIN Raden Fatah" loading="lazy">
+                                                                <span>Bujang Gadis UIN Raden Fatah</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <div class="brand-card-wrap">
                                                             <div class="brand-card"><img
                                                                     src="assets/images/bgp/Bujang Gadis Unbara.png"
-                                                                    alt="Unbara" loading="lazy"></div>
+                                                                    alt="Unbara" loading="lazy">
+                                                                <span>Bujang Gadis Unbara</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <div class="brand-card-wrap">
                                                             <div class="brand-card"><img
                                                                     src="assets/images/bgp/Duta Genre Musi Banyuasin(MuBa).png"
-                                                                    alt="MuBa" loading="lazy"></div>
+                                                                    alt="MuBa" loading="lazy">
+                                                                <span>Duta Genre Musi Banyuasin (MuBa)</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <div class="brand-card-wrap">
                                                             <div class="brand-card"><img
                                                                     src="assets/images/bgp/DUTA KESEHATAN SUMATERA SELATAN.png.png"
-                                                                    alt="Duta Kesehatan" loading="lazy"></div>
+                                                                    alt="Duta Kesehatan" loading="lazy">
+                                                                <span>Duta Kesehatan Sumatera Selatan</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <div class="brand-card-wrap">
                                                             <div class="brand-card"><img
                                                                     src="assets/images/bgp/Duta Lingkungan Sumsel.png"
-                                                                    alt="Duta Lingkungan" loading="lazy"></div>
+                                                                    alt="Duta Lingkungan" loading="lazy">
+                                                                <span>Duta Lingkungan Sumsel</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <div class="brand-card-wrap">
                                                             <div class="brand-card"><img
                                                                     src="assets/images/bgp/Duta Pelajar Remaja Nusantara.png"
-                                                                    alt="Duta Pelajar" loading="lazy"></div>
+                                                                    alt="Duta Pelajar" loading="lazy">
+                                                                <span>Duta Pelajar Remaja Nusantara</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <div class="brand-card-wrap">
                                                             <div class="brand-card"><img
                                                                     src="assets/images/bgp/logo bg wisata musi.png"
-                                                                    alt="Logo Wisata" loading="lazy"></div>
+                                                                    alt="Logo Wisata" loading="lazy">
+                                                                <span>Logo Bujang Gadis Wisata Musi</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <div class="brand-card-wrap">
                                                             <div class="brand-card"><img
                                                                     src="assets/images/bgp/logo-missbeutysumsel.png"
-                                                                    alt="Miss Beauty" loading="lazy"></div>
+                                                                    alt="Miss Beauty" loading="lazy">
+                                                                <span>Miss Beauty Sumsel</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <div class="brand-card-wrap">
                                                             <div class="brand-card"><img
                                                                     src="assets/images/bgp/Miss Beauty Indonesia.PNG"
-                                                                    alt="Miss Beauty Indonesia" loading="lazy"></div>
+                                                                    alt="Miss Beauty Indonesia" loading="lazy">
+                                                                <span>Miss Beauty Indonesia</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <div class="brand-card-wrap">
                                                             <div class="brand-card"><img
                                                                     src="assets/images/bgp/Miss beauty Jabar.png"
-                                                                    alt="Miss Beauty Jabar" loading="lazy"></div>
+                                                                    alt="Miss Beauty Jabar" loading="lazy">
+                                                                <span>Miss Beauty Jabar</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <div class="brand-card-wrap">
                                                             <div class="brand-card"><img
                                                                     src="assets/images/bgp/Putra Putri Pendidikan Sumsel.png"
-                                                                    alt="Putra Putri" loading="lazy"></div>
+                                                                    alt="Putra Putri" loading="lazy">
+                                                                <span>Bujang Gadis Pendidikan Sumsel</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <div class="brand-card-wrap">
                                                             <div class="brand-card"><img
                                                                     src="assets/images/bgp/Putra Putri SMAN3 Palemabang.png"
-                                                                    alt="SMAN3" loading="lazy"></div>
+                                                                    alt="SMAN3" loading="lazy">
+                                                                <span>Putra Putri SMAN3 Palembang</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <div class="brand-card-wrap">
                                                             <div class="brand-card"><img
                                                                     src="assets/images/bgp/Putri Muslimah Nusantara.jpeg"
-                                                                    alt="Putri Muslimah" loading="lazy"></div>
+                                                                    alt="Putri Muslimah" loading="lazy">
+                                                                <span>Putri Muslimah Nusantara</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
