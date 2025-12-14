@@ -68,7 +68,7 @@
         rel="stylesheet" />
 </head>
 
-<body id="bg" class="header-blue selection:bg-[#484848] selection:text-white">
+<body id="bg" class="selection:bg-[#484848] selection:text-white">
     <!-- LOADING AREA START ===== -->
     <div class="loading-area">
         <div class="loading-box"></div>
@@ -89,7 +89,7 @@
     <div class="cursor2"></div>
     <div class="page-wraper">
         <header
-            class="site-header sticky-header absolute left-0 right-0 top-0 duration-500 z-999 [.site-header.is-fixed]:fixed [.site-header.is-fixed]:animate-header-scroll-animation [.site-header.is-fixed]:bg-primary [.site-header.is-fixed]:top-0">
+            class="site-header sticky-header absolute lg:top-8.75 left-0 right-0 top-0 duration-500 z-999 [.site-header.is-fixed]:fixed [.site-header.is-fixed]:animate-header-scroll-animation [.site-header.is-fixed]:bg-primary [.site-header.is-fixed]:top-0">
             <div class="main-bar-wraper">
                 <div
                     class="container w-full lg:min-h-20 min-h-20 lg:ps-8.75 px-4 lg:pe-13.75 duration-500 rounded-5xl flex items-center justify-between">
@@ -231,6 +231,35 @@
                             </button>
                         </div>
                     </div>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            if (typeof Swiper === 'undefined') return;
+                            new Swiper('.brand-swiper', {
+                                loop: true,
+                                spaceBetween: 18,
+                                autoplay: {
+                                    delay: 2400,
+                                    disableOnInteraction: false
+                                },
+                                slidesPerView: 3,
+                                navigation: {
+                                    nextEl: '.brand-swiper-next',
+                                    prevEl: '.brand-swiper-prev'
+                                },
+                                breakpoints: {
+                                    480: {
+                                        slidesPerView: 3
+                                    },
+                                    768: {
+                                        slidesPerView: 5
+                                    },
+                                    1024: {
+                                        slidesPerView: 8
+                                    }
+                                }
+                            });
+                        });
+                    </script>
                 </div>
             </div>
         </header>
@@ -240,34 +269,61 @@
                 <!-- CONTENT START -->
                 <div class="page-content">
                     <!-- Banner Style One -->
-                    <div class="h-137.5 top-25.5 overflow-hidden relative">
-                        <!-- Banner slider (container-width, modest height, rounded) -->
-                        <div class="hero2-wrapper">
-                            <div class="swiper hero2-swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide"><img src="assets/images/jedev.jpg" alt="Banner 1"
-                                            loading="lazy"></div>
-                                    <div class="swiper-slide"><img src="assets/images/main-slider/slider2/slider-bg.jpg"
-                                            alt="Banner 2" loading="lazy"></div>
-                                    <div class="swiper-slide"><img src="assets/images/main-slider/slider3/slider-bg.jpg"
-                                            alt="Banner 3" loading="lazy"></div>
+                    <div class="3xl:h-237.5 2xl:h-225 sm:h-192 h-170 overflow-hidden relative trv-banner-1-wrap">
+                        <video muted loop autoplay
+                            class="absolute left-1/2 top-1/2 -translate-1/2 object-cover size-full z-0">
+                            <source src="assets/images/vid1.mp4" type="video/mp4" />
+                        </video>
+                        <div
+                            class="relative z-2 3xl:h-220 2xl:h-207.5 lg:h-171.25 h-195 lg:m-8.75 lg:rounded-3xl bg-black/35">
+                            <div class="xl:pt-50 md:pt-40 pt-37.5 md:pl-17.5 max-md:px-5 max-w-255">
+                                <span
+                                    class="2xl:text-48 text-3xl leading-17.5 text-aquamist xl:pl-12.5 font-display block">Superdev</span>
+                                <div class="relative">
+                                    <h1 class="!font-display 2xl:!text-62xl xl:!text-45xl md:!text-32xl !text-80 !text-white relative inline-block animate-slide-left"
+                                        title="Vote and Event">
+                                        Voting
+                                    </h1>
+                                    <h1 class="!font-display 2xl:!text-62xl xl:!text-45xl md:!text-32xl !text-80 !text-transparent absolute left-0 top-0 z-1 [-webkit-text-stroke:2px_#fff] animate-slide-left"
+                                        title="Vote and Event">
+                                        Voting
+                                    </h1>
                                 </div>
-                                <div class="swiper-pagination"></div>
                             </div>
-                            <button class="hero2-prev" aria-label="Previous banner"><svg width="14" height="14"
-                                    viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15 18L9 12L15 6" stroke="#111827" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" /></svg></button>
-                            <button class="hero2-next" aria-label="Next banner"><svg width="14" height="14"
-                                    viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9 6L15 12L9 18" stroke="#111827" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" /></svg></button>
+                            <div
+                                class="text-white absolute bottom-7.5 3xl:right-112.5 2xl:right-64.5 sm:right-10 right-5 flex items-center z-4">
+                                <span
+                                    class="pr-26.25 text-xs leading-4.5 tracking-[0.2em] uppercase relative inline-block after:content-[''] after:absolute after:w-16 after:h-px after:bg-white after:right-5 after:top-1/2 after:-translate-y-1/2 max-sm:hidden">Follow
+                                    Us</span>
+                                <ul class="flex">
+                                    <li>
+                                        <a href="https://www.facebook.com" target="_blank"
+                                            class="text-white text-xl ml-5 duration-500 block hover:text-secondary hover:-translate-y-1.25"><i
+                                                class="fa-brands fa-facebook-f"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.linkedin.com" target="_blank"
+                                            class="text-white text-xl ml-5 duration-500 block hover:text-secondary hover:-translate-y-1.25"><i
+                                                class="fa-brands fa-linkedin-in"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com" target="_blank"
+                                            class="text-white text-xl ml-5 duration-500 block hover:text-secondary hover:-translate-y-1.25"><i
+                                                class="fa-brands fa-instagram"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.x.com" target="_blank"
+                                            class="text-white text-xl ml-5 duration-500 block hover:text-secondary hover:-translate-y-1.25"><i
+                                                class="fa-brands fa-x-twitter"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <!-- Banner Style One End -->
 
                     <!--EXPLORE POPULAR TOUR START-->
-                    <div class="bg-lightturquoise 2xl:mx-15 sm:mx-6 mt-0">
+                    <div class="xl:pt-30 pt-12.5 bg-lightturquoise 2xl:mx-15 sm:mx-6">
                         <div class="container">
                             <!-- TITLE START-->
                             <div class="row items-center mb-15">
@@ -2523,59 +2579,6 @@
         <script src="assets/js/animation.js"></script>
         <script src="assets/js/custom.js"></script>
         <!-- Removed runtime Tailwind script `assets/js/3.4.17.js` to use compiled Tailwind CSS instead -->
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                if (typeof Swiper === 'undefined') return;
-                new Swiper('.brand-swiper', {
-                    loop: true,
-                    spaceBetween: 18,
-                    autoplay: {
-                        delay: 2400,
-                        disableOnInteraction: false
-                    },
-                    slidesPerView: 3,
-                    navigation: {
-                        nextEl: '.brand-swiper-next',
-                        prevEl: '.brand-swiper-prev'
-                    },
-                    breakpoints: {
-                        480: {
-                            slidesPerView: 3
-                        },
-                        768: {
-                            slidesPerView: 5
-                        },
-                        1024: {
-                            slidesPerView: 8
-                        }
-                    }
-                });
-
-                // Initialize the banner slider on this page
-                try {
-                    new Swiper('.hero2-swiper', {
-                        loop: true,
-                        autoplay: {
-                            delay: 4000,
-                            disableOnInteraction: false
-                        },
-                        speed: 900,
-                        slidesPerView: 1,
-                        navigation: {
-                            nextEl: '.hero2-next',
-                            prevEl: '.hero2-prev'
-                        },
-                        pagination: {
-                            el: '.hero2-swiper .swiper-pagination',
-                            clickable: true
-                        }
-                    });
-                } catch (e) {
-                    console.warn('hero2 swiper init skipped', e);
-                }
-            });
-        </script>
 </body>
 
 </html>
