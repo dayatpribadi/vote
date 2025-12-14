@@ -19060,11 +19060,10 @@ select.news-search-select option {
 @media (max-width:767px) {
   .hero2-wrapper {
     width: calc(100% - 40px);
-    height: 150px
+    height: 90px
   }
 
-  .hero2-prev,
-  .hero2-next {
-    display: none
+  .hero2-swiper .swiper-pagination {
+    display: none;
   }
 }
