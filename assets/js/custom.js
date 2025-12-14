@@ -512,7 +512,7 @@ const Travlla = (function () {
   };
 
   const handleContactModal = () => {
-    const DEFAULT_PHONE = "+6282173750055";
+    const DEFAULT_PHONE = "+6283144115169";
 
     function createModal() {
       if (document.querySelector('.contact-modal-backdrop')) return;
