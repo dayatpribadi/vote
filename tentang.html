@@ -68,7 +68,7 @@
         rel="stylesheet" />
 </head>
 
-<body id="bg" class="header-blue selection:bg-[#484848] selection:text-white">
+<body id="bg" class="selection:bg-[#484848] selection:text-white">
 
     <!-- LOADING AREA START ===== -->
     <div class="loading-area">
@@ -92,147 +92,160 @@
 
         <!-- HEADER START -->
         <header
-            class="site-header sticky-header absolute left-0 right-0 top-0 duration-500 z-999 [.site-header.is-fixed]:fixed [.site-header.is-fixed]:animate-header-scroll-animation [.site-header.is-fixed]:bg-primary [.site-header.is-fixed]:top-0">
+            class="site-header sticky-header bg-white absolute w-full duration-500 z-999 before:absolute before:w-62.5 before:h-37.5 before:left-1/2 before:-translate-x-1/2 before:bg-white before:shadow-header before:-z-1 max-4xl:before:hidden [.site-header.is-fixed]:fixed [.site-header.is-fixed]:animate-header-scroll-animation [.site-header.is-fixed]:top-0">
             <div class="main-bar-wraper">
                 <div
-                    class="container w-full lg:min-h-20 min-h-20 lg:ps-8.75 px-4 lg:pe-13.75 duration-500 rounded-5xl flex items-center justify-between">
-                    <div class="flex relative w-full">
-                        <div class="flex items-center relative z-9 h-20 lg:w-44 w-30">
+                    class="container flex items-center justify-between relative w-full 2xl:min-h-20 min-h-20 2xxl:ps-8.75 px-4.5 2xxl:pe-13.75 duration-500">
+                    <div class="flex items-center z-9 h-20 lg:w-44 w-30 4xl:absolute 4xl:left-1/2 4xl:-translate-x-1/2">
+                        <a href="index.html" class="table-cell align-middle">
+                            <img src="assets/images/superdev_.png" alt="logo"
+                                class="object-contain duration-500 lg:max-w-40 sm:max-w-30 max-w-27.5">
+                        </a>
+                    </div>
+                    <button
+                        class="xmenu-toggler lg:hidden float-right mt-4.5 mb-4 md:ml-7 ml-4 size-11 bg-dark-600 relative cursor-pointer max-lg:order-1"
+                        type="button">
+                        <span
+                            class="block absolute left-2.5 h-0.5 rounded-px bg-primary duration-300 top-3.25 w-5.5"></span>
+                        <span
+                            class="block absolute left-2.5 h-0.5 rounded-px bg-primary duration-0 top-5.5 w-6.25"></span>
+                        <span class="block absolute left-2.5 h-0.5 rounded-px bg-primary duration-300 top-8 w-4"></span>
+                    </button>
+                    <div
+                        class="lg:hidden fixed top-0 left-0 bg-black size-full duration-300 z-999 opacity-0 visible pointer-events-none menu-close fade-overlay">
+                    </div>
+                    <div
+                        class="flex lg:basis-auto lg:grow max-lg:flex-col 4xl:justify-start lg:justify-center justify-start font-base max-lg:fixed max-lg:h-screen max-lg:px-5 max-lg:top-0 max-lg:-left-75 max-lg:z-9999 max-lg:bg-white max-lg:w-72 max-lg:overflow-auto max-lg:duration-700 header-nav custom-scroll">
+                        <div class="flex items-center relative z-9 py-6.25 lg:hidden">
                             <a href="index.html" class="table-cell align-middle">
-                                <img src="assets/images/superdev_.png" alt="logo" class="object-contain duration-500" />
+                                <img src="assets/images/superdev_.png" alt="" class="object-contain duration-500">
                             </a>
                         </div>
-                        <button
-                            class="xmenu-toggler lg:hidden float-right mt-4.5 mb-4 md:ml-7 ml-4 size-11 bg-dark-600 relative cursor-pointer max-lg:order-1"
-                            type="button">
-                            <span
-                                class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-300 top-3.25 w-5.5"></span>
-                            <span
-                                class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-0 top-5.5 w-6.25"></span>
-                            <span
-                                class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-300 top-8 w-4"></span>
-                        </button>
-                        <div
-                            class="lg:hidden fixed top-0 left-0 bg-black size-full duration-300 z-999 opacity-0 visible pointer-events-none menu-close fade-overlay">
-                        </div>
-                        <div
-                            class="flex lg:justify-center lg:basis-auto lg:grow max-lg:flex-col justify-start font-base max-lg:fixed max-lg:h-screen max-lg:px-5 max-lg:top-0 max-lg:-left-75 max-lg:z-9999 max-lg:bg-white max-lg:w-72 max-lg:overflow-auto max-lg:duration-700 header-nav custom-scroll">
-                            <div class="flex items-center relative z-9 py-6.25 lg:hidden">
-                                <a href="index.html" class="table-cell align-middle">
-                                    <img src="assets/images/superdev_.png" alt="" class="object-contain duration-500" />
+                        <ul class="lg:flex flex-wrap navbar-nav">
+                            <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
+                                <a class="lg:py-7.5 py-2 3xxl:px-5 2xxl:px-3 lg:px-2 relative lg:inline-block block text-lg font-medium text-primary hover:text-primary"
+                                    href="index.html">
+                                    <span class="inline-block">Home</span>
                                 </a>
-                            </div>
-                            <ul class="lg:flex flex-wrap navbar-nav">
-                                <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
-                                    <a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary"
-                                        href="index.html">
-                                        <span class="inline-block">Home</span>
-                                    </a>
+                            </li>
+                            <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
+                                <a class="lg:py-7.5 py-2 3xxl:px-5 2xxl:px-3 lg:px-2 relative lg:inline-block block text-lg font-medium text-primary hover:text-primary"
+                                    href="tentang.html">
+                                    <span class="inline-block">Tentang Kami</span>
+                                </a>
+                            </li>
+                            <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
+                                <!-- wa me -->
+                                <a class="lg:py-7.5 py-2 3xxl:px-5 2xxl:px-3 lg:px-2 relative lg:inline-block block text-lg font-medium text-primary hover:text-primary"
+                                    href="whatsapp://send?phone=+6282173750055&text=Halo%20Superdev,%20saya%20ingin%20menyelenggarakan%20Voting.">
+                                    <span class="inline-block">Kontak Kami</span>
+                                </a>
+                            </li>
+                            <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
+                                <a class="lg:py-7.5 py-2 3xxl:px-5 2xxl:px-3 lg:px-2 relative lg:inline-block block text-lg font-medium text-primary hover:text-primary"
+                                    href="voting.html">
+                                    <span class="inline-block">e-Voting</span>
+                                </a>
+                            </li>
+                            <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
+                                <a class="lg:py-7.5 py-2 3xxl:px-5 2xxl:px-3 lg:px-2 relative lg:inline-block block text-lg font-medium text-primary hover:text-primary active"
+                                    href="berita.html" aria-current="page">
+                                    <span class="inline-block">Berita</span>
+                                </a>
+                            </li>
+                            <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
+                                <a class="lg:py-7.5 py-2 3xxl:px-5 2xxl:px-3 lg:px-2 relative lg:inline-block block text-lg font-medium text-primary hover:text-primary"
+                                    href="faq.html">
+                                    <span class="inline-block">FAQ</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="lg:hidden block max-lg:p-5 text-center mt-auto">
+                            <ul>
+                                <li class="inline-block mx-0.5">
+                                    <a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-facebook-f"
+                                        target="_blank" href="https://www.facebook.com/dexignzone"></a>
                                 </li>
-                                <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
-                                    <a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary"
-                                        href="tentang.html">
-                                        <span class="inline-block">Tentang Kami</span>
-                                    </a>
+                                <li class="inline-block mx-0.5">
+                                    <a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-twitter"
+                                        target="_blank" href="https://twitter.com/dexignzones"></a>
                                 </li>
-                                <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
-                                    <!-- wa me -->
-                                    <a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary"
-                                        href="whatsapp://send?phone=+6282173750055&text=Halo%20Superdev,%20saya%20ingin%20menyelenggarakan%20Voting.">
-                                        <span class="inline-block">Kontak Kami</span>
-                                    </a>
+                                <li class="inline-block mx-0.5">
+                                    <a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-linkedin-in"
+                                        target="_blank" href="https://www.linkedin.com/showcase/3686700/admin/"></a>
                                 </li>
-                                <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
-                                    <a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary"
-                                        href="voting.html">
-                                        <span class="inline-block">e-Voting</span>
-                                    </a>
-                                </li>
-                                <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
-                                    <a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary"
-                                        href="berita.html">
-                                        <span class="inline-block">Berita</span>
-                                    </a>
-                                </li>
-                                <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
-                                    <a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary"
-                                        href="faq.html">
-                                        <span class="inline-block">FAQ</span>
-                                    </a>
+                                <li class="inline-block mx-0.5">
+                                    <a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-instagram"
+                                        target="_blank" href="https://www.instagram.com/dexignzone/"></a>
                                 </li>
                             </ul>
-                            <div class="lg:hidden block max-lg:p-5 text-center mt-auto">
-                                <ul>
-                                    <li class="inline-block mx-0.5">
-                                        <a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-facebook-f"
-                                            target="_blank" href="https://www.facebook.com/dexignzone"></a>
-                                    </li>
-                                    <li class="inline-block mx-0.5">
-                                        <a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-twitter"
-                                            target="_blank" href="https://twitter.com/dexignzones"></a>
-                                    </li>
-                                    <li class="inline-block mx-0.5">
-                                        <a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-linkedin-in"
-                                            target="_blank" href="https://www.linkedin.com/showcase/3686700/admin/"></a>
-                                    </li>
-                                    <li class="inline-block mx-0.5">
-                                        <a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-instagram"
-                                            target="_blank" href="https://www.instagram.com/dexignzone/"></a>
-                                    </li>
-                                </ul>
+                        </div>
+                    </div>
+                    <div class="flex lg:justify-end lg:items-center z-9 h-20 xl:pl-8 max-lg:ms-auto">
+                        <div class="flex items-center">
+                            <ul class="ml-5 flex items-center -mr-2.5">
+                                <li class="inline-block max-xl:hidden">
+                                    <ul class="flex">
+                                        <li><a class="text-xl text-primary mr-5 block" href="javascript:;"><i
+                                                    class="fa-brands fa-facebook-f"></i></a></li>
+                                        <li><a class="text-xl text-primary mr-5 block" href="javascript:;"><i
+                                                    class="fa-brands fa-instagram"></i></a></li>
+                                        <li><a class="text-xl text-primary mr-5 block" href="javascript:;"><i
+                                                    class="fa-brands fa-linkedin-in"></i></a></li>
+                                        <li><a class="text-xl text-primary mr-5 block" href="javascript:;"><i
+                                                    class="fa-brands fa-x-twitter"></i></a></li>
+                                    </ul>
+                                </li>
+                                <li class="inline-block">
+                                    <button type="button"
+                                        class="flex items-center justify-center sm:size-14 size-8 sm:px-4 quick-search cursor-pointer text-primary"
+                                        data-target="#searchOverlay1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-search">
+                                            <circle cx="11" cy="11" r="8"></circle>
+                                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="inline-block" data-drawer="#offcanvas-right" data-drawer-placement="right">
+                                    <button
+                                        class="lg:mt-4.5 lg:mb-4 lg:ml-5 lg:size-11 bg-dark-600 relative cursor-pointer max-lg:order-1 max-md:ms-auto toggle-nav-btn"
+                                        type="button" aria-label="Toggle drawer">
+                                        <span
+                                            class="block absolute left-2.5 h-0.5 rounded-px bg-primary duration-300 top-3.25 w-6 max-lg:hidden"></span>
+                                        <span
+                                            class="block absolute left-2.5 h-0.5 rounded-px bg-primary duration-0 top-5.5 w-6 max-lg:hidden"></span>
+                                        <span
+                                            class="block absolute left-2.5 h-0.5 rounded-px bg-primary duration-300 top-8 w-6 max-lg:hidden"></span>
+                                        <b
+                                            class="lg:hidden uppercase fixed -rotate-90 -translate-y-1/2 -right-7.5 bg-primary px-5 rounded-t-2lg text-white tracking-[2px] top-1/2">Info</b>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="fixed -top-full left-0 size-full bg-body-bg z-999 flex items-center justify-center p-8 duration-500 xmenu-search"
+                        id="searchOverlay1">
+                        <form
+                            class="absolute top-1/2 left-1/2 -translate-1/2 w-[calc(100%_-_80px)] max-w-150 text-primary text-3xl font-light text-left outline-none p-1.5 duration-500 bg-paleaqua rounded-25xl"
+                            action="#">
+                            <div
+                                class="relative flex flex-wrap items-stretch w-full bg-white rounded-25xl overflow-hidden">
+                                <input name="search" value="" type="text"
+                                    class="h-17.5 pr-3 pl-7.5 text-lg text-primary w-[1%] flex-1 outline-none duration-300 placeholder:text-primary focus:border-primary"
+                                    placeholder="Search...">
+                                <span class="flex">
+                                    <button type="button"
+                                        class="px-2.5 outline-none size-17.5 bg-primary text-2xl text-white rounded-full flex-1 ml-2.5 duration-500 cursor-pointer"><i
+                                            class="fa fa-search"></i></button>
+                                </span>
                             </div>
-                        </div>
-                        <div class="flex lg:justify-end lg:items-center z-9 h-20 xl:pl-8 max-lg:ms-auto">
-                            <div class="flex items-center">
-                                <ul class="ml-5 flex items-center -mr-2.5">
-                                    <li class="inline-block">
-                                        <button type="button"
-                                            class="flex items-center justify-center size-14 px-4 quick-search cursor-pointer text-white"
-                                            data-target="#searchOverlay1">
-                                            <i class="fa fa-search text-xl"></i>
-                                        </button>
-                                    </li>
-                                    <li class="inline-block" data-drawer="#offcanvas-right"
-                                        data-drawer-placement="right">
-                                        <button
-                                            class="lg:mt-4.5 lg:mb-4 lg:ml-5 lg:size-11 bg-dark-600 relative cursor-pointer max-lg:order-1 max-md:ms-auto toggle-nav-btn"
-                                            type="button" aria-label="Toggle drawer">
-                                            <span
-                                                class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-300 top-3.25 w-7 max-lg:hidden"></span>
-                                            <span
-                                                class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-0 top-5.5 w-7 max-lg:hidden"></span>
-                                            <span
-                                                class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-300 top-8 w-7 max-lg:hidden"></span>
-                                            <b
-                                                class="lg:hidden uppercase fixed -rotate-90 -translate-y-1/2 -right-7.5 bg-primary px-5 rounded-t-2lg text-white tracking-[2px] top-1/2">Info</b>
-                                        </button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="fixed -top-full left-0 size-full bg-body-bg z-999 flex items-center justify-center p-8 duration-500 xmenu-search"
-                            id="searchOverlay1">
-                            <form
-                                class="absolute top-1/2 left-1/2 -translate-1/2 w-[calc(100%_-_80px)] max-w-150 text-primary text-3xl font-light text-left outline-none p-1.5 duration-500 bg-paleaqua rounded-25xl"
-                                action="#">
-                                <div
-                                    class="relative flex flex-wrap items-stretch w-full bg-white rounded-25xl overflow-hidden">
-                                    <input name="search" value="" type="text"
-                                        class="h-17.5 pr-3 pl-7.5 text-lg text-primary w-[1%] flex-1 outline-none duration-300 placeholder:text-primary focus:border-primary"
-                                        placeholder="Search..." />
-                                    <span class="flex">
-                                        <button type="button"
-                                            class="px-2.5 outline-none size-17.5 bg-primary text-2xl text-white rounded-full flex-1 ml-2.5 duration-500 cursor-pointer">
-                                            <i class="fa fa-search"></i>
-                                        </button>
-                                    </span>
-                                </div>
-                            </form>
-                            <button type="button"
-                                class="absolute right-8 top-8 text-primary bg-citrusyellow text-base size-10 cursor-pointer rounded search-remove">
-                                <i class="fa fa-close"></i>
-                            </button>
-                        </div>
+                        </form>
+                        <button type="button"
+                            class="absolute right-8 top-8 text-primary bg-citrusyellow text-base size-10 cursor-pointer rounded search-remove"><i
+                                class="fa fa-close"></i></button>
                     </div>
                 </div>
             </div>
