@@ -19060,7 +19060,7 @@ select.news-search-select option {
 @media (max-width:767px) {
   .hero2-wrapper {
     width: calc(100% - 40px);
-    /* height: 160px */
+    height: 150px
   }
 
   .hero2-prev,
