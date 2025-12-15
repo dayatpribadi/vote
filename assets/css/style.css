@@ -1156,6 +1156,10 @@ utilities;
     margin-top: calc(var(--spacing) * 12.5);
   }
 
+  .mt-22\.5 {
+    margin-top: calc(var(--spacing) * 22.5);
+  }
+
   .mt-25 {
     margin-top: calc(var(--spacing) * 25);
   }
@@ -13831,6 +13835,8 @@ button.scroltop span {
   overflow: visible;
   /* avoid child overflow causing horizontal scroll */
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  position: relative;
+  padding-bottom: 26px;
 }
 
 /* Color borders matching crown colors */
@@ -13924,6 +13930,32 @@ button.scroltop span {
 }
 
 /* Badge adjustments */
+
+/* Additional tweaks to avoid overflow from crowns (specific to leaderboard) */
+.cards-wrapper.leaderboard {
+  overflow: visible;
+}
+
+.cards-wrapper.leaderboard .crown {
+  position: absolute;
+  top: -44px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  /* ensure crown sits above card content but below fixed headers */
+  pointer-events: none;
+  /* so it doesn't block clicks */
+}
+
+.cards-wrapper.leaderboard .card.winner .crown {
+  top: -56px;
+}
+
+/* Make long names wrap cleanly in leaderboard */
+.cards-wrapper.leaderboard .country-name {
+  white-space: normal;
+  word-break: break-word;
+}
 
 /* Show a mobile copy of fade-vote at the top of main content on small/tablet
    and hide the sidebar version on those sizes. */

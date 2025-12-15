@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
 
     <!-- Responsive Design -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- Title -->
     <title>Voting Superdev</title>
@@ -66,6 +66,1162 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Kaushan+Script&display=swap"
         rel="stylesheet" />
+
+    <!-- Responsive CSS -->
+    <style>
+        /* ==================== RESPONSIVE STYLES ==================== */
+
+        /* Global Responsive */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+
+            .container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .site-button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+        /* ==================== HERO OVERLAP RESPONSIVE ==================== */
+        @media (max-width: 1200px) {
+            #page-banner .lg\:absolute {
+                position: relative !important;
+                margin-top: 30px;
+                right: 0 !important;
+            }
+
+            #hero-overlap-img {
+                max-width: 80%;
+                margin: 0 auto;
+                display: block;
+                position: relative !important;
+                height: auto;
+            }
+
+            #page-banner .lg\:pl-12\.5 {
+                padding-left: 0 !important;
+                text-align: center;
+            }
+
+            .twm-img-bg-circle-area {
+                display: none;
+            }
+
+            /* Timer grid responsive */
+            .flex-wrap .mr-6 {
+                margin-right: 10px !important;
+                margin-bottom: 10px !important;
+            }
+
+            .flex-wrap .w-\[120px\] {
+                width: 90px !important;
+            }
+
+            .flex-wrap .lg\:px-6 {
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+            }
+
+            /* Text responsive */
+            .xl\:text-38 {
+                font-size: 28px !important;
+            }
+
+            .xl\:text-20 {
+                font-size: 16px !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #page-banner {
+                height: auto !important;
+                padding: 30px 0 !important;
+            }
+
+            #page-banner .bg-black\/20 {
+                position: relative !important;
+                height: auto !important;
+                padding: 20px !important;
+                border-radius: 0 !important;
+            }
+
+            #hero-overlap-img {
+                max-width: 100%;
+                height: auto;
+                position: relative !important;
+                margin: 20px auto;
+            }
+
+            /* Timer pada mobile */
+            .flex-wrap {
+                justify-content: center;
+                margin-right: 0 !important;
+            }
+
+            .flex-wrap .w-\[120px\] {
+                width: 80px !important;
+                padding: 15px 10px !important;
+                margin-right: 5px !important;
+                margin-bottom: 10px !important;
+            }
+
+            .flex-wrap .xl\:text-46 {
+                font-size: 24px !important;
+            }
+
+            .flex-wrap .text-base {
+                font-size: 12px !important;
+            }
+
+            /* Follow section */
+            .lg\:pl-12\.5 {
+                flex-direction: column;
+                gap: 20px;
+                padding-left: 0 !important;
+                text-align: center;
+            }
+
+            .lg\:pl-12\.5 ul {
+                justify-content: center;
+                margin-top: 10px;
+            }
+
+            /* Most Favorite text */
+            .lg\:absolute.xl\:right-12\.5 {
+                position: relative !important;
+                text-align: center;
+                margin-top: 20px;
+                transform: none !important;
+                top: auto !important;
+                right: auto !important;
+            }
+
+            .lg\:absolute.xl\:right-12\.5 span {
+                display: block;
+                transform: none !important;
+                margin-left: 0 !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #page-banner {
+                padding: 20px 0 !important;
+            }
+
+            .flex-wrap .w-\[120px\] {
+                width: 70px !important;
+                padding: 10px 5px !important;
+            }
+
+            .flex-wrap .xl\:text-46 {
+                font-size: 20px !important;
+            }
+
+            /* Vote buttons */
+            .flex.max-lg\:justify-center {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .site-button.btn-white,
+            .site-button.btn-primary {
+                width: 100%;
+                text-align: center;
+                margin-right: 0 !important;
+                margin-bottom: 10px;
+            }
+        }
+
+        /* ==================== LEADERBOARD (TOP CARDS) RESPONSIVE ==================== */
+        .cards-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 30px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transition: transform 0.3s ease;
+            width: 280px;
+            min-height: 380px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card.winner {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, #fef9e7 0%, #fff 100%);
+            border: 3px solid #FFD700;
+            z-index: 2;
+        }
+
+        .crown {
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+        }
+
+        .avatar-container {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid #f0f0f0;
+            position: relative;
+            margin: 30px auto 20px;
+        }
+
+        .avatar-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .rank-badge {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 40px;
+            height: 40px;
+        }
+
+        .badge-circle {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .badge-triangle {
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 15px solid var(--primary);
+            z-index: 1;
+        }
+
+        .country-name {
+            font-size: 32px;
+            font-weight: bold;
+            color: var(--dark);
+            margin: 10px 0 5px;
+        }
+
+        .country-number {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .percentage {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary);
+            margin: 10px 0 20px;
+        }
+
+        .vote-button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 40px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            margin-top: auto;
+        }
+
+        .vote-button:hover {
+            background: #004494;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 86, 179, 0.3);
+        }
+
+        @media (max-width: 1024px) {
+            .cards-wrapper {
+                flex-direction: column;
+                align-items: center;
+                gap: 60px;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 400px;
+                position: relative;
+                min-height: 350px;
+            }
+
+            .card.winner {
+                order: -1;
+                transform: scale(1.05);
+            }
+
+            .crown {
+                transform: translateX(-50%) scale(0.8);
+            }
+
+            .crown.gold {
+                transform: translateX(-50%) scale(0.9);
+            }
+
+            .avatar-container {
+                width: 160px;
+                height: 160px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cards-wrapper {
+                gap: 50px;
+            }
+
+            .card {
+                max-width: 320px;
+                padding: 25px 15px;
+                min-height: 320px;
+            }
+
+            .avatar-container {
+                width: 140px;
+                height: 140px;
+                margin: 20px auto 15px;
+            }
+
+            .crown img {
+                width: 6rem !important;
+                height: auto;
+            }
+
+            .crown.gold img {
+                width: 7rem !important;
+            }
+
+            .country-name {
+                font-size: 28px;
+            }
+
+            .percentage {
+                font-size: 20px;
+            }
+
+            .vote-button {
+                padding: 10px 30px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cards-wrapper {
+                gap: 40px;
+            }
+
+            .card {
+                max-width: 280px;
+                min-height: 300px;
+            }
+
+            .avatar-container {
+                width: 120px;
+                height: 120px;
+            }
+
+            .country-name {
+                font-size: 24px;
+            }
+
+            .percentage {
+                font-size: 18px;
+            }
+
+            .vote-button {
+                padding: 8px 25px;
+                font-size: 13px;
+            }
+        }
+
+        /* ==================== LIST SECTION RESPONSIVE (REVISED) ==================== */
+        .list-section {
+            margin: 40px 0;
+        }
+
+        .list-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .list-header {
+            display: grid;
+            grid-template-columns: 80px 1fr 120px 150px;
+            gap: 15px;
+            padding: 15px 20px;
+            background: var(--primary);
+            color: white;
+            border-radius: 15px 15px 0 0;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 2px;
+        }
+
+        .list-header-item {
+            text-align: center;
+        }
+
+        .list-header-item:nth-child(2) {
+            text-align: left;
+        }
+
+        .list-items {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .list-item {
+            display: grid;
+            grid-template-columns: 80px 1fr 120px 150px;
+            gap: 15px;
+            background: white;
+            padding: 20px;
+            align-items: center;
+            border-radius: 0;
+            transition: all 0.3s ease;
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .list-item:last-child {
+            border-radius: 0 0 15px 15px;
+        }
+
+        .list-item.highlighted {
+            background: linear-gradient(135deg, #fffaf0 0%, #fff 100%);
+            box-shadow: 0 4px 15px rgba(255, 193, 7, 0.2);
+            transform: translateY(-2px);
+            z-index: 1;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .list-rank {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--primary);
+            text-align: center;
+            min-width: 50px;
+        }
+
+        .list-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .list-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #f0f0f0;
+            flex-shrink: 0;
+        }
+
+        .list-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .list-country {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .list-percentage {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--primary);
+            text-align: center;
+        }
+
+        .list-vote-button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-align: center;
+            min-width: 120px;
+        }
+
+        .list-vote-button:hover {
+            background: #004494;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 86, 179, 0.3);
+        }
+
+        /* Desktop hover effect */
+        @media (hover: hover) and (pointer: fine) {
+            .list-item:hover {
+                background: #f8f9fa;
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        /* Tablet Responsive */
+        @media (max-width: 768px) {
+            .list-container {
+                max-width: 100%;
+            }
+
+            .list-header {
+                grid-template-columns: 60px 1fr 90px 120px;
+                gap: 10px;
+                padding: 12px 15px;
+                font-size: 14px;
+            }
+
+            .list-item {
+                grid-template-columns: 60px 1fr 90px 120px;
+                gap: 10px;
+                padding: 15px;
+            }
+
+            .list-rank {
+                font-size: 24px;
+                min-width: 40px;
+            }
+
+            .list-avatar {
+                width: 40px;
+                height: 40px;
+            }
+
+            .list-country {
+                font-size: 16px;
+            }
+
+            .list-percentage {
+                font-size: 18px;
+            }
+
+            .list-vote-button {
+                padding: 8px 15px;
+                font-size: 13px;
+                min-width: 100px;
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 576px) {
+            .list-container {
+                overflow-x: auto;
+            }
+
+            .list-wrapper {
+                min-width: 500px;
+            }
+
+            .list-header {
+                grid-template-columns: 50px 1fr 80px 100px;
+                gap: 8px;
+                padding: 10px;
+                font-size: 13px;
+            }
+
+            .list-item {
+                grid-template-columns: 50px 1fr 80px 100px;
+                gap: 8px;
+                padding: 12px 10px;
+            }
+
+            .list-info {
+                gap: 10px;
+            }
+
+            .list-avatar {
+                width: 35px;
+                height: 35px;
+                border-width: 2px;
+            }
+
+            .list-country {
+                font-size: 14px;
+            }
+
+            .list-percentage {
+                font-size: 16px;
+            }
+
+            .list-vote-button {
+                padding: 6px 12px;
+                font-size: 12px;
+                min-width: 80px;
+                border-radius: 15px;
+            }
+        }
+
+        /* Extra Small Mobile */
+        @media (max-width: 375px) {
+            .list-wrapper {
+                min-width: 100%;
+            }
+
+            .list-header {
+                display: none;
+            }
+
+            .list-item {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                padding: 15px;
+                border-radius: 15px;
+                margin-bottom: 10px;
+                gap: 10px;
+            }
+
+            .list-item.highlighted {
+                border-left: none;
+                border-top: 4px solid var(--secondary);
+            }
+
+            .list-rank {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                background: var(--primary);
+                color: white;
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 18px;
+                min-width: auto;
+            }
+
+            .list-info {
+                flex-direction: column;
+                gap: 8px;
+                margin-top: 10px;
+            }
+
+            .list-avatar {
+                width: 70px;
+                height: 70px;
+            }
+
+            .list-country {
+                font-size: 18px;
+                text-align: center;
+            }
+
+            .list-percentage {
+                font-size: 20px;
+                margin: 5px 0;
+            }
+
+            .list-vote-button {
+                width: 100%;
+                padding: 10px;
+                font-size: 14px;
+                margin-top: 5px;
+            }
+        }
+
+        /* Dark Mode Support */
+        @media (prefers-color-scheme: dark) {
+            .list-item {
+                background: #c2c2c2;
+                color: #fff;
+            }
+
+            .list-item:hover {
+                background: #efefef;
+            }
+
+            .list-item.highlighted {
+                background: linear-gradient(135deg, #efefef 0%, #efefef 100%);
+            }
+
+            .list-country {
+                color: #444444;
+            }
+
+            .list-avatar {
+                border-color: #444;
+            }
+        }
+
+        /* High Contrast Mode */
+        @media (prefers-contrast: high) {
+            .list-item {
+                border: 1px solid #000;
+            }
+
+            .list-item.highlighted {
+                border: 2px solid var(--secondary);
+            }
+
+            .list-vote-button {
+                border: 2px solid currentColor;
+            }
+        }
+
+        /* ==================== FINALISTS SECTION RESPONSIVE ==================== */
+        .finalist-section {
+            margin: 50px 0;
+        }
+
+        .search-bar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .search-wrapper {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 15px 50px 15px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.1);
+        }
+
+        .search-button {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #666;
+            font-size: 18px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .search-button:hover {
+            color: var(--primary);
+        }
+
+        .filter-dropdown {
+            padding: 15px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px;
+            font-size: 16px;
+            background: white;
+            cursor: pointer;
+            min-width: 200px;
+            transition: all 0.3s ease;
+        }
+
+        .filter-dropdown:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .finalists-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .finalist-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            border: 2px solid transparent;
+        }
+
+        .finalist-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            border-color: var(--primary);
+        }
+
+        .finalist-photo-wrapper {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            border: 5px solid #f0f0f0;
+            position: relative;
+        }
+
+        .finalist-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .finalist-rank-badge {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+            border: 3px solid white;
+        }
+
+        .finalist-country {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+
+        .finalist-number {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .finalist-stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 15px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .stat-value {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .finalist-vote-button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 40px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .finalist-vote-button:hover {
+            background: #004494;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 86, 179, 0.3);
+        }
+
+        @media (max-width: 1200px) {
+            .finalists-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 25px;
+            }
+
+            .finalist-photo-wrapper {
+                width: 180px;
+                height: 180px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .finalists-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .search-bar-container {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 15px;
+            }
+
+            .search-wrapper {
+                min-width: 100%;
+            }
+
+            .filter-dropdown {
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            .finalist-photo-wrapper {
+                width: 160px;
+                height: 160px;
+            }
+
+            .finalist-country {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .finalists-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 0 auto;
+                gap: 30px;
+            }
+
+            .finalist-card {
+                max-width: 100%;
+            }
+
+            .finalist-photo-wrapper {
+                width: 200px;
+                height: 200px;
+                margin: 0 auto 20px;
+            }
+
+            .finalist-country {
+                font-size: 24px;
+            }
+
+            .finalist-number {
+                font-size: 16px;
+            }
+
+            .finalist-stats {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+            }
+
+            .stat-item {
+                width: 100%;
+                text-align: center;
+            }
+
+            .finalist-vote-button {
+                padding: 15px 30px;
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .finalists-grid {
+                gap: 25px;
+            }
+
+            .finalist-card {
+                padding: 20px 15px;
+            }
+
+            .finalist-photo-wrapper {
+                width: 160px;
+                height: 160px;
+            }
+
+            .finalist-country {
+                font-size: 22px;
+            }
+
+            .finalist-vote-button {
+                padding: 12px 25px;
+                font-size: 14px;
+            }
+        }
+
+        /* Specific tablet fixes: iPad Air (portrait ~820px) */
+        @media (min-width: 768px) and (max-width: 900px) {
+
+            /* Make the hero image stack and center */
+            #page-banner .lg\:absolute {
+                position: relative !important;
+                margin-top: 0.75rem !important;
+                right: 0 !important;
+                top: auto !important;
+            }
+
+            #hero-overlap-img {
+                max-width: 420px !important;
+                width: 90% !important;
+                height: auto !important;
+                object-fit: contain !important;
+                display: block !important;
+                margin: 0 auto !important;
+            }
+
+            .lg\:absolute.xl\:right-12\.5 {
+                position: relative !important;
+                transform: none !important;
+                top: auto !important;
+                right: auto !important;
+                text-align: center !important;
+                margin-top: 0.75rem !important;
+            }
+
+            .lg\:pl-12\.5 {
+                padding-left: 0 !important;
+                text-align: center !important;
+            }
+
+            /* direct helpers */
+            .hero-side {
+                position: relative !important;
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                width: 100% !important;
+                padding-top: 0.5rem !important;
+            }
+
+            .hero-text {
+                text-align: center !important;
+                margin-top: 0.75rem !important;
+                transform: none !important;
+            }
+        }
+
+        /* iPad Pro / large tablets (landscape around 1024px) */
+        @media (min-width: 900px) and (max-width: 1100px) {
+            #page-banner .lg\:absolute {
+                position: relative !important;
+                margin-top: 0.5rem !important;
+                right: 0 !important;
+            }
+
+            #hero-overlap-img {
+                max-width: 520px !important;
+                width: 100% !important;
+                height: auto !important;
+                object-fit: contain !important;
+                display: block !important;
+                margin: 0 auto !important;
+            }
+
+            .lg\:absolute.xl\:right-12\.5 {
+                position: relative !important;
+                transform: none !important;
+                top: auto !important;
+                right: auto !important;
+                text-align: center !important;
+                margin-top: 0.5rem !important;
+            }
+
+            /* iPad Pro portrait: lift hero image a bit so it aligns vertically */
+            @media (orientation: portrait) {
+                .hero-side {
+                    margin-top: -70px !important;
+                    display: flex !important;
+                    justify-content: center !important;
+                    align-items: flex-start !important;
+                }
+
+                .hero-side .relative {
+                    margin-top: 0 !important;
+                }
+
+                #hero-overlap-img {
+                    max-width: 520px !important;
+                    width: 90% !important;
+                    margin-top: -20px !important;
+                }
+
+                .hero-text {
+                    margin-top: 0.5rem !important;
+                }
+            }
+
+            /* direct helpers for larger tablets */
+            .hero-side {
+                position: relative !important;
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                width: 100% !important;
+            }
+
+            .hero-text {
+                text-align: center !important;
+                margin-top: 0.5rem !important;
+                transform: none !important;
+            }
+        }
+    </style>
 </head>
 
 <body id="bg" class="selection:bg-[#484848] selection:text-white">
@@ -359,16 +1515,16 @@
 
                                 </div>
 
-                                <div class="lg:absolute top-0 mt-45 right-0 z-3 h-full" style="z-index:3;">
+                                <div class="lg:absolute top-0 mt-45 right-0 z-3 h-full hero-side" style="z-index:3;">
                                     <div
                                         class="relative h-full ml-auto 2xl:w-full xl:w-full lg:w-4/5 w-3/4 max-2xl:mr-12.5 max-lg:!mr-auto">
                                         <img id="hero-overlap-img" src="assets/images/krn/120.png" alt="Image"
-                                            class="w-auto  object-cover max-w-none" width="800" height="800"
+                                            class="w-auto object-cover max-w-none" width="800" height="800"
                                             loading="lazy">
                                     </div>
                                 </div>
 
-                                <div class="lg:absolute xl:right-12.5 lg:right-5 lg:top-1/2 lg:-translate-y-1/2 text-white"
+                                <div class="lg:absolute xl:right-12.5 lg:right-5 lg:top-1/2 lg:-translate-y-1/2 text-white hero-text"
                                     style="z-index:5;">
                                     <span
                                         class="block font-light text-base xl:text-22 leading-6.5 italic rotate-[-15deg]">Most
@@ -455,77 +1611,119 @@
                             </div>
 
                             <!-- List Section -->
+                            <!-- List Section (Revised) -->
                             <div class="list-section">
-                                <!-- Item 4 -->
-                                <div class="list-item">
-                                    <div class="list-rank">4</div>
-                                    <div class="list-avatar">
-                                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop"
-                                            alt="Venezuela">
-                                    </div>
-                                    <div class="list-country">Venezuela</div>
-                                    <div class="list-percentage">9.96%</div>
-                                    <a href="#" class="list-vote-button">Vote Now</a>
-                                </div>
+                                <div class="list-container">
+                                    <div class="list-wrapper">
+                                        <!-- Header -->
+                                        <div class="list-header">
+                                            <div class="list-header-item">RANK</div>
+                                            <div class="list-header-item">PARTICIPANT</div>
+                                            <div class="list-header-item">PERCENTAGE</div>
+                                            <div class="list-header-item">ACTION</div>
+                                        </div>
 
-                                <!-- Item 5 -->
-                                <div class="list-item">
-                                    <div class="list-rank">5</div>
-                                    <div class="list-avatar">
-                                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&h=200&fit=crop"
-                                            alt="Poland">
-                                    </div>
-                                    <div class="list-country">Poland</div>
-                                    <div class="list-percentage">6.39%</div>
-                                    <a href="#" class="list-vote-button">Vote Now</a>
-                                </div>
+                                        <!-- Items -->
+                                        <div class="list-items">
+                                            <!-- Item 4 -->
+                                            <div class="list-item">
+                                                <div class="list-rank">4</div>
+                                                <div class="list-info">
+                                                    <div class="list-avatar">
+                                                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop"
+                                                            alt="Venezuela">
+                                                    </div>
+                                                    <div class="list-country">Venezuela</div>
+                                                </div>
+                                                <div class="list-percentage">9.96%</div>
+                                                <a href="#" class="list-vote-button">Vote Now</a>
+                                            </div>
 
-                                <!-- Item 6 - Highlighted -->
-                                <div class="list-item highlighted">
-                                    <div class="list-rank">6</div>
-                                    <div class="list-avatar">
-                                        <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?w=200&h=200&fit=crop"
-                                            alt="Vietnam">
-                                    </div>
-                                    <div class="list-country">Vietnam</div>
-                                    <div class="list-percentage">4.64%</div>
-                                    <a href="#" class="list-vote-button">Vote Now</a>
-                                </div>
+                                            <!-- Item 5 -->
+                                            <div class="list-item">
+                                                <div class="list-rank">5</div>
+                                                <div class="list-info">
+                                                    <div class="list-avatar">
+                                                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&h=200&fit=crop"
+                                                            alt="Poland">
+                                                    </div>
+                                                    <div class="list-country">Poland</div>
+                                                </div>
+                                                <div class="list-percentage">6.39%</div>
+                                                <a href="#" class="list-vote-button">Vote Now</a>
+                                            </div>
 
-                                <!-- Item 7 -->
-                                <div class="list-item">
-                                    <div class="list-rank">7</div>
-                                    <div class="list-avatar">
-                                        <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=200&h=200&fit=crop"
-                                            alt="Singapore">
-                                    </div>
-                                    <div class="list-country">Singapore</div>
-                                    <div class="list-percentage">4.47%</div>
-                                    <a href="#" class="list-vote-button">Vote Now</a>
-                                </div>
+                                            <!-- Item 6 - Highlighted -->
+                                            <div class="list-item highlighted">
+                                                <div class="list-rank">6</div>
+                                                <div class="list-info">
+                                                    <div class="list-avatar">
+                                                        <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?w=200&h=200&fit=crop"
+                                                            alt="Vietnam">
+                                                    </div>
+                                                    <div class="list-country">Vietnam</div>
+                                                </div>
+                                                <div class="list-percentage">4.64%</div>
+                                                <a href="#" class="list-vote-button">Vote Now</a>
+                                            </div>
 
-                                <!-- Item 8 -->
-                                <div class="list-item">
-                                    <div class="list-rank">8</div>
-                                    <div class="list-avatar">
-                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop"
-                                            alt="Taiwan">
-                                    </div>
-                                    <div class="list-country">Taiwan</div>
-                                    <div class="list-percentage">2.72%</div>
-                                    <a href="#" class="list-vote-button">Vote Now</a>
-                                </div>
+                                            <!-- Item 7 -->
+                                            <div class="list-item">
+                                                <div class="list-rank">7</div>
+                                                <div class="list-info">
+                                                    <div class="list-avatar">
+                                                        <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=200&h=200&fit=crop"
+                                                            alt="Singapore">
+                                                    </div>
+                                                    <div class="list-country">Singapore</div>
+                                                </div>
+                                                <div class="list-percentage">4.47%</div>
+                                                <a href="#" class="list-vote-button">Vote Now</a>
+                                            </div>
 
-                                <!-- Item 9 -->
-                                <div class="list-item">
-                                    <div class="list-rank">9</div>
-                                    <div class="list-avatar">
-                                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop"
-                                            alt="Dominican Republic">
+                                            <!-- Item 8 -->
+                                            <div class="list-item">
+                                                <div class="list-rank">8</div>
+                                                <div class="list-info">
+                                                    <div class="list-avatar">
+                                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop"
+                                                            alt="Taiwan">
+                                                    </div>
+                                                    <div class="list-country">Taiwan</div>
+                                                </div>
+                                                <div class="list-percentage">2.72%</div>
+                                                <a href="#" class="list-vote-button">Vote Now</a>
+                                            </div>
+
+                                            <!-- Item 9 -->
+                                            <div class="list-item">
+                                                <div class="list-rank">9</div>
+                                                <div class="list-info">
+                                                    <div class="list-avatar">
+                                                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop"
+                                                            alt="Dominican Republic">
+                                                    </div>
+                                                    <div class="list-country">Dominican Republic</div>
+                                                </div>
+                                                <div class="list-percentage">1.46%</div>
+                                                <a href="#" class="list-vote-button">Vote Now</a>
+                                            </div>
+
+                                            <!-- Item 10 -->
+                                            <div class="list-item">
+                                                <div class="list-rank">10</div>
+                                                <div class="list-info">
+                                                    <div class="list-avatar">
+                                                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop"
+                                                            alt="Japan">
+                                                    </div>
+                                                    <div class="list-country">Japan</div>
+                                                </div>
+                                                <div class="list-percentage">0.89%</div>
+                                                <a href="#" class="list-vote-button">Vote Now</a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="list-country">Dominican Republic</div>
-                                    <div class="list-percentage">1.46%</div>
-                                    <a href="#" class="list-vote-button">Vote Now</a>
                                 </div>
                             </div>
 
@@ -685,9 +1883,6 @@
                         </div>
                     </div>
                     <!--STEPS SECTION END-->
-
-
-                    <!-- Voting and Payment modals moved to end of <body> to avoid stacking-context issues -->
 
                     <!--WE RECOMMEND SECTION START-->
                     <div class="xl:pt-30 pt-12.5">
@@ -1145,7 +2340,6 @@
         <!-- BUTTON TOP START -->
         <button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button>
 
-
         <div id="offcanvas-right"
             class="fixed top-0 right-0 z-9999999 h-screen overflow-y-auto transition-transform translate-x-full bg-black/20 backdrop-blur-[5px] sm:max-w-125 max-w-88 custom-scroll">
             <button type="button"
@@ -1225,169 +2419,19 @@
 
     </div>
 
-    <!-- Compact modal styles (reduce sizes and enable scroll) -->
-    <style id="compact-modal-styles">
-        /* Limit modal width and use column layout so header stays fixed and body scrolls */
-        #votingModal .modal-content,
-        #paymentModal .modal-content {
-            max-width: 900px;
-            width: 92%;
-            box-sizing: border-box;
-            max-height: 90vh;
-            /* padding: 8px; */
-            display: flex;
-            flex-direction: column;
-            /* background: transparent; */
-        }
-
-        /* Make the body expand and become the scrollable area */
-        #votingModal .modal-body,
-        #paymentModal .payment-modal-body {
-            display: flex;
-            /* gap: 12px; */
-            padding: 10px;
-            flex: 1 1 auto;
-            min-height: 0;
-            /* allow flex children to shrink so overflow works */
-            overflow-y: auto;
-            box-sizing: border-box;
-            align-items: flex-start;
-        }
-
-        /* Left / right columns: use balanced flex-basis instead of max-width to avoid empty space */
-        #votingModal .modal-left,
-        #paymentModal .payment-left {
-            flex: 0 0 44%;
-            min-width: 160px;
-            box-sizing: border-box;
-        }
-
-        #votingModal .modal-right,
-        #paymentModal .payment-right {
-            flex: 1 1 56%;
-            box-sizing: border-box;
-        }
-
-        .modal-finalist-photo img,
-        .summary-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 6px;
-        }
-
-        /* Payment summary text colors (make them black for readability) */
-        .summary-title,
-        .summary-country,
-        .summary-votes,
-        .summary-price {
-            color: #000 !important;
-        }
-
-        .modal-country-name {
-            font-size: 14px;
-            margin-top: 8px;
-        }
-
-        .info-boxes .info-label {
-            font-size: 11px;
-        }
-
-        .info-boxes .info-value {
-            font-size: 12px;
-        }
-
-        .vote-options {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .vote-option {
-            padding: 8px 10px;
-            font-size: 13px;
-            border-radius: 8px;
-            cursor: pointer;
-            min-width: 110px;
-            box-sizing: border-box;
-        }
-
-        .vote-option .vote-count,
-        .vote-option .vote-price {
-            font-size: 12px;
-        }
-
-        .total-section .total-row .total-label,
-        .total-section .total-row .total-value {
-            font-size: 13px;
-        }
-
-        .continue-payment-btn,
-        .pay-now-btn,
-        .cancel-btn {
-            padding: 8px 10px;
-            font-size: 14px;
-            border-radius: 8px;
-        }
-
-        /* Payment layout adjustments - ensure both sides use available width without creating huge gaps */
-        .payment-left {
-            flex: 0 0 46%;
-            box-sizing: border-box;
-        }
-
-        .payment-right {
-            flex: 1 1 54%;
-            box-sizing: border-box;
-        }
-
-        /* Ensure internal boxes don't overflow horizontally */
-        .payment-right .payment-detail-box,
-        .payment-left .order-summary,
-        .payment-left .form-section {
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        /* Mobile: stack and increase scroll area */
-        @media (max-width: 768px) {
-
-            #votingModal .modal-body,
-            #paymentModal .payment-modal-body {
-                flex-direction: column;
-            }
-
-            #votingModal .modal-left,
-            #paymentModal .payment-left,
-            #votingModal .modal-right,
-            #paymentModal .payment-right {
-                flex-basis: 100%;
-                min-width: auto;
-            }
-
-            .modal-finalist-photo img,
-            .summary-avatar img {
-                max-width: 120px;
-                max-height: 120px;
-            }
-
-            .vote-option {
-                min-width: 48%;
-            }
-        }
-    </style>
-
-    <!-- Voting Modal (moved here) -->
+    <!-- Voting Modal -->
     <div id="votingModal" class="modal" aria-hidden="true">
-        <div class="modal-content modal-panel" role="dialog" aria-modal="true" tabindex="-1">
+        <div class="modal-content" role="dialog" aria-modal="true">
             <div class="modal-header">
-                <h2 class="modal-title">Mister Friendship International 2025</h2>
-                <button class="modal-close" onclick="closeVotingModal()">×</button>
+                <h2 class="modal-title">Vote for Finalist</h2>
+                <button class="modal-close" onclick="closeVotingModal()" aria-label="Close modal">×</button>
             </div>
             <div class="modal-body">
                 <div class="modal-left">
                     <div class="modal-finalist-photo">
-                        <img id="modalFinalistImage" src="" alt="Finalist">
+                        <img id="modalFinalistImage"
+                            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop"
+                            alt="Finalist Photo">
                     </div>
                     <h3 id="modalCountryName" class="modal-country-name">CANADA</h3>
                     <button class="modal-view-detail">
@@ -1404,8 +2448,13 @@
                             <div class="info-label">OCCUPATION</div>
                             <div class="info-value">-</div>
                         </div>
+                        <div class="info-box">
+                            <div class="info-label">NUMBER</div>
+                            <div id="modalFinalistNumber" class="info-value">001</div>
+                        </div>
                     </div>
 
+                    <h4 class="section-title">Select Vote Package</h4>
                     <div class="vote-options">
                         <div class="vote-option" onclick="selectVote(10, 1.00, this)">
                             <div class="vote-count">10 Votes</div>
@@ -1445,88 +2494,114 @@
                     </div>
 
                     <button class="continue-payment-btn" onclick="openPaymentModal()">
-                        <i class="fa-solid fa-money-bill"></i> Continue Payment
+                        <i class="fa-solid fa-money-bill"></i> Continue to Payment
                     </button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Payment Modal (moved here) -->
+    <!-- Payment Modal -->
     <div id="paymentModal" class="modal" aria-hidden="true">
-        <div class="modal-content modal-panel" role="dialog" aria-modal="true" tabindex="-1">
+        <div class="modal-content" role="dialog" aria-modal="true">
             <div class="modal-header">
-                <h2 class="modal-title">Mister Friendship International 2025</h2>
-                <button class="modal-close" onclick="closePaymentModal()">×</button>
+                <h2 class="modal-title">Complete Payment</h2>
+                <button class="modal-close" onclick="closePaymentModal()" aria-label="Close modal">×</button>
             </div>
-            <div class="payment-modal-body">
+            <div class="modal-body">
                 <div class="payment-left">
                     <div class="order-summary">
-                        <h3 class="summary-title">Detail Your Vote</h3>
+                        <h3 class="summary-title">Order Summary</h3>
                         <div class="summary-item">
                             <div class="summary-avatar">
-                                <img id="paymentFinalistImage" src="" alt="Finalist">
+                                <img id="paymentFinalistImage"
+                                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop"
+                                    alt="Finalist">
                             </div>
                             <div class="summary-info">
                                 <div id="paymentCountryName" class="summary-country">Canada</div>
                                 <div id="paymentVoteCount" class="summary-votes">10 Votes</div>
+                                <div id="paymentNumber" class="summary-number">No. 001</div>
                             </div>
-                            <div id="paymentPrice" class="summary-price">USD 0,10</div>
+                            <div id="paymentPrice" class="summary-price">USD 1.00</div>
                         </div>
                     </div>
 
                     <div class="form-section">
-                        <h3 class="form-title">Let's Fill Your Personal Data First...</h3>
-                        <p class="form-subtitle">Complete personal data to continue</p>
-                        <input type="text" class="form-input" placeholder="Full Name">
-                        <input type="tel" class="form-input" placeholder="Phone Number">
+                        <h3 class="form-title">Personal Information</h3>
+                        <p class="form-subtitle">Please fill your details below</p>
+                        <input type="text" class="form-input" placeholder="Full Name" required>
+                        <input type="tel" class="form-input" placeholder="Phone Number" required>
+                        <input type="email" class="form-input" placeholder="Email Address" required>
                     </div>
                 </div>
 
                 <div class="payment-right">
-                    <div class="form-section">
-                        <h3 class="payment-method-title">Choose Your Payment Method</h3>
-                        <p class="payment-method-subtitle">Let's choose your payment method...</p>
+                    <div class="payment-method-section">
+                        <h3 class="payment-method-title">Payment Method</h3>
+                        <p class="payment-method-subtitle">Choose your preferred payment method</p>
                         <div class="payment-options">
-                            <div class="payment-option">
+                            <div class="payment-option" onclick="selectPaymentMethod('credit-card', this)">
+                                <div class="payment-method-icon">
+                                    <i class="fa-solid fa-credit-card"></i>
+                                </div>
                                 <span class="payment-option-name">Credit Card</span>
+                                <div class="payment-method-check">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
                             </div>
-                            <div class="payment-option">
-                                <span class="payment-option-name">Card Stripe</span>
-                                <span class="payment-option-badge">SG</span>
+                            <div class="payment-option" onclick="selectPaymentMethod('stripe', this)">
+                                <div class="payment-method-icon">
+                                    <i class="fa-solid fa-university"></i>
+                                </div>
+                                <span class="payment-option-name">Stripe</span>
+                                <span class="payment-option-badge">Recommended</span>
+                                <div class="payment-method-check">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="payment-detail-box">
-                        <h3 class="detail-title">Detail Payment</h3>
+                        <h3 class="detail-title">Payment Details</h3>
                         <div class="detail-row">
-                            <span class="detail-label">Vote (10x)</span>
-                            <span class="detail-value">USD 1.00</span>
+                            <span class="detail-label">Votes</span>
+                            <span id="detailVotes" class="detail-value">10 Votes</span>
                         </div>
                         <div class="detail-row">
                             <span class="detail-label">Service Fee</span>
                             <span class="detail-value">-</span>
                         </div>
                         <div class="detail-row">
-                            <span class="detail-label">Total Pay</span>
-                            <span class="detail-value">USD 1.00</span>
+                            <span class="detail-label">Tax</span>
+                            <span class="detail-value">-</span>
+                        </div>
+                        <div class="detail-row total-row">
+                            <span class="detail-label total-label">Total Pay</span>
+                            <span id="detailTotal" class="detail-value total-value">USD 1.00</span>
                         </div>
                     </div>
 
-                    <div class="checkbox-container">
-                        <div class="custom-checkbox">
-                            <i class="fa-solid fa-check" style="color: white; font-size: 14px;"></i>
-                        </div>
-                        <div class="checkbox-text">
-                            I agree that Kreen ID may share my information with the event organizer. <a href="#">Privacy
-                                Policy</a> and have read the <a href="#">Terms of Service</a>
-                        </div>
+                    <div class="terms-checkbox">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="agreeTerms">
+                            <span class="checkmark"></span>
+                            <span class="checkbox-text">
+                                I agree to the <a href="#" class="terms-link">Terms of Service</a> and
+                                <a href="#" class="terms-link">Privacy Policy</a>
+                            </span>
+                        </label>
                     </div>
 
-                    <button class="pay-now-btn">
-                        <i class="fa-solid fa-money-bill"></i> Pay Now
-                    </button>
-                    <button class="cancel-btn" onclick="closePaymentModal()">Cancel</button>
+                    <div class="payment-buttons">
+                        <button class="pay-now-btn" onclick="processPayment()">
+                            <i class="fa-solid fa-lock"></i> Pay Now
+                        </button>
+                        <button class="cancel-btn" onclick="closePaymentModal()">
+                            <i class="fa-solid fa-arrow-left"></i> Back to Voting
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1552,383 +2627,162 @@
     <script src="assets/vendor/xmenu/xmenu.js"></script>
     <script src="assets/js/animation.js"></script>
     <script src="assets/js/custom.js"></script>
-    <!-- Removed runtime Tailwind script `assets/js/3.4.17.js` to use compiled Tailwind CSS instead -->
-
-
     <script>
         (function () {
-            let selectedVotes = 0;
-            let selectedPrice = 0;
-            let currentFinalist = {
-                image: '',
-                country: '',
-                number: ''
-            };
-            let _modalPrevFocused = null;
-            let _modalKeydownHandler = null;
+            const votingModal = document.getElementById('votingModal');
+            const paymentModal = document.getElementById('paymentModal');
 
-            function trapFocus(panel, e) {
-                const focusable = panel.querySelectorAll(
-                    'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])');
-                if (!focusable.length) return;
-                const first = focusable[0];
-                const last = focusable[focusable.length - 1];
-
-                if (e.key === 'Tab') {
-                    if (e.shiftKey) { // shift + tab
-                        if (document.activeElement === first) {
-                            e.preventDefault();
-                            last.focus();
-                        }
-                    } else { // tab
-                        if (document.activeElement === last) {
-                            e.preventDefault();
-                            first.focus();
-                        }
-                    }
-                }
-            }
-
-            function openModal(id) {
-                const modal = document.getElementById(id);
-                if (!modal) return;
-                _modalPrevFocused = document.activeElement;
-                modal.classList.add('active');
-                modal.setAttribute('aria-hidden', 'false');
+            function show(el) {
+                if (!el) return;
+                el.style.display = 'block';
+                el.setAttribute('aria-hidden', 'false');
                 document.body.style.overflow = 'hidden';
-
-                const panel = modal.querySelector('.modal-panel') || modal.querySelector('.modal-content');
-                try {
-                    if (panel) panel.focus();
-                } catch (e) {}
-
-                _modalKeydownHandler = function (ev) {
-                    if (ev.key === 'Escape') closeModal(id);
-                    trapFocus(panel, ev);
-                };
-                document.addEventListener('keydown', _modalKeydownHandler);
-
-                // backdrop click
-                modal.addEventListener('click', onBackdropClick);
             }
 
-            function closeModal(id) {
-                const modal = document.getElementById(id);
-                if (!modal) return;
-                modal.classList.remove('active');
-                modal.setAttribute('aria-hidden', 'true');
-                document.body.style.overflow = 'auto';
-
-                if (_modalKeydownHandler) {
-                    document.removeEventListener('keydown', _modalKeydownHandler);
-                    _modalKeydownHandler = null;
-                }
-                modal.removeEventListener('click', onBackdropClick);
-
-                try {
-                    if (_modalPrevFocused) _modalPrevFocused.focus();
-                } catch (e) {}
-                _modalPrevFocused = null;
+            function hide(el) {
+                if (!el) return;
+                el.style.display = 'none';
+                el.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
             }
 
-            function onBackdropClick(e) {
-                if (e.target && e.target.classList && e.target.classList.contains('modal')) {
-                    const id = e.target.id;
-                    closeModal(id);
-                }
+            window.closeVotingModal = function () {
+                hide(votingModal);
+            };
+
+            window.closePaymentModal = function () {
+                hide(paymentModal);
+            };
+
+            // Attach click handlers to all vote buttons in the page
+            function attachVoteButtons() {
+                const buttons = document.querySelectorAll(
+                    'a.vote-button, a.list-vote-button, a.finalist-vote-button');
+                buttons.forEach((btn) => {
+                    btn.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        // try to extract data from nearby card
+                        const card = btn.closest('.card, .finalist-card, .list-item') || btn
+                            .parentElement;
+                        const countryEl = card ? card.querySelector(
+                            '.country-name, .finalist-country, .list-country') : null;
+                        const numberEl = card ? card.querySelector(
+                            '.country-number, .finalist-number, .list-number') : null;
+                        const imgEl = card ? card.querySelector('img, .finalist-photo') : null;
+
+                        const country = countryEl ? countryEl.textContent.trim() : 'Finalist';
+                        const number = numberEl ? (numberEl.textContent || '').replace(/[^0-9]/g,
+                            '') : '001';
+                        const img = imgEl ? imgEl.getAttribute('src') : '';
+
+                        const modalCountry = document.getElementById('modalCountryName');
+                        const modalNumber = document.getElementById('modalFinalistNumber');
+                        const modalImage = document.getElementById('modalFinalistImage');
+
+                        if (modalCountry) modalCountry.textContent = country.toUpperCase();
+                        if (modalNumber) modalNumber.textContent = number;
+                        if (modalImage && img) modalImage.src = img;
+
+                        // reset totals and selection
+                        const totalQ = document.getElementById('totalQuantity');
+                        const totalA = document.getElementById('totalAmount');
+                        if (totalQ) totalQ.textContent = '0 Votes';
+                        if (totalA) totalA.textContent = 'USD 0.00';
+                        document.querySelectorAll('#votingModal .vote-option').forEach(o => o
+                            .classList.remove('selected'));
+
+                        show(votingModal);
+                    });
+                });
             }
 
-            function openVotingModal(image, country, number) {
-                currentFinalist = {
-                    image,
-                    country,
-                    number
-                };
-                const imgEl = document.getElementById('modalFinalistImage');
-                const nameEl = document.getElementById('modalCountryName');
-                if (imgEl) imgEl.src = image || '';
-                if (nameEl) nameEl.textContent = (country || '').toUpperCase();
-                openModal('votingModal');
-            }
+            window.selectVote = function (votes, price, el) {
+                // mark selected
+                document.querySelectorAll('#votingModal .vote-option').forEach(o => o.classList.remove(
+                    'selected'));
+                if (el && el.classList) el.classList.add('selected');
 
-            function closeVotingModal() {
-                closeModal('votingModal');
-                resetVoteSelection();
-            }
+                const totalQ = document.getElementById('totalQuantity');
+                const totalA = document.getElementById('totalAmount');
+                if (totalQ) totalQ.textContent = votes + ' Votes';
+                if (totalA) totalA.textContent = 'USD ' + Number(price).toFixed(2);
 
-            function selectVote(votes, price, element) {
-                document.querySelectorAll('.vote-option').forEach(opt => opt.classList.remove('selected'));
-                if (element) element.classList.add('selected');
-                selectedVotes = Number(votes) || 0;
-                selectedPrice = Number(price) || 0;
-                const qty = document.getElementById('totalQuantity');
-                const amt = document.getElementById('totalAmount');
-                if (qty) qty.textContent = selectedVotes + ' Votes';
-                if (amt) amt.textContent = 'USD ' + selectedPrice.toFixed(2);
-            }
+                // update prepared payment summary as well
+                const detailVotes = document.getElementById('detailVotes');
+                const detailTotal = document.getElementById('detailTotal');
+                const paymentVoteCount = document.getElementById('paymentVoteCount');
+                const paymentPrice = document.getElementById('paymentPrice');
+                if (detailVotes) detailVotes.textContent = votes + ' Votes';
+                if (detailTotal) detailTotal.textContent = 'USD ' + Number(price).toFixed(2);
+                if (paymentVoteCount) paymentVoteCount.textContent = votes + ' Votes';
+                if (paymentPrice) paymentPrice.textContent = 'USD ' + Number(price).toFixed(2);
+            };
 
-            function resetVoteSelection() {
-                selectedVotes = 0;
-                selectedPrice = 0;
-                document.querySelectorAll('.vote-option').forEach(opt => opt.classList.remove('selected'));
-                const qty = document.getElementById('totalQuantity');
-                const amt = document.getElementById('totalAmount');
-                if (qty) qty.textContent = '0 Votes';
-                if (amt) amt.textContent = 'USD 0.00';
-            }
+            window.openPaymentModal = function () {
+                // copy data from voting modal to payment modal
+                const country = (document.getElementById('modalCountryName') || {}).textContent || '';
+                const number = (document.getElementById('modalFinalistNumber') || {}).textContent || '';
+                const img = (document.getElementById('modalFinalistImage') || {}).src || '';
+                const totalAmount = (document.getElementById('totalAmount') || {}).textContent || 'USD 0.00';
+                const totalVotes = (document.getElementById('totalQuantity') || {}).textContent || '0 Votes';
 
-            function openPaymentModal() {
-                if (selectedVotes === 0) {
-                    alert('Please select a vote package first!');
+                const paymentCountryName = document.getElementById('paymentCountryName');
+                const paymentNumber = document.getElementById('paymentNumber');
+                const paymentFinalistImage = document.getElementById('paymentFinalistImage');
+                const paymentVoteCount = document.getElementById('paymentVoteCount');
+                const paymentPrice = document.getElementById('paymentPrice');
+                const detailVotes = document.getElementById('detailVotes');
+                const detailTotal = document.getElementById('detailTotal');
+
+                if (paymentCountryName) paymentCountryName.textContent = country;
+                if (paymentNumber) paymentNumber.textContent = 'No. ' + number;
+                if (paymentFinalistImage && img) paymentFinalistImage.src = img;
+                if (paymentVoteCount) paymentVoteCount.textContent = totalVotes;
+                if (paymentPrice) paymentPrice.textContent = totalAmount;
+                if (detailVotes) detailVotes.textContent = totalVotes;
+                if (detailTotal) detailTotal.textContent = totalAmount;
+
+                hide(votingModal);
+                show(paymentModal);
+            };
+
+            window.selectPaymentMethod = function (name, el) {
+                document.querySelectorAll('.payment-option').forEach(p => p.classList.remove('selected'));
+                if (el && el.classList) el.classList.add('selected');
+            };
+
+            window.processPayment = function () {
+                const agree = document.getElementById('agreeTerms');
+                if (agree && !agree.checked) {
+                    alert('Silakan setujui Terms of Service terlebih dahulu.');
                     return;
                 }
-                const pfImg = document.getElementById('paymentFinalistImage');
-                const pCountry = document.getElementById('paymentCountryName');
-                const pCount = document.getElementById('paymentVoteCount');
-                const pPrice = document.getElementById('paymentPrice');
-                if (pfImg) pfImg.src = currentFinalist.image || '';
-                if (pCountry) pCountry.textContent = currentFinalist.country || '';
-                if (pCount) pCount.textContent = selectedVotes + ' Votes';
-                if (pPrice) pPrice.textContent = 'USD ' + selectedPrice.toFixed(2);
+                // demo: show a success message and close modal
+                alert('Pembayaran diproses (demo). Terima kasih.');
+                closePaymentModal();
+            };
 
-                // switch modals
-                closeModal('votingModal');
-                openModal('paymentModal');
-            }
+            // close modals when clicking outside content
+            document.addEventListener('click', function (e) {
+                if (e.target === votingModal) closeVotingModal();
+                if (e.target === paymentModal) closePaymentModal();
+            });
 
-            function closePaymentModal() {
-                closeModal('paymentModal');
-            }
+            // Esc to close
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    closeVotingModal();
+                    closePaymentModal();
+                }
+            });
 
-            // wire up buttons and vote triggers safely
+            // initialize: ensure modals hidden and attach buttons
             document.addEventListener('DOMContentLoaded', function () {
-                // close buttons
-                document.querySelectorAll('.modal-close').forEach(btn => {
-                    btn.addEventListener('click', function (e) {
-                        const modal = btn.closest('.modal');
-                        if (!modal) return;
-                        closeModal(modal.id);
-                    });
-                });
-
-                // helper to open voting modal from a container element
-                function openFromContainer(container, rankPrefix) {
-                    if (!container) return;
-                    const imgEl = container.querySelector('img') || container.querySelector(
-                        'img.finalist-photo') || container.querySelector('.finalist-photo');
-                    const img = imgEl ? imgEl.getAttribute('src') || '' : '';
-                    const countryEl = container.querySelector('.finalist-country') || container
-                        .querySelector('.list-country') || container.querySelector('.country-name');
-                    const country = countryEl ? countryEl.textContent.trim() : '';
-                    const numberEl = container.querySelector('.finalist-number') || container.querySelector(
-                        '.list-rank') || container.querySelector('.country-number');
-                    const numberText = numberEl ? numberEl.textContent.trim() : '';
-                    const number = rankPrefix && numberText ? (rankPrefix + ' ' + numberText) : numberText;
-                    openVotingModal(img, country, number);
-                }
-
-                // finalist card buttons
-                document.querySelectorAll('.finalist-vote-button').forEach(btn => {
-                    btn.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        const card = btn.closest('.finalist-card');
-                        openFromContainer(card, '');
-                    });
-                });
-
-                // list vote buttons
-                document.querySelectorAll('.list-vote-button').forEach(btn => {
-                    btn.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        const item = btn.closest('.list-item');
-                        openFromContainer(item, 'No.');
-                    });
-                });
-
-                // top cards
-                document.querySelectorAll('.vote-button').forEach(btn => {
-                    btn.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        const card = btn.closest('.card');
-                        openFromContainer(card, '');
-                    });
-                });
-
-                // vote-option clickable behavior (delegated)
-                document.addEventListener('click', function (e) {
-                    const opt = e.target.closest('.vote-option');
-                    if (!opt) return;
-                    // parse votes
-                    let votes = 0;
-                    const votesAttr = opt.getAttribute('data-votes');
-                    if (votesAttr) {
-                        votes = parseInt(votesAttr, 10) || 0;
-                    } else {
-                        const cnt = opt.querySelector('.vote-count');
-                        if (cnt) votes = parseInt(cnt.textContent.replace(/\D/g, ''), 10) || 0;
-                    }
-                    // parse price
-                    let price = 0;
-                    const priceAttr = opt.getAttribute('data-price');
-                    if (priceAttr) {
-                        price = parseFloat(priceAttr) || 0;
-                    } else {
-                        const pEl = opt.querySelector('.vote-price');
-                        if (pEl) {
-                            const pRaw = pEl.textContent.replace(/[^0-9.,]/g, '').replace(',', '.');
-                            price = parseFloat(pRaw) || 0;
-                        }
-                    }
-                    selectVote(votes, price, opt);
-                });
-
-                // preselect smallest package when modal opens
-                const votingModal = document.getElementById('votingModal');
-                if (votingModal) {
-                    votingModal.addEventListener('transitionstart', function () {
-                        // no-op; keep for future
-                    });
-                }
-            });
-
-            // expose small API on window for inline onclick handlers (backwards compatible)
-            window.openVotingModal = openVotingModal;
-            window.closeVotingModal = closeVotingModal;
-            window.openPaymentModal = openPaymentModal;
-            window.closePaymentModal = closePaymentModal;
-            window.selectVote = selectVote;
-        })();
-    </script>
-    <script>
-        // Smooth hero follow using GSAP + ScrollTrigger
-        (function () {
-            if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
-            try {
-                gsap.registerPlugin(ScrollTrigger);
-            } catch (e) {}
-
-            const hero = document.getElementById('hero-above-header');
-            const banner = document.getElementById('page-banner');
-            if (!hero || !banner) return;
-
-            function make() {
-                ScrollTrigger.refresh();
-                const bannerHeight = banner.offsetHeight || 1;
-                // maximum travel distance for the hero while banner is scrolling
-                const maxOffset = Math.min(window.innerHeight * 0.36, 780);
-
-                // kill existing if any
-                if (hero._gsapTrigger) {
-                    try {
-                        hero._gsapTrigger.kill();
-                    } catch (e) {}
-                }
-
-                // animate hero y from 0 to maxOffset while the banner area is scrolled
-                gsap.to(hero, {
-                    y: maxOffset,
-                    ease: 'none',
-                    scrollTrigger: {
-                        trigger: banner,
-                        start: 'top top',
-                        end: `+=${bannerHeight}`,
-                        scrub: 0.6,
-                        invalidateOnRefresh: true,
-                        onRefresh(self) {
-                            // ensure the animation adapts
-                        }
-                    }
-                });
-            }
-
-            // create on load and refresh on resize
-            window.addEventListener('load', make, {
-                passive: true
-            });
-            window.addEventListener('resize', function () {
-                // small debounce
-                clearTimeout(hero._resizeTimer);
-                hero._resizeTimer = setTimeout(function () {
-                    ScrollTrigger.refresh();
-                    make();
-                }, 120);
-            }, {
-                passive: true
+                if (votingModal) votingModal.style.display = 'none';
+                if (paymentModal) paymentModal.style.display = 'none';
+                attachVoteButtons();
             });
         })();
-    </script>
-
-    <!-- Toast Notification Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const toastContainer = document.createElement('div');
-            toastContainer.id = 'toast-container';
-            toastContainer.className = 'toast-container';
-            document.body.appendChild(toastContainer);
-
-            // Sample finalist data - replace with real data
-            const finalists = [{
-                    name: 'Dzakia Sheza Ayu Handayani',
-                    votes: 100
-                },
-                {
-                    name: 'Revalina Liwanathaya Shanum',
-                    votes: 103
-                },
-                {
-                    name: 'Salwa Difa Raihana Hanifah',
-                    votes: 107
-                },
-                {
-                    name: 'Elizabeth Belvania Cahaya P',
-                    votes: 100
-                },
-                {
-                    name: 'Belva Ayunindya A S',
-                    votes: 50
-                },
-                {
-                    name: 'Wildan Dhany Fauzan',
-                    votes: 45
-                }
-            ];
-
-            let currentIndex = 0;
-
-            function showToast(finalist) {
-                const toast = document.createElement('div');
-                toast.className = 'toast';
-                toast.innerHTML = `
-                    <div class="toast-content">
-                        <i class="fa fa-bell toast-icon"></i>
-                        <div class="toast-text">
-                            <strong>${finalist.name}</strong> telah divote (${finalist.votes} vote)
-                        </div>
-                    </div>
-                `;
-
-                toastContainer.appendChild(toast);
-
-                // Auto remove after 5 seconds
-                setTimeout(() => {
-                    toast.classList.add('fade-out');
-                    setTimeout(() => {
-                        if (toast.parentNode) {
-                            toast.parentNode.removeChild(toast);
-                        }
-                    }, 500);
-                }, 5000);
-            }
-
-            // Show toast every 8 seconds
-            setInterval(() => {
-                showToast(finalists[currentIndex]);
-                currentIndex = (currentIndex + 1) % finalists.length;
-            }, 8000);
-
-            // Show first toast immediately
-            showToast(finalists[0]);
-        });
     </script>
 </body>
 
