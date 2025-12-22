@@ -20373,3 +20373,999 @@ select.news-search-select option {
     max-height: 26px;
   }
 }
+/* ===== IMPROVED PAYMENT MODAL SCROLL FOR MOBILE - FINAL ===== */
+
+/* Mobile-first: Full screen modal that scrolls easily */
+@media (max-width: 768px) {
+  .payment-modal {
+    padding: 0 !important;
+    align-items: flex-start !important;
+  }
+
+  .payment-modal-panel {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .payment-modal-header {
+    flex-shrink: 0 !important;
+    padding: 12px 16px !important;
+    position: sticky !important;
+    top: 0 !important;
+    background: #fff !important;
+    z-index: 10 !important;
+    border-bottom: 1px solid #e5e7eb !important;
+  }
+
+  .payment-modal-body {
+    flex: 1 1 auto !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    overscroll-behavior-y: contain !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+  }
+
+  .payment-content {
+    padding: 16px !important;
+    padding-bottom: 120px !important;
+  }
+
+  .payment-modal-footer {
+    flex-shrink: 0 !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: #fff !important;
+    padding: 12px 16px !important;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1) !important;
+    z-index: 20 !important;
+  }
+
+  .payment-modal-footer .payment-actions {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+
+  .payment-modal-footer .btn {
+    width: 100% !important;
+    padding: 14px !important;
+    font-size: 1rem !important;
+  }
+
+  /* Make grid single column on mobile */
+  .payment-modal-grid {
+    display: block !important;
+  }
+
+  .payment-left,
+  .payment-right {
+    width: 100% !important;
+    max-height: none !important;
+    overflow: visible !important;
+    position: static !important;
+  }
+
+  /* Order summary compact on mobile */
+  .order-summary {
+    padding: 12px !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* Form sections spacing */
+  .form-section {
+    margin-bottom: 20px !important;
+  }
+
+  .form-section-title {
+    font-size: 1rem !important;
+    margin-bottom: 12px !important;
+  }
+
+  /* Payment methods scroll container */
+  .payment-methods-scroll {
+    max-height: none !important;
+    overflow: visible !important;
+    padding-right: 0 !important;
+  }
+
+  /* Gender options horizontal on mobile */
+  .gender-options {
+    flex-direction: row !important;
+    gap: 8px !important;
+  }
+
+  .gender-card {
+    flex: 1 !important;
+    min-width: 0 !important;
+    padding: 12px 8px !important;
+  }
+
+  .gender-icon svg {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .gender-card span {
+    font-size: 0.75rem !important;
+  }
+
+  /* Payment method cards more compact */
+  .payment-methods-grid {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  .payment-method-card {
+    padding: 10px 12px !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+
+  .payment-method-icon {
+    width: 40px !important;
+    height: 40px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .payment-method-icon img {
+    max-height: 24px !important;
+  }
+
+  .payment-method-info {
+    flex: 1 !important;
+    text-align: left !important;
+  }
+
+  .payment-method-name {
+    font-size: 0.875rem !important;
+  }
+
+  .payment-method-description {
+    font-size: 0.75rem !important;
+  }
+
+  /* Info boxes compact */
+  .info-box {
+    padding: 10px 12px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .info-box-title {
+    font-size: 0.8rem !important;
+  }
+
+  .info-box-text {
+    font-size: 0.75rem !important;
+  }
+
+  /* Checkbox compact */
+  .checkbox-group {
+    margin-top: 12px !important;
+  }
+
+  .checkbox-item {
+    margin-bottom: 10px !important;
+    font-size: 0.8rem !important;
+  }
+
+  .checkbox-item label {
+    font-size: 0.8rem !important;
+    line-height: 1.4 !important;
+  }
+}
+
+/* Extra small screens - payment modal final */
+@media (max-width: 480px) {
+  .payment-content {
+    padding: 12px !important;
+    padding-bottom: 100px !important;
+  }
+
+  .payment-modal-header {
+    padding: 10px 12px !important;
+  }
+
+  .payment-modal-title-wrap h3 {
+    font-size: 1.1rem !important;
+  }
+
+  .payment-modal-title-wrap p {
+    font-size: 0.75rem !important;
+  }
+
+  .form-input {
+    padding: 10px 12px !important;
+    font-size: 0.9rem !important;
+  }
+
+  .form-label {
+    font-size: 0.8rem !important;
+    margin-bottom: 4px !important;
+  }
+
+  .gender-card img,
+  .payment-method-card img {
+    display: block;
+    max-height: 24px !important;
+  }
+}
+
+/* ===== NEW PAYMENT MODAL UI - MATCHING REFERENCE DESIGN ===== */
+
+/* Header dengan background coral/salmon */
+.payment-modal-header-new {
+  background: linear-gradient(135deg, #f87171 0%, #ef4444 100%);
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.header-icon {
+  width: 40px;
+  height: 40px;
+  background: #fef3c7;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.header-icon .fallback-icon {
+  color: #f59e0b;
+}
+
+.payment-modal-close-new {
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.payment-modal-close-new:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Form Title */
+.form-title-section {
+  margin-bottom: 24px;
+}
+
+.form-main-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #1f2937;
+  margin: 0 0 4px 0;
+}
+
+.form-subtitle {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Form Groups */
+.form-group-new {
+  margin-bottom: 20px;
+}
+
+.form-label-new {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.form-label-new .required {
+  color: #ef4444;
+  margin-left: 2px;
+}
+
+.form-input-new {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: #374151;
+  background: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.form-input-new:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-input-new::placeholder {
+  color: #9ca3af;
+}
+
+.form-hint {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #3b82f6;
+  margin-top: 8px;
+}
+
+.form-hint i {
+  font-size: 14px;
+}
+
+/* Gender Cards - New Design with Avatar */
+.gender-options-new {
+  display: flex;
+  gap: 12px;
+}
+
+.gender-card-new {
+  flex: 1;
+  background: #fff;
+  border: 2px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 20px 16px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.gender-card-new:hover {
+  border-color: #d1d5db;
+}
+
+.gender-card-new.selected,
+.gender-card-new:has(input:checked) {
+  border-color: #3b82f6;
+  background: #eff6ff;
+}
+
+.gender-avatar {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 12px;
+}
+
+.gender-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.gender-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* Divider */
+.form-divider {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 24px 0;
+}
+
+/* Payment Section Icon */
+.payment-section-icon {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 16px;
+}
+
+.icon-circle {
+  width: 48px;
+  height: 48px;
+  background: #f3f4f6;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+}
+
+/* Payment Section */
+.payment-section-new {
+  margin-top: 8px;
+}
+
+.payment-section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 4px 0;
+}
+
+.payment-section-desc {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0 0 20px 0;
+}
+
+/* Payment Group */
+.payment-group-new {
+  margin-bottom: 20px;
+}
+
+.payment-group-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #374151;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* Payment Card - Horizontal Layout */
+.payment-card-new {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.payment-card-new:hover {
+  border-color: #d1d5db;
+  background: #fafafa;
+}
+
+.payment-card-new.selected,
+.payment-card-new:has(input:checked) {
+  border-color: #3b82f6;
+  background: #eff6ff;
+}
+
+.payment-card-icon {
+  width: 56px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.payment-card-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.payment-card-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.payment-card-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tag-id {
+  display: inline-block;
+  background: #fee2e2;
+  color: #ef4444;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.payment-card-desc {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.btn-check-availability {
+  background: #eff6ff;
+  border: none;
+  color: #3b82f6;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin-top: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-check-availability:hover {
+  background: #dbeafe;
+}
+
+.payment-card-radio {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #d1d5db;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.payment-card-new:has(input:checked) .payment-card-radio {
+  border-color: #3b82f6;
+}
+
+.payment-card-new:has(input:checked) .payment-card-radio::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background: #3b82f6;
+  border-radius: 50%;
+}
+
+/* Info Boxes - New Design */
+.info-box-new {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.info-box-new.info-help {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+}
+
+.info-box-new.info-warning {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.info-box-new .info-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info-help .info-icon {
+  background: #3b82f6;
+  color: white;
+}
+
+.info-warning .info-icon {
+  background: #f87171;
+  color: white;
+}
+
+.info-box-new .info-content {
+  flex: 1;
+  font-size: 0.85rem;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.info-box-new .info-link {
+  color: #3b82f6;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.info-box-new .info-link:hover {
+  text-decoration: underline;
+}
+
+/* Checkbox Group - New Design */
+.checkbox-group-new {
+  margin-top: 20px;
+}
+
+.checkbox-item-new {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.checkbox-input {
+  display: none;
+}
+
+.checkbox-custom {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #d1d5db;
+  border-radius: 6px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  margin-top: 2px;
+}
+
+.checkbox-input:checked + .checkbox-custom {
+  background: #ef4444;
+  border-color: #ef4444;
+}
+
+.checkbox-input:checked + .checkbox-custom::after {
+  content: '✓';
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.checkbox-text {
+  font-size: 0.85rem;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.checkbox-text a {
+  color: #ef4444;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.checkbox-text a:hover {
+  text-decoration: underline;
+}
+
+.checkbox-text strong {
+  color: #1f2937;
+}
+
+/* Footer - New Design */
+.payment-modal-footer-new {
+  padding: 16px;
+  background: #fff;
+  border-top: 1px solid #f3f4f6;
+  flex-shrink: 0;
+}
+
+.btn-confirm {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #f87171 0%, #ef4444 100%);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: all 0.2s;
+}
+
+.btn-confirm:hover {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+.btn-cancel {
+  width: 100%;
+  padding: 14px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  color: #374151;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-cancel:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+}
+
+/* Mobile Responsive for New Design */
+@media (max-width: 768px) {
+  .payment-modal-header-new {
+    padding: 14px 16px;
+  }
+
+  .form-main-title {
+    font-size: 1.25rem;
+  }
+
+  .gender-options-new {
+    gap: 10px;
+  }
+
+  .gender-card-new {
+    padding: 16px 12px;
+  }
+
+  .gender-avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .gender-label {
+    font-size: 0.85rem;
+  }
+
+  .payment-card-new {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .payment-card-icon {
+    width: 48px;
+    height: 36px;
+  }
+
+  .payment-card-name {
+    font-size: 0.9rem;
+  }
+
+  .payment-modal-footer-new {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .payment-content {
+    padding-bottom: 140px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .gender-avatar {
+    width: 50px;
+    height: 50px;
+  }
+
+  .gender-card-new {
+    padding: 14px 10px;
+  }
+
+  .payment-card-icon {
+    width: 40px;
+    height: 32px;
+  }
+}
+
+/* ===== FIX SMOOTH SCROLL FOR PAYMENT MODAL ===== */
+
+/* Reset modal panel untuk scroll yang lebih baik */
+.payment-modal {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 99999 !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.payment-modal-panel {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  max-height: 100vh !important;
+  max-height: 100dvh !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  background: #fff !important;
+}
+
+/* Header tetap di atas */
+.payment-modal-header-new {
+  flex-shrink: 0 !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+/* Body scrollable dengan smooth scroll */
+.payment-modal-body {
+  flex: 1 1 auto !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+  overscroll-behavior: contain !important;
+  scroll-behavior: smooth !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+}
+
+/* Hapus semua transform yang bisa mengganggu scroll */
+.payment-modal-body * {
+  transform: none;
+}
+
+/* Content dengan padding yang cukup untuk footer */
+.payment-content {
+  padding: 20px 16px !important;
+  padding-bottom: 160px !important;
+}
+
+/* Footer fixed di bawah */
+.payment-modal-footer-new {
+  flex-shrink: 0 !important;
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  background: #fff !important;
+  padding: 12px 16px !important;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08) !important;
+  z-index: 100 !important;
+}
+
+/* Desktop - modal tidak full screen */
+@media (min-width: 769px) {
+  .payment-modal {
+    align-items: center !important;
+    padding: 20px !important;
+  }
+
+  .payment-modal-panel {
+    width: 500px !important;
+    max-width: 500px !important;
+    height: auto !important;
+    max-height: 90vh !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+  }
+
+  .payment-modal-body {
+    max-height: calc(90vh - 160px) !important;
+  }
+
+  .payment-content {
+    padding-bottom: 20px !important;
+  }
+
+  .payment-modal-footer-new {
+    position: relative !important;
+    box-shadow: none !important;
+    border-top: 1px solid #f0f0f0 !important;
+  }
+}
+
+/* Pastikan touch scroll bekerja dengan baik di iOS */
+@supports (-webkit-touch-callout: none) {
+  .payment-modal-body {
+    -webkit-overflow-scrolling: touch !important;
+  }
+}
+
+/* Hilangkan momentum scroll issues */
+.payment-modal.open {
+  touch-action: none;
+}
+
+.payment-modal-body {
+  touch-action: pan-y !important;
+}
+
+/* Scrollbar styling untuk desktop */
+.payment-modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.payment-modal-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.payment-modal-body::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+
+.payment-modal-body::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* ===== EXTRA SMOOTH SCROLL FIX ===== */
+
+/* Pastikan modal body bisa scroll dengan natural */
+.payment-modal-body {
+  /* Gunakan auto, bukan scroll */
+  overflow-y: auto !important;
+  /* Smooth scroll untuk iOS */
+  -webkit-overflow-scrolling: touch !important;
+  /* Cegah scroll chain ke body */
+  overscroll-behavior-y: contain !important;
+  /* Pastikan touch action bekerja */
+  touch-action: pan-y !important;
+  /* Hapus semua yang bisa block scroll */
+  pointer-events: auto !important;
+}
+
+/* Pastikan semua child element tidak block scroll */
+.payment-modal-body,
+.payment-modal-body * {
+  /* Jangan gunakan transform yang bisa bikin scroll jadi kaku */
+  will-change: auto;
+}
+
+/* Pastikan content bisa di-scroll */
+.payment-content {
+  min-height: min-content;
+}
+
+/* Form elements tidak boleh capture semua touch */
+.payment-content input,
+.payment-content label,
+.payment-content button {
+  touch-action: manipulation;
+}
+
+/* Pastikan payment cards tidak block scroll */
+.payment-card-new,
+.gender-card-new {
+  touch-action: manipulation;
+}
+
+/* Fix untuk iOS Safari */
+@supports (-webkit-touch-callout: none) {
+  .payment-modal-body {
+    /* Force hardware acceleration untuk smooth scroll di iOS */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+/* Pastikan body tidak scroll saat modal open */
+body.modal-open {
+  overflow: hidden !important;
+  position: fixed !important;
+  width: 100% !important;
+  height: 100% !important;
+}
