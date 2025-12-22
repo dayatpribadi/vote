@@ -91,7 +91,7 @@
     <div class="cursor2"></div>
 
     <div class="page-wraper">
-        <div class="top-bar fixed top-0 left-0 right-0 bg-primary text-white py-2.5 px-5 overflow-hidden z-2">
+        <div class="top-bar fixed top-0 left-0 right-0 bg-primary text-white py-2.5 overflow-hidden z-2">
             <div class="marquee container mx-auto">
                 <span class="text-md font-normal">Superdev Vote - Your Trusted Voting Partner - Dukung finalis
                     pilihan kamu pada Putra Putri Pelajar Nusantara Jawa Tengah Favorit
@@ -287,20 +287,20 @@
 
                                                 <div
                                                     class="md:flex justify-between pt-7.5 pb-5 items-baseline border-t border-primary/20">
-                                                    <div class="flex flex-wrap mb-2.5">
-                                                        <div class="-mt-0.75 flex flex-wrap gap-1.25">
-                                                            <a class="block text-primary bg-paleaqua text-base font-title font-medium duration-500 py-1.75 px-5 rounded-3xl hover:bg-citrusyellow"
+                                                    <div class="flex mb-2.5">
+                                                        <div class="-mt-0.75 flex flex-nowrap gap-1.25">
+                                                            <a class="block text-primary bg-paleaqua text-xs sm:text-base font-title font-medium duration-500 py-1.75 px-2.5 sm:px-5 rounded-3xl hover:bg-citrusyellow whitespace-nowrap"
                                                                 href="services.html">FAQ Vote
                                                                 <i
-                                                                    class="fa-solid fa-arrow-up-right-from-square ml-2"></i></a>
-                                                            <a class="block text-primary bg-paleaqua text-base font-title font-medium duration-500 py-1.75 px-5 rounded-3xl hover:bg-citrusyellow"
+                                                                    class="fa-solid fa-arrow-up-right-from-square ml-1 sm:ml-2"></i></a>
+                                                            <a class="block text-primary bg-paleaqua text-xs sm:text-base font-title font-medium duration-500 py-1.75 px-2.5 sm:px-5 rounded-3xl hover:bg-citrusyellow whitespace-nowrap"
                                                                 href="services.html">Tutorial Vote
                                                                 <i
-                                                                    class="fa-solid fa-arrow-up-right-from-square ml-2"></i></a>
-                                                            <a class="block text-primary bg-paleaqua text-base font-title font-medium duration-500 py-1.75 px-5 rounded-3xl hover:bg-citrusyellow"
+                                                                    class="fa-solid fa-arrow-up-right-from-square ml-1 sm:ml-2"></i></a>
+                                                            <a class="block text-primary bg-paleaqua text-xs sm:text-base font-title font-medium duration-500 py-1.75 px-2.5 sm:px-5 rounded-3xl hover:bg-citrusyellow whitespace-nowrap"
                                                                 href="services.html">S & K Voting
                                                                 <i
-                                                                    class="fa-solid fa-arrow-up-right-from-square ml-2"></i></a>
+                                                                    class="fa-solid fa-arrow-up-right-from-square ml-1 sm:ml-2"></i></a>
                                                         </div>
                                                     </div>
 
@@ -3496,6 +3496,14 @@
                 showToast(finalists[0]);
             });
         </script>
+
+        <!-- MOBILE STICKY BUTTON - Lanjutkan Pembayaran -->
+        <div class="mobile-sticky-btn-wrapper" id="mobileStickyBtn">
+            <div class="mobile-sticky-btn" onclick="document.querySelector('.btn-bayar').click()">
+                <i class="fas fa-money-bill-wave mr-3"></i>
+                Lanjutkan Pembayaran
+            </div>
+        </div>
 </body>
 
 </html>

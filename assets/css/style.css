@@ -13789,24 +13789,139 @@ button.scroltop span {
   align-items: end;
 }
 
-/* On small screens (phones and iPad), stack leaderboard cards vertically but keep the winner on top */
+/* On small screens - keep leaderboard cards horizontal (1-2-3 side by side) */
 @media (max-width: 768px) {
+
+  /* Reduce container padding for more space */
+  .leaderboard-outer .max-w-7xl {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
   .cards-wrapper.leaderboard {
-    display: flex !important;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 16px;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    gap: 6px !important;
+    align-items: end !important;
   }
 
-  /* move winner card to top when stacked */
-  .cards-wrapper.leaderboard .card.winner {
-    order: -1;
+  /* Scale down card content for mobile */
+  .cards-wrapper.leaderboard .card {
+    padding: 8px !important;
+    border-radius: 14px !important;
   }
 
-  /* ensure other cards keep natural order */
-  .cards-wrapper.leaderboard .card.silver,
-  .cards-wrapper.leaderboard .card.bronze {
-    order: 0;
+  .cards-wrapper.leaderboard .card .avatar-container {
+    max-width: 80px !important;
+  }
+
+  .cards-wrapper.leaderboard .card.winner .avatar-container {
+    max-width: 100px !important;
+  }
+
+  .cards-wrapper.leaderboard .card .country-name {
+    font-size: 0.65rem !important;
+    margin-top: 6px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .cards-wrapper.leaderboard .card .percentage {
+    font-size: 1rem !important;
+    margin-bottom: 4px !important;
+  }
+
+  .cards-wrapper.leaderboard .vote-button {
+    padding: 4px 10px !important;
+    font-size: 0.7rem !important;
+    border-radius: 14px !important;
+  }
+
+  .cards-wrapper.leaderboard .crown img {
+    width: 2rem !important;
+  }
+
+  .cards-wrapper.leaderboard .card.winner .crown img {
+    width: 2.5rem !important;
+  }
+
+  .cards-wrapper.leaderboard .crown {
+    top: -28px !important;
+  }
+
+  .cards-wrapper.leaderboard .card.winner .crown {
+    top: -34px !important;
+  }
+
+  /* Reduce page-content container padding for mobile */
+  .page-content .container {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  .page-content .section-full {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+/* Mobile Sticky Button - Lanjutkan Pembayaran */
+.mobile-sticky-btn-wrapper {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 999999;
+  padding: 12px 16px;
+  padding-top: 24px;
+  background: linear-gradient(to top, #ffffff 70%, transparent);
+  box-sizing: border-box;
+}
+
+.mobile-sticky-btn {
+  display: block;
+  width: 100%;
+  background: #1f2758;
+  color: #fff;
+  padding: 16px 24px;
+  border-radius: 50px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.mobile-sticky-btn:hover,
+.mobile-sticky-btn:active {
+  background: #171d45;
+}
+
+@media (max-width: 1024px) {
+
+  /* Hide the original btn-bayar in sidebar on mobile/tablet */
+  .side-bar .btn-bayar {
+    display: none !important;
+  }
+
+  /* Show the mobile sticky button */
+  .mobile-sticky-btn-wrapper {
+    display: block !important;
+  }
+
+  /* Add padding to body so content doesn't get hidden behind sticky button */
+  body {
+    padding-bottom: 85px !important;
+  }
+}
+
+@media (min-width: 1025px) {
+
+  /* Hide sticky button on desktop */
+  .mobile-sticky-btn-wrapper {
+    display: none !important;
   }
 }
 
