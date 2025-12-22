@@ -19163,12 +19163,64 @@ select.news-search-select option {
 
 @media (max-width:767px) {
   .hero2-wrapper {
-    width: calc(100% - 40px);
-    height: 90px
+    width: calc(100% - 24px);
+    height: 180px;
+    top: 50%;
   }
 
   .hero2-swiper .swiper-pagination {
     display: none;
+  }
+
+  .hero2-prev,
+  .hero2-next {
+    width: 28px;
+    height: 28px;
+  }
+
+  .hero2-prev {
+    left: 8px;
+  }
+
+  .hero2-next {
+    right: 8px;
+  }
+
+  /* Adjust hero container height on mobile */
+  .h-137\.5 {
+    height: auto !important;
+    min-height: 120px !important;
+    padding-top: 100px !important;
+    padding-bottom: 20px !important;
+  }
+
+  /* Reduce top spacing on mobile */
+  .top-25\.5 {
+    top: 0 !important;
+  }
+
+  /* Hero wrapper adjustments */
+  .hero2-wrapper {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    width: calc(100% - 24px) !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    border-radius: 12px !important;
+  }
+
+  /* Gambar tidak terpotong pada mobile */
+  .hero2-wrapper img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+
+  .hero2-wrapper .swiper-slide {
+    height: auto !important;
   }
 }
 
