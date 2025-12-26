@@ -15142,7 +15142,7 @@ button.scroltop span {
 /* Payment Modal */
 .payment-modal-body {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 40px;
 }
 
@@ -15858,7 +15858,7 @@ button.scroltop span {
 
   .section-full .finalists-grid,
   .section-full .max-w-7xl .grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 }
 
@@ -15895,7 +15895,7 @@ button.scroltop span {
 .section-full .finalists-grid,
 .section-full .max-w-7xl .grid {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 
@@ -15935,7 +15935,7 @@ button.scroltop span {
 /* Finalist grid overrides (inline so no build required) */
 .section-full .max-w-7xl .grid {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
   gap: 16px;
 }
 
@@ -16210,7 +16210,6 @@ button.scroltop span {
 
 .payment-modal-body {
   padding: 1.5rem;
-  flex: 1 1 auto;
   min-height: 0;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
@@ -16260,7 +16259,7 @@ button.scroltop span {
 
 @media (min-width: 640px) {
   #paymentForm {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 
   /* Make full width elements span both columns */
@@ -16283,7 +16282,7 @@ button.scroltop span {
 
 @media (min-width: 768px) {
   #paymentForm {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 }
@@ -17347,7 +17346,7 @@ select.news-search-select option {
 
 @media (min-width: 640px) {
   #paymentForm {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 
   /* Make full width elements span both columns */
@@ -17370,7 +17369,7 @@ select.news-search-select option {
 
 @media (min-width: 768px) {
   #paymentForm {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 }
@@ -18372,14 +18371,14 @@ select.news-search-select option {
    Overrides .row { display:flex } by increasing specificity and loading last. */
 .trv-blog-grid-inner-row .row.grid {
   display: grid !important;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
   gap: 1.875rem;
   /* equals 7.5 spacing used in markup */
 }
 
 @media (min-width: 768px) {
   .trv-blog-grid-inner-row .row.grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 }
 
@@ -20373,6 +20372,7 @@ select.news-search-select option {
     max-height: 26px;
   }
 }
+
 /* ===== IMPROVED PAYMENT MODAL SCROLL FOR MOBILE - FINAL ===== */
 
 /* Mobile-first: Full screen modal that scrolls easily */
@@ -21027,12 +21027,12 @@ select.news-search-select option {
   margin-top: 2px;
 }
 
-.checkbox-input:checked + .checkbox-custom {
+.checkbox-input:checked+.checkbox-custom {
   background: #ef4444;
   border-color: #ef4444;
 }
 
-.checkbox-input:checked + .checkbox-custom::after {
+.checkbox-input:checked+.checkbox-custom::after {
   content: '✓';
   color: white;
   font-size: 14px;
