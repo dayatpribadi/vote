@@ -189,6 +189,28 @@ utilities;
   }
 }
 
+/* Fix finalist images: force fixed height 200px so all cards match */
+.finalist-card .bg-gradient-to-br {
+  height: 200px !important;
+  min-height: 200px !important;
+  overflow: hidden;
+}
+
+.finalist-card .bg-gradient-to-br .text-center {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.finalist-card .bg-gradient-to-br img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block;
+}
+
 @layer base {
 
   /* Custom override: force Juara 4-10 list to single-column rows
@@ -13925,6 +13947,30 @@ button.scroltop span {
   }
 }
 
+/* Ensure the footer banner (.container.bg-citrusyellow) is visible on tablet and mobile
+   and stacks its contents for narrow viewports. */
+@media (max-width: 1024px) {
+  .container.bg-citrusyellow {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    padding: 16px !important;
+  }
+
+  .container.bg-citrusyellow>* {
+    width: 100% !important;
+  }
+
+  .container.bg-citrusyellow .pr-5 {
+    padding-right: 0 !important;
+  }
+
+  .container.bg-citrusyellow .site-button {
+    align-self: flex-start !important;
+  }
+}
+
 /* Spacing wrapper for leaderboard */
 .leaderboard-outer {
   padding-top: 4rem !important;
@@ -14000,17 +14046,20 @@ button.scroltop span {
   margin-bottom: 8px;
   width: 100%;
   max-width: 140px;
-  height: auto;
-  /* allow image to scale */
+  height: 140px;
+  /* fixed height to keep avatars uniform */
   display: block;
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden;
 }
 
 .cards-wrapper.leaderboard .card .avatar-container img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
+  object-fit: cover;
+  object-position: center center;
 }
 
 /* Sizes: winner bigger */
@@ -14018,15 +14067,40 @@ button.scroltop span {
   /* make winner avatar responsive: use full width of its container but cap via max-width */
   width: 100%;
   max-width: 220px;
-  height: auto;
+  height: 220px;
   margin: 0 auto 8px;
 }
 
 .cards-wrapper.leaderboard .card .avatar-container {
   width: 100%;
   max-width: 140px;
-  height: auto;
+  height: 140px;
   margin: 0 auto 8px;
+}
+
+/* Ensure posters and finalist images also crop to a consistent ratio */
+.finalist-card .poster img,
+.finalis-modal .modal-finalist-card .poster img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .cards-wrapper.leaderboard .card .avatar-container {
+    height: 110px;
+  }
+
+  .cards-wrapper.leaderboard .card.winner .avatar-container {
+    height: 160px;
+  }
+
+  .finalist-card .poster img,
+  .finalis-modal .modal-finalist-card .poster img {
+    height: 160px;
+  }
 }
 
 .cards-wrapper.leaderboard .vote-button {
@@ -21345,6 +21419,43 @@ select.news-search-select option {
 .payment-content label,
 .payment-content button {
   touch-action: manipulation;
+}
+
+/* Banner visibility fixes for small screens (iPhone/tablet) */
+#page-banner {
+  display: block !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+@media (max-width: 768px) {
+  #page-banner {
+    height: auto !important;
+    min-height: 220px !important;
+    padding-bottom: 20px !important;
+  }
+
+  #page-banner .bg-black\/20 {
+    position: relative !important;
+    padding: 18px !important;
+  }
+
+  /* Ensure the hero image stacks below content and scales down */
+  .hero-side {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    margin-top: 12px !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  #hero-overlap-img {
+    max-width: 90% !important;
+    height: auto !important;
+    object-fit: cover !important;
+  }
 }
 
 /* Pastikan payment cards tidak block scroll */
